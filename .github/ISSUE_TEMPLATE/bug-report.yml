@@ -2,29 +2,46 @@ name: Bug report
 description: Something in Combat Simulator 2 went wrong.
 labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: >-
+        Thanks for reporting. CS2 filled in the summary below. Tell us what happened, then attach the report zip
+        CS2 saved: it's in `CombatSimulator2/reports/` in the game folder, and "Open folder" in CS2's bug report
+        note shows it.
   - type: textarea
     id: summary
     attributes:
-      label: Summary
-      description: Filled in by "Open a GitHub issue" in CS2's bug report note.
+      label: From CS2
+      description: Filled in by CS2. Leave it as it is.
     validations:
       required: true
   - type: textarea
     id: what-happened
     attributes:
       label: What happened
+      description: What were you doing, and what went wrong?
+      placeholder: I simulated all targets and the panel said the simulator stopped responding.
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
       label: What you expected
+      description: What should have happened instead?
   - type: textarea
     id: steps
     attributes:
       label: Steps to make it happen again
-  - type: markdown
+      description: If you can make it happen again, how?
+      placeholder: |
+        1. Open CS2 and pick Compare.
+        2. ...
+  - type: textarea
+    id: report-zip
     attributes:
-      value: >-
-        Drag the report zip from `CombatSimulator2/reports/` in the game folder into this box. It already holds your
-        character's save unless you switched that off; don't attach other save files.
+      label: Report zip
+      description: >-
+        Drag the CombatSimulator2-report-….zip named in the summary into this box. It holds your character's save
+        unless you switched that off in CS2's Settings; don't attach other save files.
+    validations:
+      required: true

@@ -176,11 +176,11 @@ internal sealed class DroptimizerList
         _shown is { } a ? $"gains={a.Gains.Count} no-gain={a.NoGain} not-yet={a.NotYetWearable.Count}" : "none";
 
     /// <summary>
-    /// What side B changes over side A, when it is side A's loadout with changes: the swaps added from this list
-    /// show among them. Empty otherwise.
+    /// What side B changes over the side searched from, when it is that side's loadout with changes (always, searched
+    /// from side B): the swaps added from this list show among them. Empty otherwise.
     /// </summary>
     public static ChangeList OnB() =>
-        PanelState.B is { } b && b.Base == PanelState.A.Base ? b.Changes : ChangeList.Empty;
+        PanelState.B is { } b && b.Base == SearchSide.Side.Base ? b.Changes : ChangeList.Empty;
 
     // Whether the swap is on side B: its item is equipped there in its slot.
     private static bool Added(DropGain gain) =>

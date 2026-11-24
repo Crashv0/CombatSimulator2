@@ -3,19 +3,21 @@ using GamesByMalcs.Melvor2.EventLog;
 using GamesByMalcs.Melvor2.GameMenus.Footer;
 using GamesByMalcs.Melvor2.GameMenus.Header;
 using GamesByMalcs.Melvor2.GameMenus.Sidebar;
+using GamesByMalcs.Melvor2.GameMenus.SidebarLegacy;
 using GamesByMalcs.Melvor2.GameMenus.Widgets;
 using Godot;
 
 namespace MelvorMods.Core;
 
 /// <summary>
-/// Keeps the game's sidebar, footer, event log and widget strip (the column of shortcuts on the right), so a modal can
-/// fill the room they leave, let what they open draw over it, and know when a press on them should hand the game
+/// Keeps the game's sidebars (its own and the legacy one its settings can switch to, wide or collapsed), footer, event
+/// log and widget strip (the column of shortcuts on the right), so a modal can fill the room they leave, let what they open draw over it, and know when a press on them should hand the game
 /// back. Main thread.
 /// </summary>
 internal static class GameChrome
 {
     private static GameSidebar? _sidebar;
+    private static GameSidebarLegacy? _legacySidebar;
     private static GameFooter? _footer;
     private static WidgetsView? _widgets;
     private static EventLogView? _eventLog;
@@ -62,6 +64,9 @@ internal static class GameChrome
             case GameSidebar sidebar:
                 _sidebar = sidebar;
                 break;
+            case GameSidebarLegacy legacy:
+                _legacySidebar = legacy;
+                break;
             case GameFooter footer:
                 _footer = footer;
                 break;
@@ -97,6 +102,8 @@ internal static class GameChrome
         }
         if (_sidebar == part)
             _sidebar = null;
+        if (_legacySidebar == part)
+            _legacySidebar = null;
         if (_footer == part)
             _footer = null;
         if (_widgets == part)
@@ -122,6 +129,7 @@ internal static class GameChrome
             part.TreeExiting -= left;
         _watched.Clear();
         _sidebar = null;
+        _legacySidebar = null;
         _footer = null;
         _widgets = null;
         _eventLog = null;
@@ -132,11 +140,14 @@ internal static class GameChrome
     {
         var stack = new Stack<Node>();
         stack.Push(tree.Root);
-        while (stack.Count > 0 && (_sidebar == null || _footer == null || _widgets == null || _eventLog == null))
+        while (
+            stack.Count > 0
+            && (_sidebar == null || _legacySidebar == null || _footer == null || _widgets == null || _eventLog == null)
+        )
         {
             var node = stack.Pop();
             OnNodeAdded(node);
-            if (node is GameSidebar or GameFooter or WidgetsView or EventLogView)
+            if (node is GameSidebar or GameSidebarLegacy or GameFooter or WidgetsView or EventLogView)
                 continue;
             foreach (var child in node.GetChildren())
                 stack.Push(child);
@@ -144,7 +155,7 @@ internal static class GameChrome
     }
 
     /// <summary>
-    /// <paramref name="area"/> less the sidebar along its left, the widget strip's buttons along its right and the
+    /// <paramref name="area"/> less the sidebar showing along its left, the widget strip's buttons along its right and the
     /// footer along its foot, whichever are showing.
     /// </summary>
     public static Rect2 Free(Rect2 area)
@@ -152,8 +163,10 @@ internal static class GameChrome
         var left = area.Position.X;
         var right = area.End.X;
         var bottom = area.End.Y;
-        if (Showing(_sidebar) is { } sidebar)
-            left = Math.Clamp(sidebar.End.X, left, right);
+        // The game shows one sidebar at a time; the legacy one changes width as it collapses.
+        foreach (var shown in new[] { Showing(_sidebar), Showing(_legacySidebar) })
+            if (shown is { } sidebar)
+                left = Math.Clamp(sidebar.End.X, left, right);
         // The strip's buttons alone: a panel it opens draws over the modal, which keeps its size.
         if (Showing(Widgets?.GetNodeOrNull<Control>(StripColumn) ?? Widgets) is { } widgets)
             right = Math.Clamp(widgets.Position.X, left, right);
@@ -176,7 +189,7 @@ internal static class GameChrome
                 return false;
             if (node is BaseButton or IBaseButton)
                 button = true;
-            if (node is GameHeader or GameSidebar)
+            if (node is GameHeader or GameSidebar or GameSidebarLegacy)
                 return button;
         }
         return false;

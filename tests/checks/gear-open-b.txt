@@ -1,0 +1,33 @@
+# Searched from side B, Open as setup keeps side A and puts the set on side B. B wears a Normal Bow in place of
+# Chk's Oak Bow, and a search from B, the weapon alone, finds a javelin; the panel, on side B, shows that answer as
+# current and opens it onto B. Side B is chosen on Red Slime's form, which has no answer: the choice is on the form,
+# and Green Slime's answer shows over its own. Green Slime is the one searched: compare-gear-tab needs Red Slime
+# without an answer. The panel's pool is set to every item, as the search's, or the answer isn't the panel's.
+cs2 compare SlimeForest/RedSlime SlimeForest/GreenSlime a=current b=current b.equip=Weapon:NormalBow trials=200
+cs2 wait timeout=9
+cs2 gear SlimeForest/GreenSlime pool=every kinds=none seed=1 trials=30 short wait=0 lock=Helmet,Cape,Amulet,Torso,Legs,RingSlot1,Gloves,Boots,Offhand,Ammo equip=Weapon:NormalBow
+expect reply "running:"
+wait 9000
+cs2 gear show
+expect reply "Weapon: Normal Bow → Meteorite Javelin"
+cs2 select SlimeForest/RedSlime
+cs2 open simulate
+wait 1200
+click Cs2DetailTabGear
+wait 800
+click GearSearchPool
+wait 300
+click GearSearchPoolItem_1
+wait 500
+click GearSearchFromB
+wait 500
+cs2 select SlimeForest/GreenSlime
+wait 3000
+expect see "Weapon · replaces Normal Bow"
+click GearSearchOpen
+wait 1000
+cs2 ui
+expect reply "side a base=current changes=0"
+expect reply "side b base=current changes=1 req=check equip=Weapon:MeteoriteJavelin"
+click Cs2DetailTabRates
+wait 300

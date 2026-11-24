@@ -1,0 +1,23 @@
+# Not fighting, both buttons for what the character is fighting are switched off and say why: Simulate's, and the
+# target strip's, which keeps that target alone for the next run. Chk stands idle; fighting (the strip's button names
+# the target and keeps it alone, the one beside Simulate runs it and selects it, the strip leads with a Fighting group
+# and marks the portrait) is checked by hand: no CS2 release command starts a fight. The strip starts closed and is
+# left closed, as targets-ignore expects.
+cs2 open simulate
+wait 1200
+hover Cs2RunFighting
+wait 500
+expect see "Not fighting anything right now."
+cs2 ui
+expect reply "strip=closed"
+click Cs2StripHeader
+wait 800
+cs2 ui
+expect reply "strip=open"
+hover Cs2StripKeepFighting
+wait 500
+expect see "Not fighting anything right now."
+click Cs2StripHeader
+wait 300
+cs2 ui
+expect reply "strip=closed"

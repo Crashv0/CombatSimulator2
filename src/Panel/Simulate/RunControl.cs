@@ -33,7 +33,7 @@ internal sealed partial class RunControl
     private bool _running;
     private bool _notRunYet;
 
-    public RunControl(Control hoverOwner)
+    public RunControl(Control hoverOwner, Action fight)
     {
         // Rows that are always there, so nothing moves as a run starts, steps and ends: the status and the counter,
         // the bar, then the button.
@@ -43,7 +43,16 @@ internal sealed partial class RunControl
         _root = new MarginContainer { Name = "Cs2RunInset" };
         _root.AddThemeConstantOverride("margin_left", (int)box.GetContentMargin(Side.Left));
         _root.AddThemeConstantOverride("margin_right", (int)box.GetContentMargin(Side.Right));
-        var progress = Ui.Add(_root, Ui.Column(3, "Cs2RunControl"));
+        // The button for what the character is fighting, beside a column of the status, the bar and Simulate: the
+        // column keeps the width Simulate has alone, level with the details above, and the control grows by the button.
+        var buttons = Ui.Add(_root, Ui.Row(6, "Cs2RunButtons"));
+        buttons.AddChild(MakeFighting(fight));
+        var progress = Ui.Add(buttons, Ui.Column(3, "Cs2RunControl"));
+        progress.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
+        progress.CustomMinimumSize = new Vector2(
+            Results.Details.Width - box.GetContentMargin(Side.Left) - box.GetContentMargin(Side.Right),
+            0
+        );
         // After a pasted simulation is used: one line saying so, with Undo, until a run starts.
         _used = Ui.Add(progress, Ui.Row(8, "Cs2SimulationUsed"));
         var usedText = Ui.Add(
@@ -308,7 +317,10 @@ internal sealed partial class RunControl
 
     private string? _counterShown;
 
-    /// <summary>Called every frame: moves the timer on while a run is active, and ends the button's note.</summary>
+    /// <summary>
+    /// Called every frame: moves the timer on while a run is active, ends the button's note, and follows what the
+    /// character is fighting.
+    /// </summary>
     public void Tick()
     {
         if (_sayingUntil > 0 && Time.GetTicksMsec() >= _sayingUntil)
@@ -318,6 +330,7 @@ internal sealed partial class RunControl
         }
         if (RunService.Instance.IsActive)
             ShowCounter(RunService.Instance.Current);
+        TickFighting();
     }
 
     /// <summary>

@@ -104,13 +104,21 @@ internal static class ReportNote
         return root;
     }
 
-    // The zip's entries, with the snapshots of failed runs as one line (their file names are run ids) and the panel's
-    // state by what it is.
+    // The zip's entries, with CS2's logs as one line where the first is (a restart adds each log's previous file), the
+    // snapshots of failed runs as one line (their file names are run ids) and the panel's state by what it is: short
+    // enough that the ways to send it stay in sight under the list.
     private static List<string> Listed(IReadOnlyList<string> entries)
     {
+        // Translators: In the list of what a saved bug report holds: CS2's log files, as one line.
+        var logs = Tr.Get("CS2's logs");
         var listed = entries
             .Where(e => !e.StartsWith("snapshots/", StringComparison.Ordinal))
-            .Select(e => e == "panel.txt" ? Tr.Get("What the panel showed") : e)
+            .Select(e =>
+                e.StartsWith("logs/", StringComparison.Ordinal) ? logs
+                : e == "panel.txt" ? Tr.Get("What the panel showed")
+                : e
+            )
+            .Distinct()
             .ToList();
         if (entries.Any(e => e.StartsWith("snapshots/", StringComparison.Ordinal)))
             listed.Add(Tr.Get("Snapshots of failed runs"));

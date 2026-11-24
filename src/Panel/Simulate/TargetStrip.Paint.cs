@@ -1,9 +1,11 @@
 using Godot;
+using MelvorMods.CombatSimulator2.Game;
 using MelvorMods.CombatSimulator2.Panel.Widgets;
 
 namespace MelvorMods.CombatSimulator2.Panel.Simulate;
 
-// Painting the strip: each area's name and fold mark, then its portraits; an ignored one dimmed under a red cross.
+// Painting the strip: each area's name and fold mark, then its portraits; an ignored one dimmed under a red cross,
+// the one being fought marked with the game's combat icon.
 internal sealed partial class TargetStrip
 {
     private void Paint()
@@ -89,6 +91,8 @@ internal sealed partial class TargetStrip
                 2
             );
         }
+        if (target.Key == Fighting && Art.File(Art.CombatPath) is { } combat)
+            _canvas.DrawTextureRect(combat, new Rect2(rect.End.X - 15, rect.Position.Y + 1, 14, 14), false);
         var selected = PanelState.Selected == target.Key;
         _canvas.PxRect(
             rect,

@@ -1627,54 +1627,6 @@ msgstr ""
 msgid "Too slow"
 msgstr ""
 
-#: src/Model/VersionNews.cs:17
-msgid "Simulate every monster, dungeon and Slayer task with your setup, ranked by XP, kills and more"
-msgstr ""
-
-#: src/Model/VersionNews.cs:19
-msgid "Compare two setups on the same fights"
-msgstr ""
-
-#: src/Model/VersionNews.cs:20
-msgid "Try any gear, levels, prayers and Setup entries, owned or not"
-msgstr ""
-
-#: src/Model/VersionNews.cs:21
-msgid "Find the best setup for a target, with a cheaper and a safer one"
-msgstr ""
-
-#: src/Model/VersionNews.cs:22
-msgid "Rare drop chances per kill, and roughly when the first should drop"
-msgstr ""
-
-#: src/Model/VersionNews.cs:23
-msgid "Slayer masters: the best loadout for each, and which tasks to block"
-msgstr ""
-
-#: src/Model/VersionNews.cs:28
-msgid "Find best setup can search every item in the game, narrowed to what you can wear or have reached"
-msgstr ""
-
-#: src/Model/VersionNews.cs:32
-msgid "Items you don't own say where they come from"
-msgstr ""
-
-#: src/Model/VersionNews.cs:33
-msgid "Slots your goal can't tell apart keep what you wear; Gap from now shows what to get first"
-msgstr ""
-
-#: src/Model/VersionNews.cs:34
-msgid "Set how long a gear search may run, 15 min by default"
-msgstr ""
-
-#: src/Model/VersionNews.cs:35
-msgid "Gear searches read Early Access's item stats, so they fight far fewer sets"
-msgstr ""
-
-#: src/Model/VersionNews.cs:37
-msgid "Slayer Coins and XP for your current task no longer show too low with Slayer task \"As save\""
-msgstr ""
-
 #. Column head over the difference of B from A in the comparison's table.
 #: src/Panel/Compare/CompareCells.cs:30
 msgid "B vs A"
@@ -1760,46 +1712,46 @@ msgstr ""
 msgid "Click the portrait to ignore it in the next run · right-click to run only it"
 msgstr ""
 
-#: src/Panel/Compare/CompareDetails.cs:55
+#: src/Panel/Compare/CompareDetails.cs:57
 #, csharp-format
 msgid "Select a target to see {0} and {1} side by side."
 msgstr ""
 
 #. Tab in a target's details: its rates against the run's other targets, then its drops.
-#: src/Panel/Compare/CompareDetails.cs:87
+#: src/Panel/Compare/CompareDetails.cs:89
 #: src/Panel/Results/DetailsTabs.cs:48
 msgid "Rates"
 msgstr ""
 
 #. Tab in a target's details: risk, how the fights went and a dungeon's fight by fight.
-#: src/Panel/Compare/CompareDetails.cs:93
+#: src/Panel/Compare/CompareDetails.cs:95
 #: src/Panel/Results/DetailsTabs.cs:50
 #: src/Panel/Results/DetailsTabs.cs:95
 msgid "Fights"
 msgstr ""
 
-#: src/Panel/Compare/CompareDetails.cs:137
+#: src/Panel/Compare/CompareDetails.cs:141
 #: src/Panel/RunCache.cs:140
 msgid "XP · main skill"
 msgstr ""
 
 #. The comparison's headline: only side {0} (A or B) can kill the target in time.
-#: src/Panel/Compare/CompareDetails.cs:153
+#: src/Panel/Compare/CompareDetails.cs:157
 #, csharp-format
 msgid "Only {0} kills it"
 msgstr ""
 
-#: src/Panel/Compare/CompareDetails.cs:164
+#: src/Panel/Compare/CompareDetails.cs:168
 #, csharp-format
 msgid "B is better · {0} {1}"
 msgstr ""
 
-#: src/Panel/Compare/CompareDetails.cs:168
+#: src/Panel/Compare/CompareDetails.cs:172
 #, csharp-format
 msgid "B is worse · {0} {1}"
 msgstr ""
 
-#: src/Panel/Compare/CompareDetails.cs:172
+#: src/Panel/Compare/CompareDetails.cs:176
 #, csharp-format
 msgid "Unclear in {0}"
 msgstr ""
@@ -2034,7 +1986,9 @@ msgstr ""
 msgid "Simulate"
 msgstr ""
 
+#. A setup as a noun: the Setup tab's name, and above the gear search's two buttons, A and B, that choose which compared setup it starts from.
 #: src/Panel/Cs2Modal.cs:210
+#: src/Panel/Search/StartGear.cs:49
 msgid "Setup"
 msgstr ""
 
@@ -2199,7 +2153,7 @@ msgstr ""
 
 #. A private message on Discord to CS2's developer.
 #: src/Panel/Help/AboutLinks.cs:78
-#: src/Panel/Report/ReportNote.cs:187
+#: src/Panel/Report/ReportNote.cs:195
 msgid "Direct message"
 msgstr ""
 
@@ -2713,7 +2667,7 @@ msgid "What you fight with. Click a slot to change it; right-click puts it back 
 msgstr ""
 
 #: src/Panel/Help/HelpText.cs:201
-#: src/Panel/Simulate/TargetStrip.cs:217
+#: src/Panel/Simulate/TargetStrip.cs:226
 msgid "Targets"
 msgstr ""
 
@@ -2793,47 +2747,52 @@ msgstr ""
 msgid "It holds CS2's logs, settings and recent runs, with your user and computer names taken out. Your save isn't in it."
 msgstr ""
 
+#. In the list of what a saved bug report holds: CS2's log files, as one line.
 #: src/Panel/Report/ReportNote.cs:113
+msgid "CS2's logs"
+msgstr ""
+
+#: src/Panel/Report/ReportNote.cs:118
 msgid "What the panel showed"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:116
+#: src/Panel/Report/ReportNote.cs:124
 msgid "Snapshots of failed runs"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:129
+#: src/Panel/Report/ReportNote.cs:137
 msgid "Open the channel"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:139
+#: src/Panel/Report/ReportNote.cs:147
 msgid "GitHub issues and the Discord channel are public. To keep your save private, send the zip to Crashv in a direct message on Discord."
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:152
+#: src/Panel/Report/ReportNote.cs:160
 msgid "Copy for Discord"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:158
+#: src/Panel/Report/ReportNote.cs:166
 msgid "Copied. Paste it in the Melvor Discord's mod bug reports channel, then drag the zip in after it."
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:166
+#: src/Panel/Report/ReportNote.cs:174
 msgid "Open a GitHub issue"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:174
+#: src/Panel/Report/ReportNote.cs:182
 msgid "Opened in your browser. Say what happened there, then drag the zip into the Report zip box."
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:182
+#: src/Panel/Report/ReportNote.cs:190
 msgid "CS2's GitHub page isn't up yet"
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:193
+#: src/Panel/Report/ReportNote.cs:201
 msgid "Opened Discord. Send Crashv the zip there, with what happened."
 msgstr ""
 
-#: src/Panel/Report/ReportNote.cs:198
+#: src/Panel/Report/ReportNote.cs:206
 msgid "Open folder"
 msgstr ""
 
@@ -2954,7 +2913,7 @@ msgstr ""
 #. Gear tab sentence "Find [best setup] for [this target]": the selected target alone.
 #: src/Panel/Results/DetailsLegend.cs:23
 #: src/Panel/Results/DetailsLegend.cs:52
-#: src/Panel/Search/GearTab.cs:468
+#: src/Panel/Search/GearTab.cs:483
 msgid "this target"
 msgstr ""
 
@@ -4223,13 +4182,13 @@ msgstr ""
 
 #. Under a gear search's gain, after "Every item": only what the character's levels meet.
 #: src/Panel/Search/BestInSlotRows.cs:24
-#: src/Panel/Search/StartForm.cs:257
+#: src/Panel/Search/StartForm.cs:260
 msgid "wearable at my levels"
 msgstr ""
 
 #. Under a gear search's gain, after "Every item": only content the character has reached.
 #: src/Panel/Search/BestInSlotRows.cs:27
-#: src/Panel/Search/StartForm.cs:259
+#: src/Panel/Search/StartForm.cs:262
 msgid "content I've reached"
 msgstr ""
 
@@ -4357,7 +4316,7 @@ msgstr ""
 #: src/Panel/Search/SearchWords.cs:135
 #: src/Panel/Settings/HistoryList.Rows.cs:82
 #: src/Panel/SetupTab/SetupTabView.cs:266
-#: src/Panel/Simulate/RunControl.cs:365
+#: src/Panel/Simulate/RunControl.cs:378
 #: src/Panel/Words.cs:52
 #, csharp-format
 msgid "{0} · {1}"
@@ -4436,49 +4395,49 @@ msgid "replaces {0}"
 msgstr ""
 
 #. Gear tab sentence "Find [best setup] for [this target]": the best setup of what the character has.
-#: src/Panel/Search/GearTab.cs:81
+#: src/Panel/Search/GearTab.cs:85
 msgid "best setup"
 msgstr ""
 
 #. Gear tab sentence "Find [upgrades] for [this target]": which unowned items would gain the most.
-#: src/Panel/Search/GearTab.cs:83
+#: src/Panel/Search/GearTab.cs:87
 msgid "upgrades"
 msgstr ""
 
 #. Gear tab sentence; {0} is "best setup" or "upgrades", {1} is "this target", "its area" or "the 3 pins", each a gold choice.
-#: src/Panel/Search/GearTab.cs:103
+#: src/Panel/Search/GearTab.cs:107
 #, csharp-format
 msgid "Find {0} for {1}"
 msgstr ""
 
 #. Hover of the Gear tab's info button, which opens its guide.
-#: src/Panel/Search/GearTab.cs:127
+#: src/Panel/Search/GearTab.cs:131
 msgid "How gear search works"
 msgstr ""
 
 #. Hover of the greyed "its area" choice when the selected target isn't an enemy.
-#: src/Panel/Search/GearTab.cs:192
+#: src/Panel/Search/GearTab.cs:196
 msgid "Select an enemy to search its whole area."
 msgstr ""
 
 #. Hover of the greyed pins choice when fewer than two targets are pinned.
-#: src/Panel/Search/GearTab.cs:194
+#: src/Panel/Search/GearTab.cs:198
 msgid "Pin 2 or 3 targets to search them together."
 msgstr ""
 
 #. Gear tab sentence "Find [best setup] for [its area]": every enemy of the target's area.
-#: src/Panel/Search/GearTab.cs:470
+#: src/Panel/Search/GearTab.cs:485
 msgid "its area"
 msgstr ""
 
 #. Gear tab sentence "Find [best setup] for [the 3 pins]": the pinned targets together.
-#: src/Panel/Search/GearTab.cs:472
+#: src/Panel/Search/GearTab.cs:487
 #, csharp-format
 msgid "the {0} pins"
 msgstr ""
 
 #. Gear tab sentence "Find [best setup] for [the 3 pins]": the pinned targets together.
-#: src/Panel/Search/GearTab.cs:472
+#: src/Panel/Search/GearTab.cs:487
 msgid "the pins"
 msgstr ""
 
@@ -5107,88 +5066,89 @@ msgstr ""
 msgid "Ignore requirements"
 msgstr ""
 
-#. Hover of the gear search form's Ignore requirements tick, which is side A's own setting.
+#. Hover of the gear search form's Ignore requirements tick, which is the searched side's own setting; {0} is its letter, A or B.
 #: src/Panel/Search/StartForm.cs:199
-msgid "Side A's setting, as on the Setup tab: search any gear and choice, requirements met or not."
+#, csharp-format
+msgid "Side {0}'s setting, as on the Setup tab: search any gear and choice, requirements met or not."
 msgstr ""
 
-#: src/Panel/Search/StartForm.cs:200
+#: src/Panel/Search/StartForm.cs:203
 #: src/Panel/SetupTab/SetupTabView.cs:261
 msgid "Unsupported on this game build"
 msgstr ""
 
-#. In the summary of the gear search form's options: side A ignores requirements.
-#: src/Panel/Search/StartForm.cs:253
+#. In the summary of the gear search form's options: the side searched from ignores requirements.
+#: src/Panel/Search/StartForm.cs:256
 msgid "requirements ignored"
 msgstr ""
 
 #. In the summary of the gear search form's options: {0} how many item sources are left out.
-#: src/Panel/Search/StartForm.cs:262
+#: src/Panel/Search/StartForm.cs:265
 #, csharp-format
 msgid "{0} left out"
 msgstr ""
 
 #. In the summary of the gear search form's options: other combat styles are tried too.
-#: src/Panel/Search/StartForm.cs:268
+#: src/Panel/Search/StartForm.cs:271
 msgid "other styles"
 msgstr ""
 
 #. In the summary of the gear search form's options: choices the character doesn't have are tried too.
-#: src/Panel/Search/StartForm.cs:272
+#: src/Panel/Search/StartForm.cs:275
 msgid "choices I don't have"
 msgstr ""
 
 #. The summary of the gear search form's options when none is switched on.
-#: src/Panel/Search/StartForm.cs:275
+#: src/Panel/Search/StartForm.cs:278
 msgid "Gear only"
 msgstr ""
 
-#: src/Panel/Search/StartForm.cs:313
+#: src/Panel/Search/StartForm.cs:316
 msgid "Counting combinations…"
 msgstr ""
 
-#: src/Panel/Search/StartForm.cs:328
+#: src/Panel/Search/StartForm.cs:331
 msgid "The sets couldn't be counted."
 msgstr ""
 
 #. The start button when fighting every set would pass the long-search limit.
-#: src/Panel/Search/StartForm.cs:337
+#: src/Panel/Search/StartForm.cs:340
 msgid "Shorter search"
 msgstr ""
 
 #. Above the items a gear search must not use.
-#: src/Panel/Search/StartGear.cs:45
+#: src/Panel/Search/StartGear.cs:66
 #: src/Panel/Simulate/SlotPicker.cs:92
 msgid "Never use"
 msgstr ""
 
 #. Button that adds an item to those a gear search must not use.
-#: src/Panel/Search/StartGear.cs:51
+#: src/Panel/Search/StartGear.cs:72
 msgid "+ Item"
 msgstr ""
 
 #. Hover of an item a gear search must not use, under its name.
-#: src/Panel/Search/StartGear.cs:161
+#: src/Panel/Search/StartGear.cs:184
 msgid "Click to use it again."
 msgstr ""
 
-#: src/Panel/Search/StartGear.cs:167
+#: src/Panel/Search/StartGear.cs:190
 msgid "Show less"
 msgstr ""
 
 #. Shows every item a gear search must not use, when they fill more than two rows: {0} how many.
-#: src/Panel/Search/StartGear.cs:169
+#: src/Panel/Search/StartGear.cs:192
 #, csharp-format
 msgid "Show all ({0})"
 msgstr ""
 
 #. Hover of a locked slot in the gear search's form.
-#: src/Panel/Search/StartGear.cs:182
+#: src/Panel/Search/StartGear.cs:205
 msgid "Locked: the search keeps this slot. Click to unlock."
 msgstr ""
 
 #. Hover of a slot in the gear search's form.
-#: src/Panel/Search/StartGear.cs:184
+#: src/Panel/Search/StartGear.cs:207
 msgid "Click to lock: the search keeps this slot as it is."
 msgstr ""
 
@@ -6668,7 +6628,7 @@ msgstr ""
 
 #: src/Panel/Simulate/AreaMenu.cs:130
 #: src/Panel/Simulate/TargetFilters.cs:62
-#: src/Panel/Simulate/TargetStrip.cs:192
+#: src/Panel/Simulate/TargetStrip.cs:199
 msgid "Dungeons"
 msgstr ""
 
@@ -6880,6 +6840,27 @@ msgstr ""
 #: src/Panel/Simulate/ComparePicker.cs:379
 #, csharp-format
 msgid "Compares side {0} against this saved run's results"
+msgstr ""
+
+#: src/Panel/Simulate/KeepFightButton.cs:55
+msgid "Bring back the targets as they were"
+msgstr ""
+
+#: src/Panel/Simulate/KeepFightButton.cs:56
+#: src/Panel/Simulate/RunControl.Fighting.cs:25
+#: src/Panel/Simulate/RunControl.Fighting.cs:45
+#: src/Panel/Simulate/RunStarter.cs:32
+msgid "Not fighting anything right now."
+msgstr ""
+
+#. Tooltip of the button leading the target strip when the filters hide the fought target.
+#: src/Panel/Simulate/KeepFightButton.cs:58
+msgid "The filters don't show what you're fighting."
+msgstr ""
+
+#. Tooltip of the button leading the target strip: ignores every other target shown.
+#: src/Panel/Simulate/KeepFightButton.cs:60
+msgid "Keep only what you're fighting for the next run"
 msgstr ""
 
 #: src/Panel/Simulate/KeyStats.cs:30
@@ -7135,106 +7116,108 @@ msgstr ""
 msgid "Best loadouts · {0} · {1} of {2}"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:52
+#. Tooltip of the button beside Simulate that simulates the target the character is fighting.
+#: src/Panel/Simulate/RunControl.Fighting.cs:47
+#, csharp-format
+msgid "Simulate {0}"
+msgstr ""
+
+#: src/Panel/Simulate/RunControl.cs:61
 msgid "Simulation used: both sides, the targets left out and the settings."
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:58
+#: src/Panel/Simulate/RunControl.cs:67
 msgid "Undo"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:83
+#: src/Panel/Simulate/RunControl.cs:92
 msgid "▶ Simulate"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:124
+#: src/Panel/Simulate/RunControl.cs:133
 msgid "This setup can't be simulated; see the message above the results."
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:141
-#: src/Panel/Simulate/TargetStrip.Paint.cs:22
+#: src/Panel/Simulate/RunControl.cs:150
+#: src/Panel/Simulate/TargetStrip.Paint.cs:24
 msgid "Checking targets for this setup…"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:142
+#: src/Panel/Simulate/RunControl.cs:151
 msgid "Nothing to simulate: every target shown is ignored. Return some."
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:143
+#: src/Panel/Simulate/RunControl.cs:152
 msgid "Nothing to simulate: no target matches the filters."
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:160
+#: src/Panel/Simulate/RunControl.cs:169
 msgid "■ Cancel run"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:161
+#: src/Panel/Simulate/RunControl.cs:170
 #, csharp-format
 msgid "▶ Compare {0} target"
 msgid_plural "▶ Compare {0} targets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Panel/Simulate/RunControl.cs:162
+#: src/Panel/Simulate/RunControl.cs:171
 #, csharp-format
 msgid "▶ Simulate {0} target"
 msgid_plural "▶ Simulate {0} targets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Panel/Simulate/RunControl.cs:173
+#: src/Panel/Simulate/RunControl.cs:182
 msgid "The button can't be pressed now"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:193
+#: src/Panel/Simulate/RunControl.cs:202
 msgid "Same as before: nothing fought"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:218
+#: src/Panel/Simulate/RunControl.cs:227
 msgctxt "a run's time"
 msgid "reused"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:230
+#: src/Panel/Simulate/RunControl.cs:239
 #, csharp-format
 msgid "{5} {0} of {1} · {6} {2} of {3} · {4}"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:279
+#: src/Panel/Simulate/RunControl.cs:288
 msgid "Reused from earlier runs: Settings › Simulate fresh fights again."
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:331
+#: src/Panel/Simulate/RunControl.cs:344
 msgid "Not run yet"
 msgstr ""
 
 #. Under the run button while a gear search reads the gear, before its first step.
-#: src/Panel/Simulate/RunControl.cs:336
+#: src/Panel/Simulate/RunControl.cs:349
 msgid "Searching · reading your gear"
 msgstr ""
 
 #. Under the run button while a gear search runs: {0} the step or stage under way.
-#: src/Panel/Simulate/RunControl.cs:338
+#: src/Panel/Simulate/RunControl.cs:351
 #, csharp-format
 msgid "Searching · step {0}"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:355
+#: src/Panel/Simulate/RunControl.cs:368
 msgid "no runs yet"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:363
+#: src/Panel/Simulate/RunControl.cs:376
 #, csharp-format
 msgid "{0} of {1} done · {2}"
 msgstr ""
 
-#: src/Panel/Simulate/RunControl.cs:364
+#: src/Panel/Simulate/RunControl.cs:377
 #, csharp-format
 msgid "{0} of {1} · {2}"
-msgstr ""
-
-#: src/Panel/Simulate/RunStarter.cs:32
-msgid "Not fighting anything right now."
 msgstr ""
 
 #: src/Panel/Simulate/RunStarter.cs:134
@@ -7395,63 +7378,73 @@ msgstr ""
 msgid "Areas ▾"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.Paint.cs:23
+#. Group leading the target strip: the target the character is fighting.
+#: src/Panel/Simulate/TargetStrip.Fighting.cs:26
+msgid "Fighting"
+msgstr ""
+
+#: src/Panel/Simulate/TargetStrip.Paint.cs:25
 msgid "No target matches the filters."
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:70
+#: src/Panel/Simulate/TargetStrip.cs:80
 msgid "Click a target to ignore it in the next run, an area's name for the whole area. Right-click to run only it, then to add more."
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:80
+#: src/Panel/Simulate/TargetStrip.cs:90
 msgid "Ignore all"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:87
+#: src/Panel/Simulate/TargetStrip.cs:97
 msgid "Return all"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:145
+#: src/Panel/Simulate/TargetStrip.cs:152
 msgid "Return every target and clear the search"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:194
+#: src/Panel/Simulate/TargetStrip.cs:201
 msgid "Slayer masters"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:216
+#: src/Panel/Simulate/TargetStrip.cs:225
 #, csharp-format
 msgid "{0} of {1} targets"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:353
+#: src/Panel/Simulate/TargetStrip.cs:362
 msgid "Show this area's targets"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:353
+#: src/Panel/Simulate/TargetStrip.cs:362
 msgid "Fold this area"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:356
+#: src/Panel/Simulate/TargetStrip.cs:365
 #, csharp-format
 msgid "{0}: click to return the whole area"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:357
+#: src/Panel/Simulate/TargetStrip.cs:366
 #, csharp-format
 msgid "{0}: click to ignore the whole area"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:363
+#: src/Panel/Simulate/TargetStrip.cs:372
 msgid "Ignored: click to return it"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:364
+#: src/Panel/Simulate/TargetStrip.cs:373
 msgid "This setup can't fight it yet: the run refuses it"
 msgstr ""
 
-#: src/Panel/Simulate/TargetStrip.cs:365
+#: src/Panel/Simulate/TargetStrip.cs:374
 msgid "Click to ignore it in the next run"
+msgstr ""
+
+#. Line in a target's tooltip in the target strip: the character is fighting it.
+#: src/Panel/Simulate/TargetStrip.cs:376
+msgid "Fighting now"
 msgstr ""
 
 #: src/Panel/Slayer/MasterDetail.cs:65

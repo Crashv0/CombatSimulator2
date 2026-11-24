@@ -21,11 +21,15 @@ internal static class StateLines
         );
     }
 
-    /// <summary>The sides, the filter, the target counts and each ignored target, a line each, for <c>cs2 ui</c>.</summary>
+    /// <summary>
+    /// The sides, the side the gear search starts from, the filter, the target counts and each ignored target, a line
+    /// each, for <c>cs2 ui</c>.
+    /// </summary>
     public static void Describe(StringBuilder text)
     {
         text.Append('\n').Append(SideLine(SideLetter.A, PanelState.A));
         text.Append('\n').Append(SideLine(SideLetter.B, PanelState.B));
+        text.Append("\ngear-search from=").Append(Search.SearchSide.Letter);
         text.Append('\n').Append(FilterLine());
         if (TargetsLine() is { } targets)
             text.Append('\n').Append(targets);

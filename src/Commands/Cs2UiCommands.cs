@@ -9,7 +9,7 @@ using MelvorMods.Core;
 namespace MelvorMods.CombatSimulator2.Commands;
 
 /// <summary>
-/// <c>cs2 open</c>, <c>close</c>, <c>pin</c>, <c>skin</c>, <c>motion</c>, <c>spoilers</c>, <c>scale</c> and <c>ui</c> (alias
+/// <c>cs2 open</c>, <c>close</c>, <c>select</c>, <c>pin</c>, <c>skin</c>, <c>motion</c>, <c>spoilers</c>, <c>scale</c> and <c>ui</c> (alias
 /// <c>panel</c>): the modal for scripted checks.
 /// </summary>
 internal static class Cs2UiCommands
@@ -30,6 +30,7 @@ internal static class Cs2UiCommands
             )
         );
         subs.Add(new("close", "cs2 close", [], [], (call, _) => Close(call), NeedsGame: false));
+        subs.Add(new("select", "cs2 select <target>", [], [], Select));
         subs.Add(new("pin", "cs2 pin [<target>|clear]", [], [], Pin));
         subs.Add(new("skin", "cs2 skin [base|melvui]", [], [], Skin, NeedsGame: false));
         subs.Add(new("motion", "cs2 motion [full|reduced|off]", [], [], SetMotion, NeedsGame: false));
@@ -203,6 +204,15 @@ internal static class Cs2UiCommands
             PanelPins.TogglePin(key);
         }
         call.Ok("ok pins " + string.Join(",", PanelState.Prefs.Pins.Select(Ids.BriefKey)));
+    }
+
+    // Selects a target as a click on its row does; the list's rows can't be clicked by their text.
+    private static void Select(CommandCall call, CommandArgs args)
+    {
+        var word = args.Word(0) ?? throw new CommandException("usage: cs2 select <target>");
+        var key = Targets.Resolve(LiveGame.Require(), word).Key;
+        PanelState.Select(key);
+        call.Ok("ok selected " + Ids.BriefKey(key));
     }
 
     private static string Keys(IReadOnlyList<string> pins) =>

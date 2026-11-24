@@ -87,8 +87,7 @@ internal sealed partial class SimulateView
             _middle.SizeFlagsHorizontal = Control.SizeFlags.ExpandFill;
             _filters = new TargetFilters(hoverOwner);
             _middle.AddChild(_filters.Root);
-            _strip = new TargetStrip(_filters.Search);
-            _filters.Root.AddChild(_strip.Header);
+            _strip = new TargetStrip(_filters);
             _filters.Root.AddChild(Ui.Spacer());
             _middle.AddChild(_strip.Root);
         });
@@ -119,11 +118,11 @@ internal sealed partial class SimulateView
             _details = new Details(hoverOwner, (under, picked) => _slotPicker.PickItem(under, picked));
             _details.Root.SizeFlagsVertical = Control.SizeFlags.ExpandFill;
             _right.AddChild(_details.Root);
-            _compareDetails = new CompareDetails();
+            _compareDetails = new CompareDetails(hoverOwner, (under, picked) => _slotPicker.PickItem(under, picked));
             _compareDetails.Root.Visible = false;
             _right.AddChild(_compareDetails.Root);
             Help.AboutButton.Follow(_details.Root, _compareDetails.Root);
-            _run = new RunControl(hoverOwner);
+            _run = new RunControl(hoverOwner, _starter.StartFighting);
             _run.Pressed += () =>
             {
                 if (RunService.Instance.IsActive)
@@ -271,6 +270,7 @@ internal sealed partial class SimulateView
             return;
         }
         _run.Tick();
+        _strip.Tick();
         // A run under way, or the simulator's status changing between runs (starting, filling its stock, ready): the
         // status and bar move four times a second, on a beat that leaves an idle panel doing nothing here.
         if (_progressClock.ElapsedMilliseconds >= 250)

@@ -46,7 +46,7 @@ internal sealed class GearTab
     private readonly HashSet<(string Target, SearchKind Kind)> _again = [];
     private string _view = "none";
 
-    // Per kind, the kept answer looked up for the target against side A as last checked; each kind keeps its own, so
+    // Per kind, the kept answer looked up for the target against the side searched from as last checked; each kind keeps its own, so
     // switching between them looks nothing up again.
     private readonly Dictionary<SearchKind, Lookup> _lookups = [];
 
@@ -59,6 +59,10 @@ internal sealed class GearTab
 
     // The answer shown, which Open as setup opens a set of.
     private Answer? _shownAnswer;
+
+    // Side B as it was before the shown answer's first swap, when the search started from it: a swap taken off again
+    // puts back what B had there, as side A's does from A.
+    private (Answer Answer, SideState Side)? _swapsFrom;
 
     // The target and kind the view shown was drawn for.
     private (string Target, SearchKind Kind)? _shownFor;
@@ -307,12 +311,12 @@ internal sealed class GearTab
         _form.Foot.Visible = _page.Visible && _form.Root.Visible;
     }
 
-    // Looks up the kept answer once per kind and check of side A, for the tab's target: a change of gear since may put
+    // Looks up the kept answer once per kind and check of the side searched from, for the tab's target: a change of gear since may put
     // it out of date. The answer arrives on a later frame and the tab is shown again with it. Null before the side has
     // been checked.
     private Lookup? LookUp(string target)
     {
-        var check = PanelState.CheckA;
+        var check = SearchSide.Check;
         if (_lookups.TryGetValue(_kind, out var known) && ReferenceEquals(known.Check, check))
             return known;
         if (Game.LiveGame.Find() == null || check == null)
@@ -323,7 +327,7 @@ internal sealed class GearTab
         {
             RunService.FindKept(
                 kind,
-                Simulate.SetupCheck.Current(),
+                SearchSide.Setup(),
                 target,
                 found =>
                 {
@@ -382,27 +386,27 @@ internal sealed class GearTab
         Refresh();
     }
 
-    // Side B becomes side A with the set's changes, ready to simulate against it; nothing is fought until then.
-    // A Droptimizer swap goes onto side B beside those added before, or comes back off: the slot then holds what side
-    // A has. Side B starts as side A when it is another loadout or a run.
+    // A Droptimizer swap goes onto side B beside those added before, or comes back off: the slot then holds what the
+    // side searched from has. Searched from side A, side B starts as side A when it is another loadout or a run;
+    // searched from side B, the swaps go onto B itself, side A staying as it is. Nothing is fought until a run.
     private void Toggle(string item)
     {
         try
         {
             if (_shownAnswer is not { } answer)
                 return;
-            var a = PanelState.A;
-            var changes = PanelState.B is { } b && b.Base == a.Base ? b.Changes : a.Changes;
+            var from = SwapsFrom(answer);
+            var changes = PanelState.B is { } b && b.Base == from.Base ? b.Changes : from.Changes;
             var swap = RunService.AnswerSetOf(answer, null, item).Changes;
             var on = swap.All(c => c.Kind != ChangeKind.Equip || changes.Find(c.Key)?.Value == c.Value);
             foreach (var change in swap)
                 changes =
                     !on ? changes.With(change)
-                    : a.Changes.Find(change.Key) is { } fromA ? changes.With(fromA)
+                    : from.Changes.Find(change.Key) is { } before ? changes.With(before)
                     : changes.Without(change.Key);
             PanelState.PickBaseline(false);
             PanelState.ShowComparison(false);
-            PanelState.SetSide(SideLetter.B, new SideState(a.Base, changes, a.IgnoreRequirements));
+            PanelState.SetSide(SideLetter.B, new SideState(from.Base, changes, from.IgnoreRequirements));
             Focus(_target);
             _message.Visible = false;
         }
@@ -418,18 +422,19 @@ internal sealed class GearTab
         {
             if (_shownAnswer is not { } answer)
                 return;
-            // A current answer was searched from side A as it is now, so the set is side A with its changes. What the
-            // search fought with a requirement ignored needs it ignored on side B too, or the game refuses it there.
-            var a = PanelState.A;
+            // Side B becomes the side searched from with the set's changes: side A stays, so searched from side A it
+            // compares the set with A, and searched from side B it improves B. What the search fought with a
+            // requirement ignored needs it ignored on side B too, or the game refuses it there.
+            var from = SearchSide.Side;
             var set = RunService.AnswerSetOf(answer, tie, null, alternative);
-            var changes = a.Changes;
+            var changes = from.Changes;
             foreach (var change in set.Changes)
                 changes = changes.With(change);
             PanelState.PickBaseline(false);
             PanelState.ShowComparison(false);
             PanelState.SetSide(
                 SideLetter.B,
-                new SideState(a.Base, changes, a.IgnoreRequirements || set.NeedsRequirementsIgnored)
+                new SideState(from.Base, changes, from.IgnoreRequirements || set.NeedsRequirementsIgnored)
             );
             Focus(_target);
             _message.Visible = false;
@@ -438,6 +443,16 @@ internal sealed class GearTab
         {
             Say(e.Message);
         }
+    }
+
+    // The side the shown answer's swaps start from: side A as it is, or side B as it was before the first of them.
+    private SideState SwapsFrom(Answer answer)
+    {
+        if (SearchSide.Letter == SideLetter.A)
+            return PanelState.A;
+        if (_swapsFrom is not { } kept || !ReferenceEquals(kept.Answer, answer))
+            _swapsFrom = kept = (answer, SearchSide.Side);
+        return kept.Side;
     }
 
     // The targets narrowed to the one searched, by quoted search text that clearing brings every target back from;

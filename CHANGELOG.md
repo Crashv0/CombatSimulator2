@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-preview.4 (2026-11-24)
+
+### Added
+
+- Simulate your current target with a dedicated button.
+- The target list puts your current target first, with a button to focus it for the next run or to return focus.
+- The Gear tab can search from either compared setup, and stays while comparing.
+
+### Fixed
+
+- CS2's window no longer covers the game's legacy sidebar, wide or collapsed.
+
 ## 0.1.0-preview.3 (2026-11-24)
 
 ### Added

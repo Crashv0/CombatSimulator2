@@ -232,7 +232,7 @@ internal sealed class About
             {
                 var row = Ui.Add(list, Ui.Row(10, "Cs2AboutChange" + (i + 1)));
                 row.AddChild(Kind(lines[i].Fixed));
-                row.AddChild(Ui.Label(Tr.Note(lines[i].Text), TextStyle.Body, wrap: true));
+                row.AddChild(Ui.Label(lines[i].Text, TextStyle.Body, wrap: true));
             }
         }
         var notify = Ui.Add(

@@ -990,42 +990,6 @@ msgstr "护甲格挡"
 msgid "Too slow"
 msgstr "太慢"
 
-msgid "Simulate every monster, dungeon and Slayer task with your setup, ranked by XP, kills and more"
-msgstr "用你的配置模拟所有怪物、地牢和屠杀者任务，按经验、击杀数等排序"
-
-msgid "Compare two setups on the same fights"
-msgstr "在同一场战斗上对比两套配置"
-
-msgid "Try any gear, levels, prayers and Setup entries, owned or not"
-msgstr "尝试任意装备、等级、祝祭和配置条目，无论是否拥有"
-
-msgid "Find the best setup for a target, with a cheaper and a safer one"
-msgstr "为目标找出最佳配置，并给出更省和更稳的方案"
-
-msgid "Rare drop chances per kill, and roughly when the first should drop"
-msgstr "每次击杀的稀有掉率，以及首次掉落大致何时出现"
-
-msgid "Slayer masters: the best loadout for each, and which tasks to block"
-msgstr "屠杀大师：每位的最佳配装，以及应屏蔽哪些任务"
-
-msgid "Find best setup can search every item in the game, narrowed to what you can wear or have reached"
-msgstr "“查找最佳配置”可搜索游戏中所有物品，并缩小到你能穿戴或已达到的范围"
-
-msgid "Items you don't own say where they come from"
-msgstr "未拥有的物品会标明来源"
-
-msgid "Slots your goal can't tell apart keep what you wear; Gap from now shows what to get first"
-msgstr "目标无法区分的栏位保留当前装备；“当前差距”显示优先获取什么"
-
-msgid "Set how long a gear search may run, 15 min by default"
-msgstr "设置装备搜索的最长时长，默认 15 分钟"
-
-msgid "Gear searches read Early Access's item stats, so they fight far fewer sets"
-msgstr "装备搜索读取抢先体验版的物品数据，因此实际测试的套装少得多"
-
-msgid "Slayer Coins and XP for your current task no longer show too low with Slayer task \"As save\""
-msgstr "屠杀者任务设为“按存档”时，当前任务的屠杀者硬币和经验不再显示偏低"
-
 msgid "B vs A"
 msgstr "B 对 A"
 
@@ -3075,9 +3039,6 @@ msgstr "同时用其他各战斗风格的武器搜索，并显示每种风格的
 msgid "Ignore requirements"
 msgstr "忽略要求"
 
-msgid "Side A's setting, as on the Setup tab: search any gear and choice, requirements met or not."
-msgstr "A 方的设置，同配置页：搜索任意装备和选项，无论是否满足要求。"
-
 msgid "Unsupported on this game build"
 msgstr "当前游戏版本不支持"
 
@@ -4182,6 +4143,9 @@ msgstr "将此预设复制为一行文本，供其他玩家导入"
 msgid "Compares side {0} against this saved run's results"
 msgstr "将 {0} 方与此已保存运行的结果对比"
 
+msgid "Not fighting anything right now."
+msgstr "当前未进行任何战斗。"
+
 msgid "Key stats"
 msgstr "关键数据"
 
@@ -4415,9 +4379,6 @@ msgstr "已完成 {0}/{1} · {2}"
 
 msgid "{0} of {1} · {2}"
 msgstr "{0}/{1} · {2}"
-
-msgid "Not fighting anything right now."
-msgstr "当前未进行任何战斗。"
 
 msgid "No changes yet: change a level, an item, food, a prayer or a spell."
 msgstr "暂无改动：请修改等级、物品、食物、祝祭或法术。"

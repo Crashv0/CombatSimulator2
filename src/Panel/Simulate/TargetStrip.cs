@@ -55,16 +55,26 @@ internal sealed partial class TargetStrip
     // Folded areas, for the session: the strip opens with every area open.
     private readonly HashSet<string> _folded = new(StringComparer.Ordinal);
     private TargetSelection? _selection;
+    private readonly FightWatch _fight = new();
+    private readonly KeepFightButton _keep;
     private float _laidOutWidth = -1;
 
-    /// <summary>The strip, with <paramref name="search"/> leading its head.</summary>
-    public TargetStrip(Control search)
+    /// <summary>
+    /// The strip, with the search of <paramref name="filters"/> leading its head and its "Targets n of m" header at the
+    /// end of their row.
+    /// </summary>
+    public TargetStrip(TargetFilters filters)
     {
+        var search = filters.Search;
         (_header, _headerText, _headerArrow, _reset) = MakeHeader();
+        filters.Root.AddChild(_header);
         _root = Look.Panel(Art.RowBox, "Cs2StripPanel");
         var column = Ui.Add(_root, Ui.Column(6));
         var head = Ui.Add(column, Ui.Row(10));
         search.SizeFlagsVertical = Control.SizeFlags.ShrinkCenter;
+        _fight.Changed += () => Show(_selection);
+        _keep = new KeepFightButton(_fight);
+        head.AddChild(_keep.Root);
         head.AddChild(search);
         var hint = Ui.Label(
             Tr.Get(
@@ -113,9 +123,6 @@ internal sealed partial class TargetStrip
 
     /// <summary>The strip with its search, hint, Ignore all and Return all.</summary>
     public Control Root => _root;
-
-    /// <summary>"Targets n of m" at the end of the filters' row, which folds the strip under it.</summary>
-    public Control Header => _header;
 
     // Drawn as the game's foldable sections are (Smithing's recipe groups): their textured bar, the title, and the arrow
     // that says whether it is open. A click anywhere on it folds or unfolds the strip.
@@ -203,7 +210,9 @@ internal sealed partial class TargetStrip
                 _areas.Add(dungeons);
             if (masters != null)
                 _areas.Add(masters);
+            AddFighting(selection);
         }
+        _keep.Show(selection);
         _ignoreAll.Disabled = selection is not { ToRun.Count: > 0 };
         _returnAll.Disabled = PanelState.Ignored.Count == 0;
         ShowHeader();
@@ -363,7 +372,9 @@ internal sealed partial class TargetStrip
                         PanelState.Ignored.Contains(target.Key) ? Tr.Get("Ignored: click to return it")
                         : !target.CanFight ? Tr.Get("This setup can't fight it yet: the run refuses it")
                         : Tr.Get("Click to ignore it in the next run");
-                    return target.Name + "\n" + state;
+                    // Translators: Line in a target's tooltip in the target strip: the character is fighting it.
+                    var fighting = target.Key == Fighting ? Tr.Get("Fighting now") + "\n" : "";
+                    return target.Name + "\n" + fighting + state;
                 }
         }
         return "";

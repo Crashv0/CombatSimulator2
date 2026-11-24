@@ -1,6 +1,7 @@
 # A small window caps the Scale: 150% saved is drawn at the most the room allows and stays saved, and Settings says
 # why. With the game's UI scale at 1.0, a 1280×800 window leaves room for 120% beside the Bank; a skill's page adds
-# the game's widget strip, which leaves room for 115% only.
+# the game's widget strip, which leaves room for 115% only. The numbers are for the game's own sidebar: the legacy one
+# (a game setting no command changes) is wider, and leaves room for 115% beside the Bank.
 goto bank
 window 1280 800
 wait 1500

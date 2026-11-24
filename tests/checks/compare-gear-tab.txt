@@ -1,0 +1,22 @@
+# While two setups are compared, the Gear tab holds the gear search, with the choice of the side it starts from in
+# the room beside the gear (clicked by name: its label, "Setup", is the Setup tab's name too); without a side B the
+# search is side A's again. Rates is chosen again at the end: the tab is remembered. Red Slime because no check
+# searches it: a kept answer would show over the form.
+cs2 compare SlimeForest/RedSlime a=current b=current b.level=Attack:2 trials=200
+cs2 wait timeout=9
+cs2 select SlimeForest/RedSlime
+cs2 open simulate
+wait 1200
+click Cs2DetailTabGear
+wait 800
+click GearSearchFromB
+wait 500
+cs2 ui
+expect reply "gear-search from=B"
+expect reply "compare=whatif shown=yes"
+cs2 side b off
+wait 800
+cs2 ui
+expect reply "gear-search from=A"
+click Cs2DetailTabRates
+wait 300

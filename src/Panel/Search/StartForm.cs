@@ -38,7 +38,7 @@ internal sealed class StartForm
     // The counts last shown, kept while they are counted again so that only their numbers fade.
     private PlanPreview? _shown;
     private bool _counting;
-    private (string Target, SearchKind Kind, object? Check, string? Note, int Language)? _stamp;
+    private (string Target, SearchKind Kind, object? Check, bool Choose, string? Note, int Language)? _stamp;
 
     /// <summary>
     /// The form; <paramref name="pickItem"/> opens the item picker under a control; <paramref name="start"/> gets
@@ -117,16 +117,16 @@ internal sealed class StartForm
         _styles.TooltipText = Tr.Get(
             "Also search with a weapon of each other combat style, and show each style's best."
         );
-        // Side A's own setting, here too: what the search may wear and try hangs on it. The side's new check counts the
-        // search again.
+        // The searched side's own setting, here too: what the search may wear and try hangs on it. The side's new check
+        // counts the search again.
         _ignore = Cs2Check.Make(
             "GearSearchIgnoreRequirements",
             Tr.Get("Ignore requirements"),
             false,
             on =>
             {
-                if (PanelState.A is { CanChange: true } a)
-                    PanelState.SetSide(SideLetter.A, a.WithIgnoreRequirements(on));
+                if (SearchSide.Side is { CanChange: true } side)
+                    PanelState.SetSide(SearchSide.Letter, side.WithIgnoreRequirements(on));
             }
         );
         _gear = new StartGear(pickItem, Changed);
@@ -156,18 +156,18 @@ internal sealed class StartForm
 
     /// <summary>
     /// The form for <paramref name="target"/> and a search of <paramref name="kind"/>, counted again when either or
-    /// side A has changed since it was last shown.
+    /// the side searched from has changed since it was last shown.
     /// </summary>
     public void Show(string target, SearchKind kind, string? note = null)
     {
-        var stamp = (target, kind, PanelState.CheckA, note, Tr.Version);
+        var stamp = (target, kind, SearchSide.Check, SearchSide.CanChoose, note, Tr.Version);
         if (stamp == _stamp)
             return;
         var fresh =
             _stamp is not { } last
             || last.Target != target
             || last.Kind != kind
-            || !ReferenceEquals(last.Check, PanelState.CheckA);
+            || !ReferenceEquals(last.Check, SearchSide.Check);
         _stamp = stamp;
         if (_target != target)
             _shown = null;
@@ -191,12 +191,15 @@ internal sealed class StartForm
             }
         );
         Cs2Check.Set(_styles, _allStyles);
-        Cs2Check.Set(_ignore, PanelState.A.IgnoreRequirements);
+        Cs2Check.Set(_ignore, SearchSide.Side.IgnoreRequirements);
         var bypass = Game.Dependencies.IsAvailable(Game.Dependencies.IgnoreRequirements);
-        _ignore.Disabled = !PanelState.A.CanChange || !bypass;
+        _ignore.Disabled = !SearchSide.Side.CanChange || !bypass;
         _ignore.TooltipText = bypass
-            // Translators: Hover of the gear search form's Ignore requirements tick, which is side A's own setting.
-            ? Tr.Get("Side A's setting, as on the Setup tab: search any gear and choice, requirements met or not.")
+            // Translators: Hover of the gear search form's Ignore requirements tick, which is the searched side's own setting; {0} is its letter, A or B.
+            ? Tr.Format(
+                "Side {0}'s setting, as on the Setup tab: search any gear and choice, requirements met or not.",
+                SearchSide.Letter
+            )
             : Tr.Get("Unsupported on this game build");
         _switches.Show(kind);
         _narrowing.Show(PoolPick.For(kind, target) == ItemPool.Every);
@@ -248,8 +251,8 @@ internal sealed class StartForm
     {
         var prefs = PanelState.Prefs;
         var on = new List<string>();
-        if (PanelState.A.IgnoreRequirements)
-            // Translators: In the summary of the gear search form's options: side A ignores requirements.
+        if (SearchSide.Side.IgnoreRequirements)
+            // Translators: In the summary of the gear search form's options: the side searched from ignores requirements.
             on.Add(Tr.Get("requirements ignored"));
         if (_target != null && PoolPick.For(_kind, _target) == ItemPool.Every)
         {
@@ -283,7 +286,7 @@ internal sealed class StartForm
         return PoolPick.Apply(
             new SearchRequest(
                 _kind,
-                Simulate.SetupCheck.Current(),
+                SearchSide.Setup(),
                 _target,
                 new Goal(_metric, _limit),
                 prefs.Trials,

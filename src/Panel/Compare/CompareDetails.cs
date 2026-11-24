@@ -9,8 +9,8 @@ namespace MelvorMods.CombatSimulator2.Panel.Compare;
 /// <summary>
 /// One target of a comparison: its name and the verdict for the ranked metric, each side's card with what it changed,
 /// then the single run's tabs with every metric as a table row of A, B and B against A: Rates (then the drops, the
-/// kill rate's change said once) and Fights (risk, the fight numbers with their bars, and a dungeon's fight by
-/// fight).
+/// kill rate's change said once), Fights (risk, the fight numbers with their bars, and a dungeon's fight by fight) and
+/// Gear, the gear search as in a single run's details, from the side chosen beside its gear.
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage(
     "Reliability",
@@ -30,6 +30,7 @@ internal sealed partial class CompareDetails
     }
 
     private readonly PanelContainer _root;
+    private readonly Search.GearTab _gear;
     private readonly CenterContainer _empty;
     private readonly VBoxContainer _body;
     private readonly PanelContainer _portrait;
@@ -44,7 +45,8 @@ internal sealed partial class CompareDetails
     private readonly VBoxContainer _depth;
     private readonly ScrollContainer _scroll;
 
-    public CompareDetails()
+    /// <summary>The panel; <paramref name="pickItem"/> serves its Gear tab.</summary>
+    public CompareDetails(Control hoverOwner, Action<Control, Action<string>> pickItem)
     {
         _root = Look.Panel(Art.SideBox, "Cs2CompareDetails");
         _root.CustomMinimumSize = new Vector2(Details.Width, 0);
@@ -80,7 +82,7 @@ internal sealed partial class CompareDetails
         _verdict = Ui.Label("", TextStyle.BodyStrong, wrap: true);
         names.AddChild(_verdict);
         _body.AddChild(_sides.Root);
-        _tabs = new DetailsTabs(_body, gear: false);
+        _tabs = new DetailsTabs(_body, gear: true);
         _scroll = _tabs.Scroll;
         var rates = _tabs.Page(DetailsTabs.Rates);
         var rateTable = Ui.Add(rates, Ui.Column(0, "Cs2CompareMetrics"));
@@ -93,6 +95,7 @@ internal sealed partial class CompareDetails
         fightTable.AddChild(CompareCells.Heads(Tr.Get("Fights")));
         _rows[DetailsTabs.Fights] = (Ui.Add(fightTable, Ui.Column(8)), []);
         _depth = Ui.Add(fights, Ui.Column(10, "Cs2CompareDepth"));
+        _gear = new Search.GearTab(_tabs.Page(DetailsTabs.Gear), _tabs.Foot, hoverOwner, pickItem);
         ShowNothing();
     }
 
@@ -128,6 +131,7 @@ internal sealed partial class CompareDetails
         var saved = comparison.Record.Kind == ComparisonKind.NowAgainstSaved;
         Func<string, Texture2D?>? art = game != null ? k => Art.Metric(game, k) : null;
         _sides.Show(a, b, saved, art);
+        _gear.Show(key);
 
         // Every metric either side has, "XP · main skill" first.
         var results = new[] { a.Results.GetValueOrDefault(key), b.Results.GetValueOrDefault(key) }

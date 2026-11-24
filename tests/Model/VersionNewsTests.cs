@@ -20,9 +20,9 @@ public sealed class VersionNewsTests
         {
             var lines = VersionNews.For(version);
             Assert.NotEmpty(lines);
-            Assert.All(lines, line => Assert.False(string.IsNullOrWhiteSpace(line.Text.English())));
+            Assert.All(lines, line => Assert.False(string.IsNullOrWhiteSpace(line.Text)));
             Assert.Equal(lines.OrderBy(line => line.Fixed).ToList(), lines);
-            Assert.Equal(lines.Count, lines.Select(line => line.Text.English()).Distinct().Count());
+            Assert.Equal(lines.Count, lines.Select(line => line.Text).Distinct().Count());
         }
     }
 
@@ -39,6 +39,6 @@ public sealed class VersionNewsTests
             .Where(l => l.StartsWith("- ", StringComparison.Ordinal))
             .Select(l => l[2..])
             .ToList();
-        Assert.Equal(bullets, VersionNews.For(version).Select(line => line.Text.English()));
+        Assert.Equal(bullets, VersionNews.For(version).Select(line => line.Text));
     }
 }

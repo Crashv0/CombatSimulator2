@@ -7,9 +7,10 @@ using MelvorMods.CombatSimulator2.Panel.Widgets;
 namespace MelvorMods.CombatSimulator2.Panel.Search;
 
 /// <summary>
-/// The start form's gear: what side A wears, laid out as the game lays it out, where a click locks a slot to what is
-/// in it (with a lock mark); under it the items never to use, as small icons that wrap (a click takes one out),
-/// folded past two rows, with their count and "+ Item" to add one.
+/// The start form's gear: what the side searched from wears, laid out as the game lays it out, where a click locks a
+/// slot to what is in it (with a lock mark), and beside it, while side B is a setup too, which side that is; under it
+/// the items never to use, as small icons that wrap (a click takes one out), folded past two rows, with their count
+/// and "+ Item" to add one.
 /// </summary>
 internal sealed class StartGear
 {
@@ -18,6 +19,8 @@ internal sealed class StartGear
     private const int NeverGap = 4;
 
     private readonly GridContainer _grid;
+    private readonly VBoxContainer _from;
+    private readonly Segmented _fromPick;
     private readonly HFlowContainer _never;
     private readonly Label _neverCount;
     private readonly Button _neverMore;
@@ -36,7 +39,25 @@ internal sealed class StartGear
         _pickItem = pickItem;
         _changed = changed;
         Root = Ui.Column(10, "GearSearchGear");
-        _grid = Ui.Add(Root, new GridContainer { Name = "GearSearchSlots" });
+        var top = Ui.Add(Root, Ui.Row(12));
+        _grid = Ui.Add(top, new GridContainer { Name = "GearSearchSlots" });
+        // The room the grid leaves at its right holds the choice of side, level with the grid's top.
+        top.AddChild(Ui.Spacer());
+        _from = Ui.Add(top, Ui.Column(6, "GearSearchFrom"));
+        _from.SizeFlagsVertical = Control.SizeFlags.ShrinkBegin;
+        // Translators: A setup as a noun: the Setup tab's name, and above the gear search's two buttons, A and B, that choose which compared setup it starts from.
+        _from.AddChild(Ui.Label(Tr.Get("Setup"), TextStyle.Label));
+        _fromPick = new Segmented(
+            "GearSearchFromPick",
+            [("A", SideLine.A, "GearSearchFromA"), ("B", SideLine.B, "GearSearchFromB")],
+            id => SearchSide.Choose(id == "B" ? SideLetter.B : SideLetter.A),
+            side: 6,
+            ends: 3,
+            framed: true
+        );
+        // Two letters, so the pair sits closer than the form's wider choices.
+        _fromPick.Root.AddThemeConstantOverride("separation", 2);
+        _from.AddChild(_fromPick.Root);
         _grid.AddThemeConstantOverride("h_separation", 4);
         _grid.AddThemeConstantOverride("v_separation", 4);
         var never = Ui.Add(Root, Ui.Column(6, "GearSearchNeverUse"));
@@ -73,7 +94,7 @@ internal sealed class StartGear
 
     public VBoxContainer Root { get; }
 
-    /// <summary>The slots locked to what side A wears.</summary>
+    /// <summary>The slots locked to what the side searched from wears.</summary>
     public HashSet<string> Locks { get; } = new(StringComparer.Ordinal);
 
     /// <summary>The items the search must not use.</summary>
@@ -90,17 +111,19 @@ internal sealed class StartGear
         }
     }
 
-    /// <summary>Draws the grid from side A as last checked, and the list.</summary>
+    /// <summary>Draws the grid from the side searched from as last checked, the choice of side, and the list.</summary>
     public void Fill()
     {
         Ui.Clear(_grid);
         var grid = ChangeOptions.Grid();
-        var side = PanelState.A;
-        var check = PanelState.CheckA;
+        var side = SearchSide.Side;
+        var check = SearchSide.Check;
+        _from.Visible = SearchSide.CanChoose;
+        _fromPick.Show(SearchSide.Letter == SideLetter.B ? "B" : "A");
         var names = PanelState.Names();
         if (grid.Count > 0)
         {
-            // Until side A is read the slots stand empty, so the form has its shape and the gear lands in place.
+            // Until the side is read the slots stand empty, so the form has its shape and the gear lands in place.
             var view = check == null ? null : new SideView(check.Changes, side.Changes);
             var columns = grid.Max(g => g.Column) + 1;
             var rows = grid.Max(g => g.Row) + 1;

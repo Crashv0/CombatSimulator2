@@ -120,8 +120,8 @@ msgstr ""
 
 #: src/Game/BonfireChange.cs:67
 #: src/Game/Changes.cs:232
-#: src/Game/Changes.cs:332
-#: src/Game/Changes.cs:356
+#: src/Game/Changes.cs:348
+#: src/Game/Changes.cs:372
 #: src/Game/QuestChange.cs:90
 #: src/Game/ShopChange.cs:39
 #: src/Game/ShopChange.cs:51
@@ -230,29 +230,29 @@ msgstr ""
 
 #: src/Game/Changes.cs:289
 #: src/Game/Changes.cs:321
-#: src/Game/Changes.cs:360
+#: src/Game/Changes.cs:376
 msgid "the game didn't select it"
 msgstr ""
 
 #: src/Game/Changes.cs:304
-#: src/Game/Changes.cs:348
+#: src/Game/Changes.cs:364
 #: src/Game/PetChange.cs:28
 msgid "the game kept it"
 msgstr ""
 
-#: src/Game/Changes.cs:353
+#: src/Game/Changes.cs:369
 msgid "isn't food"
 msgstr ""
 
-#: src/Game/Changes.cs:377
+#: src/Game/Changes.cs:393
 msgid "the game kept it on"
 msgstr ""
 
-#: src/Game/Changes.cs:389
+#: src/Game/Changes.cs:405
 msgid "no free prayer slot"
 msgstr ""
 
-#: src/Game/Changes.cs:395
+#: src/Game/Changes.cs:411
 msgid "the game didn't turn it on"
 msgstr ""
 

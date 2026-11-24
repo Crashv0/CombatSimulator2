@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0-preview.3 (2026-11-24)
+
+### Added
+
+- CS2 is now available in Simplified Chinese.
+- About links to CS2's page on Nexus Mods.
+
+### Fixed
+
+- A magic setup now attacks when your bank has none of its spell's runes. (#2)
+
 ## 0.1.0-preview.2 (2026-11-21)
 
 ### Added

@@ -160,6 +160,7 @@ internal sealed partial class Copy : IDisposable
     private void Ready()
     {
         RaiseStacks();
+        Changes.StockRunes(this);
         MainSkill = ReadMainSkill();
         using (Guards.Enter())
             Settle();

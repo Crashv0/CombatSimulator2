@@ -322,6 +322,22 @@ internal static partial class Changes
         return Outcome(change, from, applied, reasons, ignored);
     }
 
+    /// <summary>
+    /// Gives the bank the runes the selected spell and imbuement cost when it holds none, as choosing a spell in a
+    /// setup does. Fights top runes back up after each tick, but only runes the bank holds: with none, the copy
+    /// can't cast and never attacks.
+    /// </summary>
+    public static void StockRunes(Copy copy)
+    {
+        if (!Dependencies.IsAvailable(Dependencies.Changes))
+            return;
+        using var scope = Guards.Enter();
+        var magic = copy.Combat.MagicSpells;
+        var costs = (magic.SelectedSpell?.Data.RuneCosts ?? []).Concat(magic.SelectedImbuement?.Data.RuneCosts ?? []);
+        if (AddRunes(copy, costs) is { } full)
+            Log.Warn($"runes not added for the selected spell: {full.English()}");
+    }
+
     // The runes a spell costs, added to the bank when it holds none; a reason when the bank is full.
     private static Note? AddRunes(Copy copy, IEnumerable<GamesByMalcs.Melvor2.Data.Items.ItemQuantity> costs)
     {

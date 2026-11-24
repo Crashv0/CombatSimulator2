@@ -43,8 +43,8 @@ internal static class Links
     /// <summary>Where players ask questions and suggest things.</summary>
     public const string Discord = ReportLinks.DiscordChannel;
 
-    /// <summary>CS2's page on mod.io.</summary>
-    public const string ModIo = "";
+    /// <summary>CS2's page on Nexus Mods.</summary>
+    public const string NexusMods = "https://www.nexusmods.com/melvoridle2/mods/39";
 
     /// <summary>CS2's translation project, where players translate it.</summary>
     public const string Translate = "https://crowdin.com/project/combat-simulator-2";

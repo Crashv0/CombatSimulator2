@@ -11,8 +11,14 @@ expect see "About"
 expect see "Combat Simulator 2"
 expect see "Save bug report"
 expect see "Stats"
+# With the translators' credits the body is taller than the window: the disclaimer is at its end. Back to the top
+# after, so the cards clicked below are in sight however About keeps its place.
+scroll Cs2AboutBody down 20
+wait 300
 expect see "Built with AI assistance."
 expect see "Nothing is sent online."
+scroll Cs2AboutBody up 20
+wait 300
 key escape
 wait 300
 cs2 ui

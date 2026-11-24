@@ -1,0 +1,286 @@
+# Publishes a release to Nexus Mods and keeps the mod page's text in step with it.
+#   release published: upload its zip as a new version of the mod's file (the version before it moves to old files,
+#   the page takes its version, the release notes' entries become its changelog), then update the page's summary and
+#   description from media/nexus/ at the tag
+#   by hand with tag: the same for an existing release, skipping the upload when Nexus already has that version
+#   by hand with dry_run: fill the page text from ref and diff it against the live page; nothing is written
+#   by hand with page_only: update the page's summary and description from ref; no upload
+# The version and the game version come from manifest.json at the tag or ref. Images in the text link to this
+# repository at that tag or commit, so they load only while the repository is public.
+# Secrets: NEXUSMODS_API_KEY (an API key of the page's owner), NEXUSMODS_FILE_ID (the file each release adds a version
+# to) and NEXUSMODS_MOD_ID (the page's Unique Mod ID), the last two from the page's Files tab.
+
+name: Nexus Mods
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish (v1.2.3); leave empty for a dry run or page only
+        required: false
+      dry_run:
+        description: Diff the page text against the live page; nothing is written
+        type: boolean
+        default: false
+      page_only:
+        description: Update only the page's summary and description; no upload
+        type: boolean
+        default: false
+      ref:
+        description: Dry run or page only, the branch, tag or commit to take the page text from
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nexus-${{ inputs.tag || github.event.release.tag_name || inputs.ref }}
+  cancel-in-progress: false
+
+jobs:
+  nexus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      FILE_ID: ${{ secrets.NEXUSMODS_FILE_ID }}
+      MOD_ID: ${{ secrets.NEXUSMODS_MOD_ID }}
+      API: https://api.nexusmods.com/v3
+    steps:
+      - name: Mode
+        id: mode
+        env:
+          EVENT: ${{ github.event_name }}
+          DRY: ${{ inputs.dry_run }}
+          PAGE: ${{ inputs.page_only }}
+          INPUT_TAG: ${{ inputs.tag }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          REF: ${{ inputs.ref }}
+        run: |
+          [ "$DRY" = true ] && [ "$PAGE" = true ] && { echo "::error::pick dry_run or page_only, not both"; exit 1; }
+          if [ "$DRY" = true ] || [ "$PAGE" = true ]; then
+            mode=dry
+            [ "$PAGE" = true ] && mode=page
+            { echo "mode=$mode"; echo "ref=${REF:-main}"; } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          tag="$INPUT_TAG"
+          [ "$EVENT" = release ] && tag="$RELEASE_TAG"
+          [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$ ]] || { echo "::error::'$tag' isn't a release tag (v1.2.3)"; exit 1; }
+          { echo "mode=release"; echo "ref=$tag"; echo "tag=$tag"; } >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ steps.mode.outputs.ref }}
+          persist-credentials: false
+
+      - name: Versions
+        id: versions
+        env:
+          TAG: ${{ steps.mode.outputs.tag }}
+        run: |
+          version="$(jq -r .version manifest.json)"
+          game="$(jq -r '.gameBuilds[0].version // empty' manifest.json)"
+          name="$(jq -r .name manifest.json)"
+          [ -n "$game" ] || { echo "::error::manifest.json lists no game build"; exit 1; }
+          if [ -n "$TAG" ] && [ "$TAG" != "v$version" ]; then
+            echo "::error::tag $TAG doesn't match manifest.json's version $version"
+            exit 1
+          fi
+          { echo "version=$version"; echo "game=$game"; echo "name=$name"; } >> "$GITHUB_OUTPUT"
+
+      # The key goes to curl through a header file, never on a command line.
+      - name: Nexus headers
+        env:
+          NEXUS_KEY: ${{ secrets.NEXUSMODS_API_KEY }}
+        run: |
+          [ -n "$NEXUS_KEY" ] || { echo "::error::repository secret NEXUSMODS_API_KEY is missing"; exit 1; }
+          [ -n "$FILE_ID" ] && [ -n "$MOD_ID" ] || { echo "::error::repository secrets NEXUSMODS_FILE_ID and NEXUSMODS_MOD_ID must be set"; exit 1; }
+          umask 077
+          printf 'apikey: %s\nAccept: application/json\n' "$NEXUS_KEY" > "$RUNNER_TEMP/nexus-headers"
+
+      - name: File versions on Nexus
+        id: existing
+        if: steps.mode.outputs.mode != 'page'
+        env:
+          VERSION: ${{ steps.versions.outputs.version }}
+        run: |
+          code="$(curl -sS -o "$RUNNER_TEMP/versions.json" -w '%{http_code}' -H @"$RUNNER_TEMP/nexus-headers" "$API/mod-files/$FILE_ID/versions")"
+          [ "$code" = 200 ] || { echo "::error::GET /mod-files/<file>/versions answered $code"; exit 1; }
+          versions="$(jq -r '[.. | objects | select(has("version")) | .version | strings] | unique | join(", ")' "$RUNNER_TEMP/versions.json")"
+          exists=false
+          jq -e --arg v "$VERSION" '[.. | objects | select(has("version")) | .version] | index($v) != null' "$RUNNER_TEMP/versions.json" >/dev/null && exists=true
+          { echo "exists=$exists"; echo "versions=$versions"; } >> "$GITHUB_OUTPUT"
+
+      - name: Zip and changelog
+        id: release
+        if: steps.mode.outputs.mode == 'release'
+        env:
+          TAG: ${{ steps.mode.outputs.tag }}
+          VERSION: ${{ steps.versions.outputs.version }}
+        run: |
+          gh release download "$TAG" --pattern "*-$VERSION.zip" --dir dist
+          zips=(dist/*.zip)
+          [ "${#zips[@]}" -eq 1 ] || { echo "::error::release $TAG has ${#zips[@]} zips for $VERSION, expected one"; exit 1; }
+          # Nexus lists changelog entries one per line: the notes' "- " lines, named by their section unless added.
+          gh release view "$TAG" --json body -q .body | python3 -c '
+          import sys
+          section = None
+          for line in sys.stdin.read().splitlines():
+              if line.startswith("### "):
+                  section = line[4:].strip()
+              elif line.startswith("- ") and section:
+                  text = line[2:].strip()
+                  print(text if section == "Added" else f"{section}: {text}")
+          ' > "$RUNNER_TEMP/changelog.txt"
+          {
+            echo "zip=${zips[0]}"
+            echo 'changelog<<CHANGELOG_END'
+            cat "$RUNNER_TEMP/changelog.txt"
+            echo 'CHANGELOG_END'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Upload to Nexus
+        if: steps.mode.outputs.mode == 'release' && steps.existing.outputs.exists == 'false'
+        uses: Nexus-Mods/upload-action@98532f7670c27cbecc78fae03fa3e278147827e2 # v1.0.0-beta.11
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ secrets.NEXUSMODS_FILE_ID }}
+          mod_id: ${{ secrets.NEXUSMODS_MOD_ID }}
+          filename: ${{ steps.release.outputs.zip }}
+          version: ${{ steps.versions.outputs.version }}
+          display_name: ${{ steps.versions.outputs.name }}
+          description: ${{ steps.versions.outputs.name }} v${{ steps.versions.outputs.version }} for Melvor Idle 2 ${{ steps.versions.outputs.game }}. Extract into the game's folder, next to Melvor2.exe.
+          category: main
+          archive_existing_version: true
+          update_mod_version: true
+          changelog: ${{ steps.release.outputs.changelog }}
+
+      - name: Fill the page text
+        env:
+          VERSION: ${{ steps.versions.outputs.version }}
+          GAME: ${{ steps.versions.outputs.game }}
+          MODE: ${{ steps.mode.outputs.mode }}
+          TAG: ${{ steps.mode.outputs.tag }}
+        run: |
+          # A release links images at its tag; a dry run or page-only run at the exact commit, which GitHub doesn't
+          # serve stale.
+          ref="$TAG"
+          [ "$MODE" = release ] || ref="$(git rev-parse HEAD)"
+          mkdir -p preview
+          python3 media/nexus/fill.py media/nexus/summary.txt "$VERSION" "$GAME" "$GH_REPO" "$ref" \
+            | tr -s '[:space:]' ' ' | sed -e 's/^ //' -e 's/ $//' > preview/summary.txt
+          python3 media/nexus/fill.py media/nexus/description.bbcode "$VERSION" "$GAME" "$GH_REPO" "$ref" > preview/description.bbcode
+          left="$(grep -oh '{{[^}]*}}' preview/summary.txt preview/description.bbcode | head -1 || true)"
+          [ -z "$left" ] || { echo "::error::unfilled placeholder $left in the page text"; exit 1; }
+          length="$(tr -d '\n' < preview/summary.txt | wc -m)"
+          [ "$length" -le 350 ] || { echo "::error::Nexus summary is $length characters (max 350)"; exit 1; }
+          echo "Summary: $length characters"
+
+      - name: Update the page text
+        id: page
+        if: steps.mode.outputs.mode != 'dry'
+        run: |
+          jq -n --rawfile s preview/summary.txt --rawfile d preview/description.bbcode '{summary: ($s | rtrimstr("\n")), description: $d}' > "$RUNNER_TEMP/page.json"
+          code="$(curl -sS -X PATCH -o "$RUNNER_TEMP/page-response.json" -w '%{http_code}' -H @"$RUNNER_TEMP/nexus-headers" \
+            -H 'Content-Type: application/json' --data @"$RUNNER_TEMP/page.json" "$API/mods/$MOD_ID")"
+          case "$code" in
+            2??) echo "result=done" >> "$GITHUB_OUTPUT" ;;
+            403|404|422)
+              echo "::warning::Nexus didn't take the page text (PATCH /mods/<mod> answered $code); paste it by hand from the job summary"
+              echo "result=left: Nexus answered $code" >> "$GITHUB_OUTPUT" ;;
+            *) echo "::error::PATCH /mods/<mod> answered $code"; exit 1 ;;
+          esac
+
+      - name: Diff against the live page
+        if: steps.mode.outputs.mode == 'dry'
+        env:
+          VERSION: ${{ steps.versions.outputs.version }}
+          EXISTS: ${{ steps.existing.outputs.exists }}
+          VERSIONS: ${{ steps.existing.outputs.versions }}
+        run: |
+          code="$(curl -sS -o "$RUNNER_TEMP/mod.json" -w '%{http_code}' -H @"$RUNNER_TEMP/nexus-headers" "$API/mods/$MOD_ID")"
+          [ "$code" = 200 ] || { echo "::error::GET /mods/<mod> answered $code"; exit 1; }
+          # Nexus returns each line break as "<br />"; drop those so the diff shows real changes only.
+          jq -r '[.. | objects | select(has("description")) | .description | strings][0] // ""' "$RUNNER_TEMP/mod.json" \
+            | sed -e 's/^<br \/>//' -e 's/<br \/>$//' > "$RUNNER_TEMP/live-description.bbcode"
+          diff -u --label live --label filled "$RUNNER_TEMP/live-description.bbcode" preview/description.bbcode > preview/description.diff || true
+          {
+            echo "API key: accepted (GET /mods/<mod> 200, GET /mod-files/<file>/versions 200)"
+            echo "Page: $(jq -r '[.. | objects | select(has("name")) | .name | strings][0] // "?"' "$RUNNER_TEMP/mod.json")"
+            echo "File versions on Nexus: ${VERSIONS:-none}"
+            echo "This version: $VERSION$([ "$EXISTS" = true ] && echo " (already there: a release would skip the upload)")"
+            echo "Summary: $(tr -d '\n' < preview/summary.txt | wc -m) characters"
+            echo "Description diff: $(grep -c '^+[^+]' preview/description.diff || true) lines added, $(grep -c '^-[^-]' preview/description.diff || true) removed"
+          } > preview/report.txt
+          cat preview/report.txt
+
+      - name: Preview artifact
+        if: steps.mode.outputs.mode == 'dry'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: nexus-preview
+          path: |
+            preview/summary.txt
+            preview/description.bbcode
+            preview/description.diff
+            preview/report.txt
+
+      - name: Job summary
+        if: always()
+        env:
+          MODE: ${{ steps.mode.outputs.mode }}
+          REF: ${{ steps.mode.outputs.ref }}
+          TAG: ${{ steps.mode.outputs.tag }}
+          NAME: ${{ steps.versions.outputs.name }}
+          VERSION: ${{ steps.versions.outputs.version }}
+          EXISTS: ${{ steps.existing.outputs.exists }}
+          PAGE: ${{ steps.page.outputs.result }}
+          RELEASE: ${{ steps.release.outcome }}
+          JOB: ${{ job.status }}
+        run: |
+          {
+            if [ "$MODE" = dry ]; then
+              echo "## Nexus preview from $REF (nothing written)"
+              echo
+              echo '```text'
+              cat preview/report.txt 2>/dev/null || echo "no report: see the steps above"
+              echo '```'
+              echo
+              echo "### Summary"
+              echo
+              cat preview/summary.txt 2>/dev/null || true
+              echo
+              echo "### Description diff (live → filled)"
+              echo
+              echo '```diff'
+              cat preview/description.diff 2>/dev/null || true
+              echo '```'
+            else
+              if [ "$MODE" = page ]; then
+                echo "## Nexus page text from $REF ($NAME $VERSION; no upload)"
+                echo
+              else
+                echo "## Nexus: $NAME $VERSION"
+                echo
+                if [ "$EXISTS" = true ]; then echo "- upload: skipped (already there)"
+                elif [ "$RELEASE" = success ] && [ "$JOB" = success ]; then echo "- upload: done"
+                else echo "- upload: left: see the failed step"; fi
+                echo "- [release](https://github.com/$GH_REPO/releases/tag/$TAG)"
+              fi
+              echo "- page text: ${PAGE:-left: see the failed step}"
+              if [ "$PAGE" != done ] && [ -f preview/description.bbcode ]; then
+                echo
+                echo "### Page text to paste by hand"
+                echo
+                echo '```text'
+                cat preview/summary.txt
+                echo
+                cat preview/description.bbcode
+                echo '```'
+              fi
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -83,11 +83,11 @@ internal static class AboutLinks
         rows.AddChild(
             LinkRow(
                 ring,
-                "Cs2AboutModIo",
+                "Cs2AboutNexusMods",
                 Art.File(Art.ModsPath) ?? Art.Missing,
-                "mod.io",
+                "Nexus Mods",
                 Tr.Get("Main page and updates"),
-                Links.ModIo
+                Links.NexusMods
             )
         );
         rows.AddChild(

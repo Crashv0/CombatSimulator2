@@ -1,0 +1,4989 @@
+# CombatSimulator2 in zh_CN, fetched from Crowdin by ./mm locale pull CombatSimulator2. Don't edit: translate on Crowdin.
+msgid ""
+msgstr ""
+"Project-Id-Version: CombatSimulator2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Combat Simulator 2"
+msgstr "战斗模拟器 2"
+
+msgid "Sim"
+msgstr "模拟"
+
+msgid "cancelled: the character was closed"
+msgstr "已取消：角色已关闭"
+
+msgid "cancelled: the mod was reloaded"
+msgstr "已取消：模组已重新加载"
+
+msgid "failed: {0}: {1}"
+msgstr "失败：{0}：{1}"
+
+msgid "not enough free memory for one copy (needs about {0} MB with {1} MB free): close other programs, or simulate in the game's process"
+msgstr "空闲内存不足以创建副本（约需 {0} MB，当前空闲 {1} MB）：请关闭其他程序，或改为在游戏进程内模拟"
+
+msgid "{0} wasn't saved: {1}"
+msgstr "{0} 未保存：{1}"
+
+msgid "{0} couldn't be opened: {1}"
+msgstr "{0} 无法打开：{1}"
+
+msgid "a copy failed to build and was dropped"
+msgstr "副本创建失败，已丢弃"
+
+msgid "{0} target failed"
+msgid_plural "{0} targets failed"
+msgstr[0] "有 {0} 个目标失败"
+
+msgid "no Slayer master {0} in this game"
+msgstr "此游戏中没有屠杀大师 {0}"
+
+msgid "loadout {0} is gone: change it"
+msgstr "配装 {0} 已不存在：请更换"
+
+msgid "cancelled"
+msgstr "已取消"
+
+msgid "failed: {0}"
+msgstr "失败：{0}"
+
+msgid "the pool ended without a result for it"
+msgstr "模拟池已结束，但它没有结果"
+
+msgid "the run is in progress"
+msgstr "运行正在进行中"
+
+msgid "could not be checked"
+msgstr "无法检查"
+
+msgid "{0} was refused"
+msgstr "{0} 被拒绝"
+
+msgid "no bonfire"
+msgstr "没有篝火"
+
+msgid "the game kept it burning"
+msgstr "游戏保持其燃烧"
+
+msgid "the game can't lower a bonfire"
+msgstr "游戏无法降低篝火"
+
+msgid "bank full"
+msgstr "仓库已满"
+
+msgid "the game didn't raise it"
+msgstr "游戏未能提升它"
+
+msgid "the game didn't light it"
+msgstr "游戏未能点燃它"
+
+msgid "weapon can't cast {0}"
+msgstr "武器无法施放 {0}"
+
+msgid "Power ({0}): {1}"
+msgstr "威力（{0}）：{1}"
+
+msgid "Protection ({0}): {1}"
+msgstr "防护（{0}）：{1}"
+
+msgid "Heals {0}"
+msgstr "治疗 {0}"
+
+msgid "In brackets: change from {0}"
+msgstr "括号内为相对 {0} 的变化"
+
+msgid "unsupported on this game build"
+msgstr "当前游戏版本不支持"
+
+msgid "the game failed: {0}"
+msgstr "游戏执行失败：{0}"
+
+msgid "not in this build"
+msgstr "当前版本中没有"
+
+msgid "can't change this skill"
+msgstr "无法修改此技能"
+
+msgid "level must be {0}–{1}"
+msgstr "等级须在 {0}–{1} 之间"
+
+msgid "the game kept level {0}"
+msgstr "游戏保持等级 {0}"
+
+msgid "this slot is locked"
+msgstr "此栏位已锁定"
+
+msgid "the game didn't take it off"
+msgstr "游戏未能将其卸下"
+
+msgid "doesn't fit this slot"
+msgstr "不适用于此栏位"
+
+msgid "already worn in another slot"
+msgstr "已在其他栏位装备"
+
+msgid "the game didn't equip it"
+msgstr "游戏未能装备它"
+
+msgid "this weapon has no such stance"
+msgstr "此武器没有该姿态"
+
+msgid "the game kept its stance"
+msgstr "游戏保持其姿态"
+
+msgid "the game didn't select it"
+msgstr "游戏未能选中它"
+
+msgid "the game kept it"
+msgstr "游戏保持原样"
+
+msgid "isn't food"
+msgstr "不是食物"
+
+msgid "the game kept it on"
+msgstr "游戏保持开启"
+
+msgid "no free prayer slot"
+msgstr "没有空闲的祝祭栏位"
+
+msgid "the game didn't turn it on"
+msgstr "游戏未能开启它"
+
+msgid "{0}: not counted, missing {1}"
+msgstr "{0}：未计入，缺少 {1}"
+
+msgid "requirements ignored: {0}"
+msgstr "已忽略要求：{0}"
+
+msgid "no master gives it: off task"
+msgstr "没有大师会给出它：非任务状态"
+
+msgid "cancelled after {0} of {1} trials"
+msgstr "在 {1} 次试验中的第 {0} 次后取消"
+
+msgid "a trial ran over the {0:0} s limit after {1} finished trials"
+msgstr "完成 {1} 次试验后，有一次试验超过了 {0:0} 秒上限"
+
+msgid "stopped early at ±{0}% after {1} of {2} trials"
+msgstr "在 {2} 次试验完成 {1} 次后，于 ±{0}% 处提前停止"
+
+msgid "its keeping an item on death, as CS2 never takes one"
+msgstr "其死亡时保留物品，CS2 从不占用物品"
+
+msgid "{0}, on a Slayer task only. Your save has no task for this monster; On task, on the Setup tab's Slayer page, counts it."
+msgstr "{0}，仅在屠杀者任务中。你的存档没有针对此怪物的任务；在“配置”页的屠杀者选项卡选“任务中”即可计入。"
+
+msgid "{0}, on a Slayer task only. This setup fights off task."
+msgstr "{0}，仅在屠杀者任务中。此配置在非任务状态下作战。"
+
+msgid "{0}: blocked a side effect at {1}"
+msgstr "{0}：在 {1} 时阻挡了一次副作用"
+
+msgid "this guild has ranks 0–{0}"
+msgstr "此公会的等级为 0–{0}"
+
+msgid "rank needs {1} points, completable tasks only give {0}"
+msgstr "等级需要 {1} 点，可完成的任务只提供 {0}"
+
+msgid "rank needs {1} points taken back, undoable tasks only give {0}"
+msgstr "等级需要回收 {1} 点，可撤销的任务只提供 {0}"
+
+msgid "the game kept rank {0}"
+msgstr "游戏保持等级 {0}"
+
+msgid "{0}: not in this build"
+msgstr "{0}：当前版本中没有"
+
+msgid "no game is loaded: open a character first"
+msgstr "尚未加载游戏：请先打开一个角色"
+
+msgid "Not in this build"
+msgstr "当前版本中没有"
+
+msgid "This build has it; CS2 can't show or change it yet."
+msgstr "当前版本有此内容；CS2 暂无法显示或修改它。"
+
+msgid "Nothing in Agility changes a fight in this build. Techniques decide which areas and dungeons you can enter."
+msgstr "当前版本中灵巧不影响战斗。技巧决定你能进入哪些区域和地牢。"
+
+msgid "Needs level {0}"
+msgstr "需要等级 {0}"
+
+msgid "{0} shortcut built"
+msgid_plural "{0} shortcuts built"
+msgstr[0] "已建成 {0} 条捷径"
+
+msgid "Times each course was completed, read only: courses change no fight"
+msgstr "每条路线完成的次数，仅供查看：路线不改变战斗"
+
+msgid "The game can't remove a star."
+msgstr "游戏无法移除星星。"
+
+msgid "{0} of {1} stars · {2} knowledge"
+msgstr "{0}/{1} 颗星 · {2} 知识"
+
+msgid "No bonfires yet"
+msgstr "暂无篝火"
+
+msgid "Your bonfire: {0}, burning"
+msgstr "你的篝火：{0}，燃烧中"
+
+msgid "Your bonfire: {0}, not burning"
+msgstr "你的篝火：{0}，未燃烧"
+
+msgid "Bonfire"
+msgstr "篝火"
+
+msgid "The game can't lower a bonfire."
+msgstr "游戏无法降低篝火。"
+
+msgid "Burns up to {0} h"
+msgstr "最多燃烧 {0} 小时"
+
+msgid "{0:N0} {1} · burns up to {2} h"
+msgstr "{0:N0} {1} · 最多燃烧 {2} 小时"
+
+msgid "{0} of {1} points"
+msgstr "{0}/{1} 点"
+
+msgid "No combat potions"
+msgstr "没有战斗药水"
+
+msgid "The potion in your toolbelt. One per side."
+msgstr "工具带中的药水。每方一瓶。"
+
+msgid "{0} in your bank"
+msgstr "仓库中有 {0}"
+
+msgid "Not in your bank"
+msgstr "仓库中没有"
+
+msgid "No bonus"
+msgstr "无加成"
+
+msgid "{0} of {1} found"
+msgstr "已找到 {0}/{1}"
+
+msgid "In combat"
+msgstr "战斗中"
+
+msgid "Help only their own skill, or give nothing"
+msgstr "只帮助自身的技能，或没有效果"
+
+msgid "Other pets ({0})"
+msgstr "其他宠物（{0}）"
+
+msgid "Found pets always give their bonus."
+msgstr "已找到的宠物总会提供加成。"
+
+msgid "{0} of {1} done"
+msgstr "已完成 {0}/{1}"
+
+msgid "{0} of {1} bought"
+msgstr "已购买 {0}/{1}"
+
+msgid "not found yet"
+msgstr "尚未找到"
+
+msgid "no combat potion slot"
+msgstr "没有战斗药水栏位"
+
+msgid "not a combat potion"
+msgstr "不是战斗药水"
+
+msgid "the game kept it done"
+msgstr "游戏保持其完成状态"
+
+msgid "the game didn't complete the quest"
+msgstr "游戏未能完成任务"
+
+msgid "the game didn't complete a task"
+msgstr "游戏未能完成一项任务"
+
+msgid "the game didn't give the quest's rewards (bank full)"
+msgstr "游戏未能发放任务奖励（仓库已满）"
+
+msgid "switch on Spell under Also try to include it"
+msgstr "请先在“同时尝试”下开启“法术”才能纳入"
+
+msgid "Dropped by {0}"
+msgstr "由 {0} 掉落"
+
+msgid "Reward from {0}"
+msgstr "来自 {0} 的奖励"
+
+msgid "Shop"
+msgstr "商店"
+
+msgid "Bought in the shop"
+msgstr "在商店购买"
+
+msgid "Upgrade"
+msgstr "升级"
+
+msgid "Upgraded from {0}"
+msgstr "由 {0} 升级而来"
+
+msgid "Upgraded from another item"
+msgstr "由其他物品升级而来"
+
+msgid "Opened from {0}"
+msgstr "从 {0} 中开出"
+
+msgid "Sacrificial Anvil: {0}"
+msgstr "献祭铁砧：{0}"
+
+msgid "Thieving: {0}"
+msgstr "扒窃：{0}"
+
+msgid "Stolen from {0} in Thieving"
+msgstr "在扒窃中从 {0} 偷得"
+
+msgid "Firemaking: {0}"
+msgstr "生火：{0}"
+
+msgid "Found burning {0} in Firemaking"
+msgstr "在生火中燃烧 {0} 时发现"
+
+msgid "Fishing: {0}"
+msgstr "钓鱼：{0}"
+
+msgid "Caught fishing {0}"
+msgstr "钓鱼 {0} 时捕获"
+
+msgid "Reward for the quest {0}"
+msgstr "任务 {0} 的奖励"
+
+msgid "Made in {0}: {1}"
+msgstr "在 {0} 中制作：{1}"
+
+msgid "Made: {0}"
+msgstr "制作：{0}"
+
+msgid "Combat Level"
+msgstr "战斗等级"
+
+msgid "Combat Style"
+msgstr "战斗风格"
+
+msgid "Attack Stance"
+msgstr "攻击姿态"
+
+msgid "Element"
+msgstr "元素"
+
+msgid "Min Hit"
+msgstr "最小伤害"
+
+msgid "Max Hit"
+msgstr "最大伤害"
+
+msgid "Accuracy Rating ({0})"
+msgstr "精准值（{0}）"
+
+msgid "Attack Interval"
+msgstr "攻击间隔"
+
+msgid "Power ({0})"
+msgstr "威力（{0}）"
+
+msgid "Max Hitpoints"
+msgstr "最大生命值"
+
+msgid "Evasion ({0})"
+msgstr "躲避（{0}）"
+
+msgid "Protection ({0})"
+msgstr "防护（{0}）"
+
+msgid "Critical Hit Chance"
+msgstr "暴击几率"
+
+msgid "Critical Hit Multiplier"
+msgstr "暴击倍率"
+
+msgid "Attack Reflect"
+msgstr "攻击反射"
+
+msgid "Light"
+msgstr "光照"
+
+msgid "the game has no refund"
+msgstr "游戏不退款"
+
+msgid "the shop sells at most {0}"
+msgstr "商店最多出售 {0}"
+
+msgid "the wallet is full"
+msgstr "钱包已满"
+
+msgid "the game still asks for its requirements"
+msgstr "游戏仍要求其前置条件"
+
+msgid "the game didn't sell it"
+msgstr "游戏未能出售它"
+
+msgid "the game sold {0}"
+msgstr "游戏出售了 {0}"
+
+msgid "{0} isn't one of {1}'s monsters"
+msgstr "{0} 不是 {1} 的怪物"
+
+msgid "{0} has {1} block slots"
+msgstr "{0} 有 {1} 个屏蔽栏位"
+
+msgid "the game blocked {0}"
+msgstr "游戏屏蔽了 {0}"
+
+msgid "needs slot {0} · {1} more task"
+msgid_plural "needs slot {0} · {1} more tasks"
+msgstr[0] "需要栏位 {0} · 还需 {1} 个任务"
+
+msgid "{0} is not in {1}'s pool"
+msgstr "{0} 不在 {1} 的任务池中"
+
+msgid "no loadout {0}"
+msgstr "没有配装 {0}"
+
+msgid "{0} is locked"
+msgstr "{0} 已锁定"
+
+msgid "{0} is not a single monster"
+msgstr "{0} 不是单个怪物"
+
+msgid "needs {0} more minor stars in this constellation"
+msgstr "此星座还需 {0} 颗小星"
+
+msgid "needs {0} knowledge"
+msgstr "需要 {0} 知识"
+
+msgid "no more stars can be unlocked in this constellation"
+msgstr "此星座已无法解锁更多星星"
+
+msgid "the game didn't unlock it"
+msgstr "游戏未能解锁它"
+
+msgid "not a combat toolbelt slot"
+msgstr "不是战斗工具带栏位"
+
+msgid "already in another slot"
+msgstr "已在其他栏位"
+
+msgid "the simulator can't start: CS2 is not loaded"
+msgstr "模拟器无法启动：CS2 未加载"
+
+msgid "the simulator did not start within 30 s"
+msgstr "模拟器未在 30 秒内启动"
+
+msgid "the simulator closed while starting: an antivirus may be blocking a second Melvor2.exe; allow it, or simulate in the game's process"
+msgstr "模拟器在启动过程中关闭：杀毒软件可能拦截了第二个 Melvor2.exe；请放行，或改为在游戏进程内模拟"
+
+msgid "the simulator broke off while starting ({0}); try again, or simulate in the game's process"
+msgstr "模拟器启动时中断（{0}）；请重试，或改为在游戏进程内模拟"
+
+msgid "the simulator sent something unreadable ({0})"
+msgstr "模拟器发送了无法读取的内容（{0}）"
+
+msgid "the simulator closed unexpectedly"
+msgstr "模拟器意外关闭"
+
+msgid "the simulator loaded a different game build ({0}, live {1}); restart the game"
+msgstr "模拟器加载了不同的游戏版本（{0}，当前 {1}）；请重启游戏"
+
+msgid "the simulator loaded a different CS2 version; reload CS2"
+msgstr "模拟器加载了不同的 CS2 版本；请重新加载 CS2"
+
+msgid "the simulator closed unexpectedly (code {0})"
+msgstr "模拟器意外关闭（代码 {0}）"
+
+msgid "the simulator did not start within 30 s: the machine may be busy; try again, or simulate in the game's process"
+msgstr "模拟器未在 30 秒内启动：机器可能繁忙；请重试，或改为在游戏进程内模拟"
+
+msgid "the simulator stopped responding"
+msgstr "模拟器停止响应"
+
+msgid "the simulator failed: {0}"
+msgstr "模拟器失败：{0}"
+
+msgid "clean start (combat stopped, HP full)"
+msgstr "干净开局（战斗停止、生命值满）"
+
+msgid "no item loss on death"
+msgstr "死亡不掉落物品"
+
+msgid "fights again after a death"
+msgstr "死亡后再次战斗"
+
+msgid "unlimited consumables (topped up after each tick)"
+msgstr "消耗品无限（每回合补满）"
+
+msgid "levels held (XP reset after each trial)"
+msgstr "等级固定（每次试验后重置经验）"
+
+msgid "loot cleared from the bank after it is counted"
+msgstr "战利品计入后从仓库清除"
+
+msgid "slayer task as in the save, for the whole run (it never runs out), auto-slayer off"
+msgstr "屠杀者任务与存档一致，贯穿整个运行（不会耗尽），自动屠杀者关闭"
+
+msgid "time of day frozen at 12:00"
+msgstr "游戏时间固定在 12:00"
+
+msgid "Auto Slayer on, starting in the task's area"
+msgstr "自动屠杀者开启，从任务所在区域开始"
+
+msgid "every task fought to the end; no rerolls or extensions"
+msgstr "每个任务都打到结束；不重抽、不延长"
+
+msgid "Slayer level as in the setup"
+msgstr "屠杀者等级按配置设定"
+
+msgid "one respawn between tasks"
+msgstr "任务之间重生一次"
+
+msgid "you start again after each death: the game stops, so a master with deaths can't be left running"
+msgstr "每次死亡后重新开始：游戏会在死亡时停止，因此会死亡的大师无法挂机运行"
+
+msgid "Auto Slayer enters areas you haven't unlocked"
+msgstr "自动屠杀者会进入你尚未解锁的区域"
+
+msgid "each monster given up to an hour a kill"
+msgstr "每个怪物最多给一小时来击杀"
+
+msgid "Loadout swaps between tasks cost no time (swapped while the next monster spawns)"
+msgstr "任务间切换配装不耗时（在下一个怪物生成时切换）"
+
+msgid "Pets added or taken away here change their bonuses only; the game still counts the pets you've found."
+msgstr "在此添加或移除宠物只会改变其加成；游戏仍按你已找到的宠物计算。"
+
+msgid "items and prayers already in use stay when a level is lowered"
+msgstr "降低等级时，已在使用的物品和祝祭保持不变"
+
+msgid "{0}: requirement ignored ({1})"
+msgstr "{0}：已忽略要求（{1}）"
+
+msgid "left out: {0} ({1})"
+msgstr "已排除：{0}（{1}）"
+
+msgid "left out: {0} (not in this build)"
+msgstr "已排除：{0}（当前版本中没有）"
+
+msgid "{0}: {1}"
+msgstr "{0}：{1}"
+
+msgid "{0} + {1} change"
+msgid_plural "{0} + {1} changes"
+msgstr[0] "{0} + {1} 项改动"
+
+msgid "Stance: {0} → {1}"
+msgstr "姿态：{0} → {1}"
+
+msgid "Spell: none → {0}"
+msgstr "法术：无 → {0}"
+
+msgid "Spell: {0} → {1}"
+msgstr "法术：{0} → {1}"
+
+msgid "Imbuement: none → {0}"
+msgstr "灌注：无 → {0}"
+
+msgid "Imbuement: {0} → none"
+msgstr "灌注：{0} → 无"
+
+msgid "Imbuement: {0} → {1}"
+msgstr "灌注：{0} → {1}"
+
+msgid "{0} on"
+msgstr "{0} 开启"
+
+msgid "{0} off"
+msgstr "{0} 关闭"
+
+msgid "Quest {0} done"
+msgstr "任务 {0} 已完成"
+
+msgid "Quest {0} not done"
+msgstr "任务 {0} 未完成"
+
+msgid "{0}: {1} → {2} bought"
+msgstr "{0}：{1} → 已购买 {2}"
+
+msgid "{0} guild rank {1} → {2}"
+msgstr "{0} 公会等级 {1} → {2}"
+
+msgid "Star {0} on"
+msgstr "星星 {0} 开启"
+
+msgid "{0}: empty → {1}"
+msgstr "{0}：空 → {1}"
+
+msgid "{0}: {1} → empty"
+msgstr "{0}：{1} → 空"
+
+msgid "{0}: {1} → {2}"
+msgstr "{0}：{1} → {2}"
+
+msgid "{0} blocks: {1} → {2}"
+msgstr "{0} 屏蔽：{1} → {2}"
+
+msgid "{0} loadouts: {1} → {2}"
+msgstr "{0} 配装：{1} → {2}"
+
+msgid "Single monsters on a slayer task"
+msgstr "单个怪物处于屠杀者任务中"
+
+msgid "Single monsters off any slayer task"
+msgstr "单个怪物不在任何屠杀者任务中"
+
+msgid "{0}: on a slayer task"
+msgstr "{0}：处于屠杀者任务中"
+
+msgid "{0}: off any slayer task"
+msgstr "{0}：不在任何屠杀者任务中"
+
+msgid "{0}: slayer task as the save"
+msgstr "{0}：屠杀者任务与存档一致"
+
+msgid "Food: none → {0}"
+msgstr "食物：无 → {0}"
+
+msgid "Food: {0} → none"
+msgstr "食物：{0} → 无"
+
+msgid "Food: {0} → {1}"
+msgstr "食物：{0} → {1}"
+
+msgid "{0} found"
+msgstr "已找到 {0}"
+
+msgid "{0} removed"
+msgstr "已移除 {0}"
+
+msgid "{0} bonfire, burning"
+msgstr "{0} 篝火，燃烧中"
+
+msgid "Bonfire out"
+msgstr "篝火熄灭"
+
+msgid "Potion: none → {0}"
+msgstr "药水：无 → {0}"
+
+msgid "Potion: {0} → none"
+msgstr "药水：{0} → 无"
+
+msgid "Potion: {0} → {1}"
+msgstr "药水：{0} → {1}"
+
+msgid "no reason given"
+msgstr "未给出原因"
+
+msgid "{0}; {1}"
+msgstr "{0}；{1}"
+
+msgid "The sides come from different game builds: {0} and {1}."
+msgstr "两侧数据来自不同的游戏版本：{0} 和 {1}。"
+
+msgid "The baseline was simulated by an earlier version of CS2."
+msgstr "基线由较早版本的 CS2 模拟得出。"
+
+msgid "The baseline run is gone."
+msgstr "基线运行记录已不存在。"
+
+msgid "Both died every fight"
+msgstr "双方每场都死亡"
+
+msgid "A died every fight"
+msgstr "A 每场都死亡"
+
+msgid "B died every fight"
+msgstr "B 每场都死亡"
+
+msgid "Kills"
+msgstr "击杀"
+
+msgid "Completions"
+msgstr "通关"
+
+msgid "Kills or completions"
+msgstr "击杀或通关"
+
+msgid "Kill time (s)"
+msgstr "击杀时间（秒）"
+
+msgid "Clear time (s)"
+msgstr "通关时间（秒）"
+
+msgid "Kill or clear time (s)"
+msgstr "击杀或通关时间（秒）"
+
+msgid "Deaths"
+msgstr "死亡"
+
+msgid "Death rate"
+msgstr "死亡率"
+
+msgid "Highest hit taken"
+msgstr "承受最高伤害"
+
+msgid "Lowest HP"
+msgstr "最低生命值"
+
+msgid "Highest reflect taken"
+msgstr "承受最高反射伤害"
+
+msgid "Drops"
+msgstr "掉落"
+
+msgid "Chance to hit"
+msgstr "命中率"
+
+msgid "Damage per hit"
+msgstr "每次命中伤害"
+
+msgid "Damage per second"
+msgstr "每秒伤害"
+
+msgid "Enemy's chance to hit"
+msgstr "敌人命中率"
+
+msgid "Enemy's damage per hit"
+msgstr "敌人每次命中伤害"
+
+msgid "Damage taken per second"
+msgstr "每秒承受伤害"
+
+msgid "Overkill"
+msgstr "过量伤害"
+
+msgid "Attacks per kill"
+msgstr "每次击杀的攻击次数"
+
+msgid "Missed per kill"
+msgstr "每次击杀的未命中次数"
+
+msgid "Ran over"
+msgstr "超时"
+
+msgid "XP"
+msgstr "经验"
+
+msgid "Item"
+msgstr "物品"
+
+msgid "Dropped"
+msgstr "已掉落"
+
+msgid "Value"
+msgstr "价值"
+
+msgid "Total value"
+msgstr "总价值"
+
+msgid "If buried"
+msgstr "若埋葬"
+
+msgid "Used"
+msgstr "已使用"
+
+msgid "Rare event"
+msgstr "稀有事件"
+
+msgid "Food"
+msgstr "食物"
+
+msgid "Consumables"
+msgstr "消耗品"
+
+msgid "Potions"
+msgstr "药水"
+
+msgid "Runes"
+msgstr "符文"
+
+msgid "Ammo"
+msgstr "弹药"
+
+msgid "Prayer points"
+msgstr "祝祭点"
+
+msgid "{0} (ammo)"
+msgstr "{0}（弹药）"
+
+msgid "{0} (charges)"
+msgstr "{0}（次数）"
+
+msgid "Gets stuck on {0}: {1}"
+msgstr "卡在 {0}：{1}"
+
+msgid "queued"
+msgstr "排队中"
+
+msgid "running"
+msgstr "运行中"
+
+msgid "no estimate"
+msgstr "无预估"
+
+msgid "unfinished"
+msgstr "未完成"
+
+msgid "refused"
+msgstr "被拒绝"
+
+msgid "unsupported"
+msgstr "不支持"
+
+msgid "the run is pinned: unpin it first"
+msgstr "该运行已固定：请先取消固定"
+
+msgid "a kept comparison uses this run"
+msgstr "有保留的对比正在使用此运行"
+
+msgid "setup changed"
+msgstr "配置已更改"
+
+msgid "gear changed"
+msgstr "装备已更改"
+
+msgid "levels changed"
+msgstr "等级已更改"
+
+msgid "game updated"
+msgstr "游戏已更新"
+
+msgid "Combat Simulator 2 updated"
+msgstr "战斗模拟器 2 已更新"
+
+msgid "goal changed"
+msgstr "目标已更改"
+
+msgid "locks changed"
+msgstr "锁定已更改"
+
+msgid "excluded items changed"
+msgstr "排除物品已更改"
+
+msgid "styles changed"
+msgstr "风格已更改"
+
+msgid "margin changed"
+msgstr "容差已更改"
+
+msgid "seed changed"
+msgstr "种子已更改"
+
+msgid "choices tried changed"
+msgstr "尝试的选项已更改"
+
+msgid "prayers, spells, food or toolbelt changed"
+msgstr "祝祭、法术、食物或工具带已更改"
+
+msgid "Other"
+msgstr "其他"
+
+msgid "takes more than one slot"
+msgstr "占用多个栏位"
+
+msgid "can't tell whether it can be got"
+msgstr "无法判断是否可获得"
+
+msgid "nothing in the game for it to fire"
+msgstr "游戏中没有可触发它的内容"
+
+msgid "nothing owned for it to fire"
+msgstr "没有可用于触发的已拥有内容"
+
+msgid "No slot {0}"
+msgstr "没有栏位 {0}"
+
+msgid "{0} is not an item that can be worn"
+msgstr "{0} 不是可穿戴物品"
+
+msgid "Choose one target"
+msgstr "请选择一个目标"
+
+msgid "Droptimizer keeps every slot as worn: it takes no locks"
+msgstr "掉落优化器保持各栏位当前装备：不采用锁定"
+
+msgid "Droptimizer tries gear only"
+msgstr "掉落优化器只尝试装备"
+
+msgid "Droptimizer tries every item already"
+msgstr "掉落优化器已在尝试所有物品"
+
+msgid "Every item: one target at a time"
+msgstr "所有物品：每次针对一个目标"
+
+msgid "Narrowing the pool needs every item"
+msgstr "缩小候选池需要使用所有物品"
+
+msgid "No kind of choice {0}"
+msgstr "没有选项类型 {0}"
+
+msgid "no result for {0}"
+msgstr "{0} 没有结果"
+
+msgid "dies every time"
+msgstr "每次都死亡"
+
+msgid "{0} of {1} trials ran over {2} minutes. {3}"
+msgstr "{1} 次试验中有 {0} 次超过 {2} 分钟。{3}"
+
+msgid "You never attacked in {0} minutes."
+msgstr "{0} 分钟内你从未发起攻击。"
+
+msgid "Immune to your attacks: 0 of {0} landed."
+msgstr "对你的攻击免疫：{0} 次中 0 次命中。"
+
+msgid "Never hit it: 0 of {0} attacks landed."
+msgstr "从未命中：{0} 次攻击中 0 次命中。"
+
+msgid "It heals back what you deal: {0} dealt, {1} healed, {2}% HP left."
+msgstr "它能恢复你造成的伤害：造成 {0}，恢复 {1}，剩余生命 {2}%。"
+
+msgid "Armour stops your hits: {0} hits did {1} damage, {2}% HP left."
+msgstr "护甲挡住了你的攻击：{0} 次命中仅造成 {1} 伤害，剩余生命 {2}%。"
+
+msgid "Too slow: {0}% HP left after {1} minutes. {2} of {3} attacks landed, {4} damage a hit."
+msgstr "太慢：{1} 分钟后仍剩 {0}% 生命。{3} 次攻击中 {2} 次命中，每次 {4} 伤害。"
+
+msgid "Stage {0}, {1}: {2}"
+msgstr "阶段 {0}，{1}：{2}"
+
+msgid "Never attacked ({0})"
+msgstr "从未攻击（{0}）"
+
+msgid "Immune ({0})"
+msgstr "免疫（{0}）"
+
+msgid "Never hit ({0})"
+msgstr "从未命中（{0}）"
+
+msgid "Heals back ({0})"
+msgstr "恢复生命（{0}）"
+
+msgid "Armour stops your hits ({0})"
+msgstr "护甲格挡（{0}）"
+
+msgid "Too slow ({0})"
+msgstr "太慢（{0}）"
+
+msgid "Never attacked"
+msgstr "从未攻击"
+
+msgid "Immune"
+msgstr "免疫"
+
+msgid "Never hit"
+msgstr "从未命中"
+
+msgid "Heals back"
+msgstr "恢复生命"
+
+msgid "Armour stops your hits"
+msgstr "护甲格挡"
+
+msgid "Too slow"
+msgstr "太慢"
+
+msgid "Simulate every monster, dungeon and Slayer task with your setup, ranked by XP, kills and more"
+msgstr "用你的配置模拟所有怪物、地牢和屠杀者任务，按经验、击杀数等排序"
+
+msgid "Compare two setups on the same fights"
+msgstr "在同一场战斗上对比两套配置"
+
+msgid "Try any gear, levels, prayers and Setup entries, owned or not"
+msgstr "尝试任意装备、等级、祝祭和配置条目，无论是否拥有"
+
+msgid "Find the best setup for a target, with a cheaper and a safer one"
+msgstr "为目标找出最佳配置，并给出更省和更稳的方案"
+
+msgid "Rare drop chances per kill, and roughly when the first should drop"
+msgstr "每次击杀的稀有掉率，以及首次掉落大致何时出现"
+
+msgid "Slayer masters: the best loadout for each, and which tasks to block"
+msgstr "屠杀大师：每位的最佳配装，以及应屏蔽哪些任务"
+
+msgid "Find best setup can search every item in the game, narrowed to what you can wear or have reached"
+msgstr "“查找最佳配置”可搜索游戏中所有物品，并缩小到你能穿戴或已达到的范围"
+
+msgid "Items you don't own say where they come from"
+msgstr "未拥有的物品会标明来源"
+
+msgid "Slots your goal can't tell apart keep what you wear; Gap from now shows what to get first"
+msgstr "目标无法区分的栏位保留当前装备；“当前差距”显示优先获取什么"
+
+msgid "Set how long a gear search may run, 15 min by default"
+msgstr "设置装备搜索的最长时长，默认 15 分钟"
+
+msgid "Gear searches read Early Access's item stats, so they fight far fewer sets"
+msgstr "装备搜索读取抢先体验版的物品数据，因此实际测试的套装少得多"
+
+msgid "Slayer Coins and XP for your current task no longer show too low with Slayer task \"As save\""
+msgstr "屠杀者任务设为“按存档”时，当前任务的屠杀者硬币和经验不再显示偏低"
+
+msgid "B vs A"
+msgstr "B 对 A"
+
+msgid "diff. skills"
+msgstr "技能不同"
+
+msgid "A and B train different skills, so their XP isn't compared"
+msgstr "A 与 B 训练不同技能，因此不比较其经验"
+
+msgid "only {0}"
+msgstr "仅 {0}"
+
+msgid "{0} can't kill it in time: {1}"
+msgstr "{0} 无法及时击杀：{1}"
+
+msgid "Could be luck: likely between {0} and {1}. More trials narrow it."
+msgstr "可能是运气：约为 {0} 到 {1} 之间。增加试验次数可缩小范围。"
+
+msgid "Unfinished"
+msgstr "未完成"
+
+msgid "Not recorded"
+msgstr "未记录"
+
+msgid "{0} worse"
+msgstr "差 {0}"
+
+msgid "95% range"
+msgstr "95% 区间"
+
+msgid "different skills"
+msgstr "技能不同"
+
+msgid "{0}, better"
+msgstr "好 {0}"
+
+msgid "{4} − {5}: {0} ({1} to {2}) · {3}"
+msgstr "{4} − {5}：{0}（{1} 至 {2}）· {3}"
+
+msgid "different skills, not compared"
+msgstr "技能不同，未比较"
+
+msgid "Ignored in the next run · click the portrait to return it"
+msgstr "已从下次运行中忽略 · 点击头像可恢复"
+
+msgid "Click the portrait to ignore it in the next run · right-click to run only it"
+msgstr "点击头像可将其从下次运行中忽略 · 右键仅运行它"
+
+msgid "Select a target to see {0} and {1} side by side."
+msgstr "选择一个目标以并排查看 {0} 和 {1}。"
+
+msgid "Rates"
+msgstr "速率"
+
+msgid "Fights"
+msgstr "战斗"
+
+msgid "XP · main skill"
+msgstr "经验 · 主技能"
+
+msgid "Only {0} kills it"
+msgstr "仅 {0} 能击杀"
+
+msgid "B is better · {0} {1}"
+msgstr "B 更好 · {0} {1}"
+
+msgid "B is worse · {0} {1}"
+msgstr "B 更差 · {0} {1}"
+
+msgid "Unclear in {0}"
+msgstr "{0} 内不明确"
+
+msgid "Rare · time to first drop"
+msgstr "稀有 · 首次掉落时间"
+
+msgid "{0} per kill · {1}"
+msgstr "每次击杀 {0} · {1}"
+
+msgid "Drop rate changed"
+msgstr "掉率已变"
+
+msgid "{0} drop rate"
+msgstr "{0} 掉率"
+
+msgid "Drop rate unchanged · {0}"
+msgstr "掉率未变 · {0}"
+
+msgid "B kills about as fast."
+msgstr "B 的击杀速度差不多。"
+
+msgid "B gets {0} fewer kills."
+msgstr "B 少 {0} 次击杀。"
+
+msgid "B gets {0} more kills."
+msgstr "B 多 {0} 次击杀。"
+
+msgid "Target"
+msgstr "目标"
+
+msgid "Verdict"
+msgstr "结论"
+
+msgid "About 1 in 20 targets can show a difference by chance."
+msgstr "约每 20 个目标就有 1 个可能因巧合而显出差异。"
+
+msgid "Click to sort by this column."
+msgstr "点击按此列排序。"
+
+msgid "Difference {0} − {1} · 95% range"
+msgstr "差值 {0} − {1} · 95% 区间"
+
+msgid "waiting for both sides"
+msgstr "等待双方完成"
+
+msgid "A: {0}"
+msgstr "A：{0}"
+
+msgid "B: {0}"
+msgstr "B：{0}"
+
+msgid "no kills on one side"
+msgstr "有一方没有击杀"
+
+msgid "Same seed per target"
+msgstr "每个目标使用相同种子"
+
+msgid "saved run"
+msgstr "已保存运行"
+
+msgid "was {0}"
+msgstr "原为 {0}"
+
+msgid "+{0} more"
+msgstr "另有 {0} 个"
+
+msgid "{0} · requirement ignored"
+msgstr "{0} · 已忽略要求"
+
+msgid "Left out of A"
+msgstr "A 中已排除"
+
+msgid "Left out of B"
+msgstr "B 中已排除"
+
+msgctxt "comparison verdict"
+msgid "Better"
+msgstr "更好"
+
+msgctxt "comparison verdict"
+msgid "Worse"
+msgstr "更差"
+
+msgctxt "verdict"
+msgid "Unclear"
+msgstr "不明确"
+
+msgid "{0}  ({1} to {2})"
+msgstr "{0}（{1} 至 {2}）"
+
+msgid "{0} · saved run"
+msgstr "{0} · 已保存运行"
+
+msgid "Running…"
+msgstr "运行中…"
+
+msgid "Queued"
+msgstr "已排队"
+
+msgid "◂ Back to results"
+msgstr "◂ 返回结果"
+
+msgid "Same setup, build and seed · bars relative to the best of the pins · gold = best"
+msgstr "相同的配置、版本与种子 · 柱状相对固定项中的最佳 · 金色 = 最佳"
+
+msgid "Comparing {0} pinned target"
+msgid_plural "Comparing {0} pinned targets"
+msgstr[0] "正在对比 {0} 个固定目标"
+
+msgid "Unpin row"
+msgstr "取消固定此行"
+
+msgid "Pin row to top"
+msgstr "固定此行到顶部"
+
+msgid "Top loot / kill"
+msgstr "最高战利品/击杀"
+
+msgid "Top loot / second"
+msgstr "最高战利品/秒"
+
+msgid "Top loot / minute"
+msgstr "最高战利品/分钟"
+
+msgid "Top loot / hour"
+msgstr "最高战利品/小时"
+
+msgid "Top loot / day"
+msgstr "最高战利品/天"
+
+msgid "Unpin"
+msgstr "取消固定"
+
+msgid "Simulate"
+msgstr "模拟"
+
+msgid "Setup"
+msgstr "配置"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "About"
+msgstr "关于"
+
+msgid "Unofficial fan mod, not affiliated with or endorsed by Games by Malcs or Jagex."
+msgstr "非官方粉丝模组，与 Games by Malcs 或 Jagex 无关联，也未获其认可。"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Version {0}  ·  by Crash"
+msgstr "版本 {0} · 作者 Crash"
+
+msgid "Checked with Melvor Idle 2 {0} (build {1})"
+msgstr "已用 Melvor Idle 2 {0}（版本 {1}）验证"
+
+msgid "Not checked with Melvor Idle 2 {0} (build {1}). Results may be wrong."
+msgstr "未用 Melvor Idle 2 {0}（版本 {1}）验证，结果可能有误。"
+
+msgid "Save bug report"
+msgstr "保存错误报告"
+
+msgid "Zips CS2's logs, settings and recent runs into mods/CombatSimulator2/reports, to send with a bug report."
+msgstr "将 CS2 的日志、设置和近期运行打包到 mods/CombatSimulator2/reports，用于附带提交错误报告。"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "Spoiler guard"
+msgstr "剧透防护"
+
+msgid "Monsters you haven't killed and places you can't enter yet show as ???. Results stay the same."
+msgstr "你尚未击杀的怪物和还不能进入的地点显示为 ???，结果不受影响。"
+
+msgid "What CS2 does and how sure a result is"
+msgstr "CS2 做什么，以及结果有多可靠"
+
+msgid "Tour"
+msgstr "导览"
+
+msgid "{0} step around the window"
+msgid_plural "{0} steps around the window"
+msgstr[0] "窗口导览共 {0} 步"
+
+msgid "What's new in {0}"
+msgstr "{0} 的新内容"
+
+msgid "All changes"
+msgstr "全部改动"
+
+msgid "Update notifications"
+msgstr "更新提示"
+
+msgid "After an update, a red dot on the About button until About is opened."
+msgstr "更新后，“关于”按钮上会显示红点，直到打开“关于”。"
+
+msgctxt "change"
+msgid "Fixed"
+msgstr "修复"
+
+msgctxt "change"
+msgid "New"
+msgstr "新增"
+
+msgid "Disclaimer"
+msgstr "免责声明"
+
+msgid "Built with AI assistance."
+msgstr "在 AI 辅助下构建。"
+
+msgid "Results are estimates from simulated fights; real play can differ."
+msgstr "结果来自模拟战斗的估算，实际游玩可能不同。"
+
+msgid "CS2 never changes or edits your game."
+msgstr "CS2 从不改动或编辑你的游戏。"
+
+msgid "Nothing is sent online."
+msgstr "不会向网络发送任何内容。"
+
+msgid "Translations"
+msgstr "翻译"
+
+msgid "Links"
+msgstr "链接"
+
+msgid "Source and changelog"
+msgstr "源码与更新日志"
+
+msgid "Send feedback"
+msgstr "发送反馈"
+
+msgid "Ideas or issues that aren't bugs"
+msgstr "想法或非缺陷类问题"
+
+msgid "Report a bug"
+msgstr "报告缺陷"
+
+msgid "New issue on GitHub"
+msgstr "在 GitHub 新建 issue"
+
+msgid "Questions, comments, and reports"
+msgstr "提问、评论与报告"
+
+msgid "Direct message"
+msgstr "私信"
+
+msgid "Send private bug report"
+msgstr "私发错误报告"
+
+msgid "Main page and updates"
+msgstr "主页与更新"
+
+msgid "Translate"
+msgstr "参与翻译"
+
+msgid "Community translations on Crowdin"
+msgstr "Crowdin 上的社区翻译"
+
+msgid "Not available yet"
+msgstr "暂不可用"
+
+msgid "Stats"
+msgstr "统计"
+
+msgid "This session"
+msgstr "本次会话"
+
+msgid "All time"
+msgstr "累计"
+
+msgid "Session"
+msgstr "会话"
+
+msgid "Runs"
+msgstr "运行次数"
+
+msgid "Fights simulated"
+msgstr "已模拟战斗"
+
+msgid "Comparisons"
+msgstr "对比次数"
+
+msgid "First opened {0}. Counts while CS2 is open."
+msgstr "首次打开于 {0}。仅在 CS2 打开时计数。"
+
+msgid "{0}s"
+msgstr "{0} 秒"
+
+msgid "{0}m"
+msgstr "{0} 分"
+
+msgid "{0}h {1}m"
+msgstr "{0} 小时 {1} 分"
+
+msgid "Gear search"
+msgstr "装备搜索"
+
+msgid "Each set fights the target as in a run. The best by your Rank by stat wins, within your Deaths limit."
+msgstr "每套装备都像正式运行那样与目标战斗。按你的排序指标最优且在死亡上限内者胜出。"
+
+msgid "Find best setup"
+msgstr "查找最佳配置"
+
+msgid "Best mix of what you own: gear, plus what's on under Also try."
+msgstr "用你拥有的物品组合出最佳：装备，加上“同时尝试”中启用的内容。"
+
+msgid "Gather"
+msgstr "收集"
+
+msgid "Everything you own and can wear now."
+msgstr "你现在拥有且能穿戴的全部物品。"
+
+msgid "Bank, worn and your other loadouts. Locked slots stay; items marked Never use are left out."
+msgstr "仓库、已穿戴及其他配装。锁定的栏位保持不变；标记为“从不使用”的物品会被排除。"
+
+msgid "With Include what I can't use yet, choices you lack and gear you can't wear yet are tried too, and marked."
+msgstr "开启“包含我还不能用的”后，缺少的选项和还不能穿的装备也会被尝试并标注。"
+
+msgid "Rule out"
+msgstr "排除"
+
+msgid "Sets beaten in every stat skip the fight."
+msgstr "在每项指标上都落败的套装直接跳过战斗。"
+
+msgid "Beaten or matched in every stat that counts against this target."
+msgstr "在针对此目标的所有计入指标上均被击败或持平。"
+
+msgid "Sets with the same stats against the target fight once."
+msgstr "针对此目标属性相同的套装只战斗一次。"
+
+msgid "Race"
+msgstr "竞速"
+
+msgid "Fights in stages: {0} trials."
+msgstr "分阶段战斗：{0} 次试验。"
+
+msgid "A set clearly behind the leader, or over the death limit, drops out after each stage."
+msgstr "明显落后领先者或超出死亡上限的套装会在每个阶段后淘汰。"
+
+msgid "Your current gear always stays in, so the gain can be measured."
+msgstr "你当前的装备始终保留，以便衡量提升。"
+
+msgid "{0} trials first when there are {1} sets or more."
+msgstr "当套装数达到 {1} 或更多时，先进行 {0} 次试验。"
+
+msgid "Too many sets"
+msgstr "套装过多"
+
+msgid "Over {0}: improves one slot at a time."
+msgstr "超过 {0} 套时：每次只改进一个栏位。"
+
+msgid "Also when fighting them all would take over {0} min, or before any search is timed, over {1} sets."
+msgstr "另外，全部战斗会超过 {0} 分钟时，或在任何搜索计时之前超过 {1} 套时，也如此。"
+
+msgid "Weapon first, then each slot, then set pieces together, until nothing changes or {0} min pass."
+msgstr "先武器，再各栏位，再成套装备，直到不再变化或满 {0} 分钟。"
+
+msgid "A close second weapon gets its own climb. A better combination may exist."
+msgstr "接近的第二武器会单独爬升，但可能存在更优组合。"
+
+msgid "Beyond gear"
+msgstr "装备之外"
+
+msgid "Then prayers, spell, food and the rest, in turn."
+msgstr "然后依次是祝祭、法术、食物及其他。"
+
+msgid "Prayers one at a time, then pairs of the best {0}."
+msgstr "祝祭逐个尝试，再将最好的 {0} 个两两组合。"
+
+msgid "When a choice changes, the gear is searched again around it, up to three passes."
+msgstr "某选项改变后，会围绕它重新搜索装备，最多三轮。"
+
+msgid "Two too close to call fight again, four times as long; the answer names the runner-up."
+msgstr "难分高下的两套会再战四倍时长；结果会列出次优方案。"
+
+msgid "Answer"
+msgstr "结果"
+
+msgid "Best set and its gain, or keep yours if as good."
+msgstr "最佳套装及其提升；若你当前的同样好则保留。"
+
+msgid "The gain over your setup, with a 95% range, and why it wins."
+msgstr "相对你配置的提升、95% 区间及胜出原因。"
+
+msgid "Gear alone: of the sets within the best's range or the margin, the one taking least damage; yours if it takes no more."
+msgstr "仅装备：在最佳套装区间或容差内的套装中，选受伤最少的；若你当前的受伤不多则保留。"
+
+msgid "With Also try: yours if within the best's range, else the highest gain."
+msgstr "开启“同时尝试”：若你当前在最佳区间内则保留，否则取提升最大者。"
+
+msgid "Cheaper and Safer: as good, using less or taking less damage. Open as setup puts one on side B."
+msgstr "更省与更稳：同样好，但更省或受伤更少。点击“作为配置打开”可将其放到 B 方。"
+
+msgid "Find upgrades"
+msgstr "查找升级"
+
+msgid "Items you don't own yet, by what they'd gain."
+msgstr "你尚未拥有的物品，按可带来的提升排序。"
+
+msgid "Every item you don't own and can wear."
+msgstr "所有你未拥有且可穿戴的物品。"
+
+msgid "Items you can't wear yet are listed with what they need, and never fought."
+msgstr "你还不能穿戴的物品会连同所需条件列出，且不参与战斗。"
+
+msgid "Items beaten in every stat skip the fight."
+msgstr "在每项指标上都落败的物品直接跳过战斗。"
+
+msgid "Beaten or matched by another unowned item for its slot, in every stat that counts."
+msgstr "在同栏位的另一件未拥有物品上，所有计入指标均被击败或持平。"
+
+msgid "Swap and fight"
+msgstr "替换并战斗"
+
+msgid "Each item alone in your gear, raced against it."
+msgstr "每件物品单独替换进你的装备，与之竞速。"
+
+msgid "The same stages as Find best setup, judged against your gear alone."
+msgstr "与“查找最佳配置”相同的阶段，仅以你当前装备为基准评判。"
+
+msgid "Gains by source, largest first. Click one to try it on B."
+msgstr "按来源分组的提升，从大到小。点击可在 B 方试用。"
+
+msgid "Safer lists items as good that take clearly less damage."
+msgstr "“更稳”会列出明显受伤更少的同等好物品。"
+
+msgid "Click others to try them together; click one again to take it out."
+msgstr "点击其他物品可一起试用；再次点击可移除。"
+
+msgid "Hide guide button"
+msgstr "隐藏指南按钮"
+
+msgid "Hides the (i) on the Gear tab. Settings shows it again."
+msgstr "隐藏“装备”标签上的 (i)。可在设置中重新显示。"
+
+msgid "Answers are kept per character and target."
+msgstr "结果按角色和目标分别保留。"
+
+msgctxt "CS2 help"
+msgid "Guide"
+msgstr "指南"
+
+msgid "CS2 runs the game's combat code on a copy of your character and records the results."
+msgstr "CS2 在你的角色副本上运行游戏的战斗代码并记录结果。"
+
+msgid "Snapshot"
+msgstr "快照"
+
+msgid "CS2 saves your character to memory, including gear, prayers, potions and bonuses."
+msgstr "CS2 将你的角色存入内存，包括装备、祝祭、药水和加成。"
+
+msgid "Fight"
+msgstr "战斗"
+
+msgid "A separate copy of the game fights each target {0} time."
+msgid_plural "A separate copy of the game fights each target {0} times."
+msgstr[0] "一个独立的游戏副本会将每个目标战斗 {0} 次。"
+
+msgid "A separate copy of the game fights each target up to {0} time."
+msgid_plural "A separate copy of the game fights each target up to {0} times."
+msgstr[0] "一个独立的游戏副本会将每个目标战斗至多 {0} 次。"
+
+msgid "Copies inside your game fight each target {0} time."
+msgid_plural "Copies inside your game fight each target {0} times."
+msgstr[0] "游戏内的副本会将每个目标战斗 {0} 次。"
+
+msgid "Copies inside your game fight each target up to {0} time."
+msgid_plural "Copies inside your game fight each target up to {0} times."
+msgstr[0] "游戏内的副本会将每个目标战斗至多 {0} 次。"
+
+msgid "Measure"
+msgstr "统计"
+
+msgid "CS2 turns the results into rates {0}, each with a range."
+msgstr "CS2 将结果换算为速率 {0}，每项都带区间。"
+
+msgid "XP {0}"
+msgstr "经验 {0}"
+
+msgid "CS2 is 95% sure the rate is in this range."
+msgstr "CS2 有 95% 把握认为速率在此区间内。"
+
+msgid "In every fight"
+msgstr "每场战斗中"
+
+msgid "Each result lists all of its assumptions."
+msgstr "每个结果都会列出其全部假设。"
+
+msgid "What you can do"
+msgstr "你能做什么"
+
+msgid "Rank every target by any rate. Click one for its fights."
+msgstr "按任意速率排列所有目标。点击可查看其战斗详情。"
+
+msgid "Fight details: chance to hit and damage, both ways, with ranges."
+msgstr "战斗详情：双方的命中率与伤害，均带区间。"
+
+msgid "Close calls: fights won where one more top hit would have killed."
+msgstr "险胜：获胜的战斗中，若再挨一次最高伤害就会死亡。"
+
+msgid "Ran over: a fight past the time limit counts as no kill and no death."
+msgstr "超时：超过时间上限的战斗不计击杀也不计死亡。"
+
+msgid "Compare"
+msgstr "对比"
+
+msgid "Setup A against B, target by target."
+msgstr "配置 A 对 B，逐目标对比。"
+
+msgid "+ Compare starts B from a copy of yours, a loadout, a preset or a saved run."
+msgstr "“+ 对比”可从你的副本、配装、预设或已保存运行开始 B 方。"
+
+msgid "Each target shows which side is better and by how much."
+msgstr "每个目标都会显示哪方更好及差距多少。"
+
+msgid "Better and Worse show only where B is clearly ahead or behind."
+msgstr "“更好”和“更差”只显示 B 明显领先或落后的目标。"
+
+msgid "⇅ swaps the sides; ✕ Clear goes back to one setup."
+msgstr "⇅ 交换双方；✕ 清除可回到单个配置。"
+
+msgid "Find gear"
+msgstr "查找装备"
+
+msgid "Best set of what you own; upgrades you don't."
+msgstr "你拥有的最佳套装；以及你未拥有的升级。"
+
+msgid "A set within the best's 95% range or the margin ({0}) is as good; then yours wins."
+msgstr "在最佳套装 95% 区间或容差（{0}）内的套装视为同样好；此时优先你的。"
+
+msgid "For an area or the pins, each target counts the same."
+msgstr "针对一个区域或固定目标，每个目标权重相同。"
+
+msgid "How it searches: (i) on the Gear tab."
+msgstr "搜索方式：见“装备”标签上的 (i)。"
+
+msgid "Slayer"
+msgstr "屠杀者"
+
+msgid "Masters as targets; best loadouts and blocks per master."
+msgstr "以大师为目标；给出每位大师的最佳配装与屏蔽。"
+
+msgid "A master's monsters fight on task, weighted by how long their tasks take."
+msgstr "大师的怪物在任务状态下战斗，按任务耗时加权。"
+
+msgid "The Slayer page tries your loadouts and blocks; nothing changes in your game."
+msgstr "屠杀者页面会试用你的配装与屏蔽；你的游戏不会有任何改变。"
+
+msgid "Your tasks: which to extend or reroll."
+msgstr "你的任务：该延长还是重抽。"
+
+msgid "CS2 does not change or edit your game."
+msgstr "CS2 不会改动或编辑你的游戏。"
+
+msgid "Start tour"
+msgstr "开始导览"
+
+msgid "You start at full HP"
+msgstr "以满生命值开局"
+
+msgid "Food and ammo never run out"
+msgstr "食物和弹药永不耗尽"
+
+msgid "Your levels stay the same"
+msgstr "等级保持不变"
+
+msgid "You lose no items on death"
+msgstr "死亡不掉落物品"
+
+msgid "Skip tour"
+msgstr "跳过导览"
+
+msgid "Back"
+msgstr "上一步"
+
+msgid "Next"
+msgstr "下一步"
+
+msgid "Done"
+msgstr "完成"
+
+msgid "{0} of {1}"
+msgstr "{0}/{1}"
+
+msgid "Your setup"
+msgstr "你的配置"
+
+msgid "What you fight with. Click a slot to change it; right-click puts it back or empties it. Edit opens the Setup tab for levels, prayers, spells and more."
+msgstr "你作战所用的内容。点击栏位可更换；右键可还原或清空。“编辑”打开配置页，可调等级、祝祭、法术等。"
+
+msgid "Targets"
+msgstr "目标"
+
+msgid "Open this to see what will be simulated. Click a monster to ignore it. The filters to its left narrow the list."
+msgstr "打开可查看将要模拟的内容。点击怪物可忽略它。左侧筛选可缩小列表。"
+
+msgid "Two setups"
+msgstr "两个配置"
+
+msgid "A is compared to B, target by target. ⇅ swaps them. ✕ Clear goes back to one setup."
+msgstr "A 与 B 逐目标对比。⇅ 交换两者。✕ 清除可回到单个配置。"
+
+msgid "+ Compare adds a second setup: a copy of yours to change, a loadout, a preset or a saved run. Each target then shows which is better and by how much."
+msgstr "“+ 对比”添加第二个配置：可改动的你的副本、配装、预设或已保存运行。之后每个目标会显示哪方更好及差距。"
+
+msgid "A run is going. This button cancels it."
+msgstr "正在运行。此按钮可取消。"
+
+msgid "Each result shows as its target finishes."
+msgstr "每个目标完成后即显示其结果。"
+
+msgid "Read the results"
+msgstr "查看结果"
+
+msgid "Results show here after a run. Rank them by any stat. Click one for its details."
+msgstr "运行结束后结果显示在此。可按任意指标排序。点击可看详情。"
+
+msgid "Each bar is a target: its height is the stat you rank by, its colour how often you die there, its whisker the 95% range. Hover for numbers, click for details, shift-click to pin. Click a portrait to ignore that target, or an area's name to fold it into one bar."
+msgstr "每根柱代表一个目标：高度为排序指标，颜色为在该处死亡的频率，须线为 95% 区间。悬停看数值，点击看详情，Shift+点击固定。点击头像可忽略该目标，点击区域名可折叠为一根柱。"
+
+msgid "Rank by any stat. Click a row for its details. Pin up to three, then View side by side."
+msgstr "按任意指标排序。点击行看详情。最多固定三个，然后并排查看。"
+
+msgid "pins full ({0}, {1} waiting): unpin one or clear"
+msgstr "固定已满（{0} 个，{1} 个等待）：取消一个或清除"
+
+msgid "pins full ({0}): unpin one first"
+msgstr "固定已满（{0} 个）：请先取消一个"
+
+msgid "Refused: {0}"
+msgstr "被拒绝：{0}"
+
+msgid "Bug report saved"
+msgstr "错误报告已保存"
+
+msgid "Couldn't save the bug report"
+msgstr "无法保存错误报告"
+
+msgid "{0}, in mods/CombatSimulator2/reports in the game's folder."
+msgstr "{0}，位于游戏目录下的 mods/CombatSimulator2/reports。"
+
+msgid "It holds CS2's logs, settings and recent runs, with your user and computer names taken out, and your character's save, so the developer can run what you ran."
+msgstr "其中包含 CS2 的日志、设置和近期运行（已去除用户名和计算机名），以及你角色的存档，便于开发者复现你的运行。"
+
+msgid "It holds CS2's logs, settings and recent runs, with your user and computer names taken out. Your save isn't in it."
+msgstr "其中包含 CS2 的日志、设置和近期运行（已去除用户名和计算机名）。不含你的存档。"
+
+msgid "What the panel showed"
+msgstr "面板显示的内容"
+
+msgid "Snapshots of failed runs"
+msgstr "失败运行的快照"
+
+msgid "Open the channel"
+msgstr "打开频道"
+
+msgid "GitHub issues and the Discord channel are public. To keep your save private, send the zip to Crashv in a direct message on Discord."
+msgstr "GitHub issue 和 Discord 频道是公开的。若想保留存档隐私，请在 Discord 私信将压缩包发给 Crashv。"
+
+msgid "Copy for Discord"
+msgstr "复制到 Discord"
+
+msgid "Copied. Paste it in the Melvor Discord's mod bug reports channel, then drag the zip in after it."
+msgstr "已复制。请粘贴到 Melvor Discord 的模组错误报告频道，随后把压缩包拖进去。"
+
+msgid "Open a GitHub issue"
+msgstr "打开 GitHub issue"
+
+msgid "Opened in your browser. Say what happened there, then drag the zip into the Report zip box."
+msgstr "已在浏览器中打开。请在那里说明情况，然后把压缩包拖入“报告压缩包”框。"
+
+msgid "CS2's GitHub page isn't up yet"
+msgstr "CS2 的 GitHub 页面尚未上线"
+
+msgid "Opened Discord. Send Crashv the zip there, with what happened."
+msgstr "已打开 Discord。请将压缩包和情况说明发给 Crashv。"
+
+msgid "Open folder"
+msgstr "打开文件夹"
+
+msgid "best"
+msgstr "最佳"
+
+msgid "Best"
+msgstr "最佳"
+
+msgid "Select a result to see how it compares with the others."
+msgstr "选择一个结果以查看它与其他结果的对比。"
+
+msgid "#{0} of {1} by {2}"
+msgstr "第 {0}/{1} 名（按 {2}）"
+
+msgid "Unfinished · trial limit {0} minutes"
+msgstr "未完成 · 试验上限 {0} 分钟"
+
+msgid "{0} / {1} trials"
+msgstr "{0}/{1} 次试验"
+
+msgid "No results for this target yet."
+msgstr "此目标暂无结果。"
+
+msgid "vs {0} other"
+msgid_plural "vs {0} others"
+msgstr[0] "对比 {0} 个其他目标"
+
+msgid "{0} assumption"
+msgid_plural "{0} assumptions"
+msgstr[0] "{0} 条假设"
+
+msgid "{0} not simulated"
+msgid_plural "{0} not simulated"
+msgstr[0] "{0} 个未模拟"
+
+msgid "Lv {0}"
+msgstr "{0} 级"
+
+msgid "{0}: {1}  ({2})"
+msgstr "{0}：{1}（{2}）"
+
+msgid "{0}: {1}  (#{2} of {3})"
+msgstr "{0}：{1}（第 {2}/{3} 名）"
+
+msgid "Best: {0}, {1}"
+msgstr "最佳：{0}，{1}"
+
+msgid "Median: {0}"
+msgstr "中位：{0}"
+
+msgid "Worst: {0}"
+msgstr "最差：{0}"
+
+msgid "The bar is this value as a share of the best: {0}."
+msgstr "柱长为该值相对最佳的比例：{0}。"
+
+msgid "Lower is better: the bar is the best as a share of this value: {0}."
+msgstr "越低越好：柱长为最佳相对该值的比例：{0}。"
+
+msgid "Lower is better and the best is zero: the bar runs from the worst (empty) to the best (full)."
+msgstr "越低越好且最佳为零：柱从最差（空）到最佳（满）。"
+
+msgid "safest"
+msgstr "最稳"
+
+msgid "#{0} of {1}"
+msgstr "第 {0}/{1} 名"
+
+msgid "this target"
+msgstr "此目标"
+
+msgid "middle half"
+msgstr "中间半数"
+
+msgid "median"
+msgstr "中位"
+
+msgid "Each row runs from the run's worst value (left) to its best (right)."
+msgstr "每行从本次运行的最差值（左）到最佳值（右）。"
+
+msgid "the middle half of the run's targets"
+msgstr "本次运行目标的中间半数"
+
+msgid "their median"
+msgstr "其中位数"
+
+msgid "Where lower is better (kill time, deaths), the lowest is at the right."
+msgstr "越低越好的指标（击杀时间、死亡）最低值在右侧。"
+
+msgid "Hover a row for its best, median and worst values."
+msgstr "悬停某行可看最佳、中位和最差值。"
+
+msgid "Gear"
+msgstr "装备"
+
+msgid "Monsters"
+msgstr "怪物"
+
+msgid "Died every fight"
+msgstr "每场都死亡"
+
+msgid "You died in every fight here. Its values were earned while dying: no rank, never best."
+msgstr "你在此处的每场战斗都死亡。其数值是在死亡过程中取得的：不参与排名，永不为最佳。"
+
+msgid "Nothing simulated yet"
+msgstr "尚未模拟任何内容"
+
+msgid "Pick targets on the left, or start with what you're fighting."
+msgstr "在左侧选择目标，或直接以你当前正在打的内容开始。"
+
+msgid "Simulate what I'm fighting"
+msgstr "模拟我正在打的"
+
+msgid "Simulate selected"
+msgstr "模拟所选"
+
+msgid "Simulate {0} selected"
+msgstr "模拟所选的 {0} 个"
+
+msgid "Fight Details"
+msgstr "战斗详情"
+
+msgid "Measured over the trials: hits over attacks as they happened, so chance to hit can differ from the combat screen's."
+msgstr "按试验实测：以实际发生的命中/攻击计，因此命中率可能与战斗界面不同。"
+
+msgid "Runs from before this version have no fight counts."
+msgstr "此版本之前的运行没有战斗计数。"
+
+msgid "You"
+msgstr "你"
+
+msgid "It made no attack"
+msgstr "它未发起攻击"
+
+msgid "No hit landed"
+msgstr "没有命中"
+
+msgid "Enemies"
+msgstr "敌人"
+
+msgid "Enemy"
+msgstr "敌人"
+
+msgid "Per clear"
+msgstr "每次通关"
+
+msgid "Per kill"
+msgstr "每次击杀"
+
+msgid "Clear time"
+msgstr "通关时间"
+
+msgid "Time to kill"
+msgstr "击杀时间"
+
+msgid "No kill"
+msgstr "未击杀"
+
+msgid "Attacks per clear"
+msgstr "每次通关的攻击次数"
+
+msgid "{0}, of which {1} missed"
+msgstr "{0}，其中 {1} 次未命中"
+
+msgid "{0} of {1} trials ran over {2} minutes"
+msgstr "{1} 次试验中有 {0} 次超过 {2} 分钟"
+
+msgid "{0}, range {1}."
+msgstr "{0}，区间 {1}。"
+
+msgid "{0} unfinished trial"
+msgid_plural "{0} unfinished trials"
+msgstr[0] "{0} 次未完成试验"
+
+msgid "Attacks that landed, of all attacks made. Can differ from the combat screen's chance."
+msgstr "命中的攻击占全部攻击的比例。可能与战斗界面显示的命中率不同。"
+
+msgid "Health an attack removed when it landed, after armour and resistance."
+msgstr "一次攻击命中后扣除的生命值（已计入护甲与抗性）。"
+
+msgid "Health removed per second of fighting, from attacks, effects and reflect. Waiting for a spawn doesn't count."
+msgstr "战斗中每秒扣除的生命值，来自攻击、效果与反射。等待怪物生成的时间不计入。"
+
+msgid "Damage beyond the enemy's remaining health, as a share of all damage dealt."
+msgstr "超出敌人剩余生命值的伤害，占全部造成伤害的比例。"
+
+msgid "Attacks made for each kill, and how many of them missed."
+msgstr "每次击杀的攻击次数，以及其中未命中的次数。"
+
+msgid "Measured over the trials; the small numbers are the 95% range."
+msgstr "按试验实测；小字为 95% 区间。"
+
+msgid "of which effects {0}/s, reflect {1}/s"
+msgstr "其中效果 {0}/秒，反射 {1}/秒"
+
+msgid "of which effects {0}/s"
+msgstr "其中效果 {0}/秒"
+
+msgid "of which reflect {0}/s"
+msgstr "其中反射 {0}/秒"
+
+msgid "{0} stage"
+msgid_plural "{0} stages"
+msgstr[0] "{0} 个阶段"
+
+msgid "{0} · deaths at stage {1}"
+msgstr "{0} · 在第 {1} 阶段死亡"
+
+msgid "Fight by fight"
+msgstr "逐场详情"
+
+msgid "Fight by fight · {0}"
+msgstr "逐场详情 · {0}"
+
+msgid "Time"
+msgstr "时间"
+
+msgid "Damage"
+msgstr "伤害"
+
+msgid "Highest hit"
+msgstr "最高单次伤害"
+
+msgid "Time between fights"
+msgstr "战斗间隔时间"
+
+msgid "{0} s per completion"
+msgstr "每次通关 {0} 秒"
+
+msgid "Highest hit and lowest HP per fight: not recorded in this run."
+msgstr "逐场最高伤害与最低生命值：本次运行未记录。"
+
+msgid "Later fights count only the trials that reached them."
+msgstr "后续场次只统计到达该场次的试验。"
+
+msgid "The bar is the stage's share of the clear time."
+msgstr "柱长为该阶段占通关时间的比例。"
+
+msgid "Not reached"
+msgstr "未到达"
+
+msgid "not rolled"
+msgstr "未触发"
+
+msgid "×{0} rolled"
+msgstr "×{0} 已触发"
+
+msgid "reached"
+msgstr "已到达"
+
+msgid "{0} s"
+msgstr "{0} 秒"
+
+msgid "You hit {0} / {1} · dealt {2} · it hit {3} / {4}"
+msgstr "你命中 {0}/{1} · 造成 {2} · 它命中 {3}/{4}"
+
+msgid "{0} fight ran over"
+msgid_plural "{0} fights ran over"
+msgstr[0] "{0} 场战斗超时"
+
+msgid "✕ Ignore"
+msgstr "✕ 忽略"
+
+msgid "Return"
+msgstr "恢复"
+
+msgid "Bring this target back into the next run"
+msgstr "将此目标恢复到下次运行"
+
+msgid "Leave this target out of the next run · right-click to run only it"
+msgstr "将此次目标排除在下次运行外 · 右键仅运行它"
+
+msgid "Loot per kill"
+msgstr "每次击杀战利品"
+
+msgid "Loot per second"
+msgstr "每秒战利品"
+
+msgid "Loot per minute"
+msgstr "每分钟战利品"
+
+msgid "Loot per hour"
+msgstr "每小时战利品"
+
+msgid "Loot per day"
+msgstr "每天战利品"
+
+msgctxt "earlier run"
+msgid "Show"
+msgstr "显示"
+
+msgid "Showing {0} of {1} target · previous run:"
+msgid_plural "Showing {0} of {1} targets · previous run:"
+msgstr[0] "显示 {0}/{1} 个目标 · 上次运行："
+
+msgid "Showing {0} of {1} target · previous run no longer saved"
+msgid_plural "Showing {0} of {1} targets · previous run no longer saved"
+msgstr[0] "显示 {0}/{1} 个目标 · 上次运行已不再保存"
+
+msgid "Run a simulation to see its CPU, memory and frame rate here."
+msgstr "运行一次模拟，即可在此查看其 CPU、内存和帧率。"
+
+msgid "Performance · this run, live · in the CS2 host"
+msgstr "性能 · 本次运行，实时 · 在 CS2 宿主中"
+
+msgid "Performance · this run, live · in the game's process"
+msgstr "性能 · 本次运行，实时 · 在游戏进程中"
+
+msgid "Performance · last run · in the CS2 host"
+msgstr "性能 · 上次运行 · 在 CS2 宿主中"
+
+msgid "Performance · last run · in the game's process"
+msgstr "性能 · 上次运行 · 在游戏进程中"
+
+msgid "Start a search to see its CPU, memory and frame rate here."
+msgstr "开始搜索，即可在此查看其 CPU、内存和帧率。"
+
+msgid "Performance · this search, live · in the CS2 host"
+msgstr "性能 · 本次搜索，实时 · 在 CS2 宿主中"
+
+msgid "Performance · this search, live · in the game's process"
+msgstr "性能 · 本次搜索，实时 · 在游戏进程中"
+
+msgid "Performance · last search · in the CS2 host"
+msgstr "性能 · 上次搜索 · 在 CS2 宿主中"
+
+msgid "Performance · last search · in the game's process"
+msgstr "性能 · 上次搜索 · 在游戏进程中"
+
+msgid "Performance"
+msgstr "性能"
+
+msgid "now"
+msgstr "当前"
+
+msgid "at end"
+msgstr "结束时"
+
+msgid "average"
+msgstr "平均"
+
+msgid "low"
+msgstr "最低"
+
+msgid "peak"
+msgstr "峰值"
+
+msgid "Over {0} s · CPU 0–100% · memory 0–{1} · fps 0–{2}"
+msgstr "历时 {0} 秒 · CPU 0–100% · 内存 0–{1} · 帧率 0–{2}"
+
+msgid "cancelled {0}"
+msgstr "已取消 {0}"
+
+msgid "failed {0}"
+msgstr "失败 {0}"
+
+msgid "ran {0}"
+msgstr "已运行 {0}"
+
+msgid "just now"
+msgstr "刚刚"
+
+msgid "{0} min ago"
+msgid_plural "{0} min ago"
+msgstr[0] "{0} 分钟前"
+
+msgid "{0} h ago"
+msgid_plural "{0} h ago"
+msgstr[0] "{0} 小时前"
+
+msgid "{0} d ago"
+msgid_plural "{0} d ago"
+msgstr[0] "{0} 天前"
+
+msgid "build {0} · seed {1}"
+msgstr "版本 {0} · 种子 {1}"
+
+msgid "Simulator CPU"
+msgstr "模拟器 CPU"
+
+msgid "Game CPU"
+msgstr "游戏 CPU"
+
+msgid "Simulator memory"
+msgstr "模拟器内存"
+
+msgid "Game memory"
+msgstr "游戏内存"
+
+msgid "Free memory"
+msgstr "可用内存"
+
+msgid "Game fps"
+msgstr "游戏帧率"
+
+msgid "Starting the simulator…"
+msgstr "正在启动模拟器…"
+
+msgid "Readying copies for the next run · {0} / {1}"
+msgstr "正在为下次运行准备副本 · {0}/{1}"
+
+msgid "Preparing the simulator · {0} / {1} copies"
+msgstr "正在准备模拟器 · {0}/{1} 个副本"
+
+msgid "Simulator ready · {0} copy"
+msgid_plural "Simulator ready · {0} copies"
+msgstr[0] "模拟器就绪 · {0} 个副本"
+
+msgid "Finishing the last target · {0}"
+msgstr "正在完成最后一个目标 · {0}"
+
+msgid "Finishing the last {0} target"
+msgid_plural "Finishing the last {0} targets"
+msgstr[0] "正在完成最后的 {0} 个目标"
+
+msgid "Fighting {0}"
+msgstr "正在战斗：{0}"
+
+msgid "Fighting {0} and {1} other"
+msgid_plural "Fighting {0} and {1} others"
+msgstr[0] "正在战斗：{0} 及另外 {1} 个"
+
+msgid "Building a copy of your game…"
+msgstr "正在构建你游戏的副本…"
+
+msgid "Checking which targets you can fight…"
+msgstr "正在检查你能战斗哪些目标…"
+
+msgid "Starting the next targets…"
+msgstr "正在开始下一批目标…"
+
+msgctxt "pins"
+msgid "Clear"
+msgstr "清除"
+
+msgid "Side by side ▸"
+msgstr "并排查看 ▸"
+
+msgid "{0} waiting"
+msgstr "{0} 个等待中"
+
+msgid "Not in this run, shown again in one that has them: {0}"
+msgstr "不在本次运行中，将在包含它们的一次运行中显示：{0}"
+
+msgid "{0} of {1} pinned"
+msgstr "已固定 {0}/{1}"
+
+msgid "Side by side needs 2 pins in the shown run"
+msgstr "并排查看需要在所显示的运行中有 2 个固定项"
+
+msgid "Pin at least 2 targets to compare"
+msgstr "至少固定 2 个目标才能对比"
+
+msgid "{0} ran over"
+msgstr "{0} 个超时"
+
+msgid "No target survived"
+msgstr "没有目标存活"
+
+msgid "Died every fight ({0})"
+msgstr "每场都死亡（{0}）"
+
+msgid "per kill"
+msgstr "每次击杀"
+
+msgid "Pin to compare (up to {0})"
+msgstr "固定以对比（最多 {0} 个）"
+
+msgid "per clear"
+msgstr "每次通关"
+
+msgid "from an earlier run · {0}"
+msgstr "来自较早运行 · {0}"
+
+msgid "Dungeon"
+msgstr "地牢"
+
+msgid "{0} reward"
+msgid_plural "{0} rewards"
+msgstr[0] "{0} 项奖励"
+
+msgid "{0} loot"
+msgstr "{0} 项战利品"
+
+msgid "{0} event"
+msgid_plural "{0} events"
+msgstr[0] "{0} 个事件"
+
+msgid "Rare drops"
+msgstr "稀有掉落"
+
+msgid "Rewards below 1% per completion, and rare events"
+msgstr "每次通关低于 1% 的奖励，以及稀有事件"
+
+msgid "Loot below 1% per kill, and rare events"
+msgstr "每次击杀低于 1% 的战利品，以及稀有事件"
+
+msgid "Rewards · chance per completion · {0} from {1} completions {2}"
+msgstr "奖励 · 每次通关几率 · {1} 次通关中 {0} 次 {2}"
+
+msgid "Loot · chance per kill · {0} from {1} kills {2}"
+msgstr "战利品 · 每次击杀几率 · {1} 次击杀中 {0} 次 {2}"
+
+msgid "Rare events · chance per minute in combat · rate as observed"
+msgstr "稀有事件 · 战斗中每分钟几率 · 速率按观测值"
+
+msgid "observed only: not in the game's list"
+msgstr "仅观测：不在游戏列表内"
+
+msgid "{0} per minute in combat"
+msgstr "战斗中每分钟 {0}"
+
+msgid "{0} per completion"
+msgstr "每次通关 {0}"
+
+msgid "{0} per kill"
+msgstr "每次击杀 {0}"
+
+msgid "Not possible"
+msgstr "不可能"
+
+msgid "observed {0}"
+msgstr "观测 {0}"
+
+msgid "First ≈{0} in combat"
+msgstr "首次约需战斗 {0}"
+
+msgid "First drop ≈{0} completions"
+msgstr "首次掉落约 {0} 次通关"
+
+msgid "First drop ≈{0} kills"
+msgstr "首次掉落约 {0} 次击杀"
+
+msgid "{0} · ≈{1}"
+msgstr "{0} · 约 {1}"
+
+msgid "{0} in combat"
+msgstr "战斗 {0}"
+
+msgid "{0} completions"
+msgstr "{0} 次通关"
+
+msgid "{0} kills"
+msgstr "{0} 次击杀"
+
+msgid "{0} ({1})"
+msgstr "{0}（{1}）"
+
+msgid "First drop, by luck:"
+msgstr "首次掉落（按概率）："
+
+msgid "50% chance within {0}"
+msgstr "50% 概率在 {0} 内"
+
+msgid "90% chance within {0}"
+msgstr "90% 概率在 {0} 内"
+
+msgid "Dismiss"
+msgstr "忽略"
+
+msgid "Pick another run"
+msgstr "选择其他运行"
+
+msgid "Baseline gone"
+msgstr "基线已不存在"
+
+msgid "The sides differ in more than the setup"
+msgstr "双方差异不止配置本身"
+
+msgid "The simulator closed unexpectedly"
+msgstr "模拟器意外关闭"
+
+msgid "The simulator stopped responding"
+msgstr "模拟器停止响应"
+
+msgid "The simulator couldn't start"
+msgstr "模拟器无法启动"
+
+msgid "The run failed"
+msgstr "运行失败"
+
+msgid "Some targets failed"
+msgstr "部分目标失败"
+
+msgid "Couldn't save"
+msgstr "无法保存"
+
+msgid "Couldn't open a saved run"
+msgstr "无法打开已保存运行"
+
+msgid "Simulate the {0} again"
+msgstr "再次模拟 {0}"
+
+msgid "Run cancelled"
+msgstr "运行已取消"
+
+msgid "Finished results are kept; {0} target was cancelled."
+msgid_plural "Finished results are kept; {0} targets were cancelled."
+msgstr[0] "已完成的结果会保留；{0} 个目标已取消。"
+
+msgid "Simulate in the game's process (may stutter)"
+msgstr "在游戏进程中模拟（可能卡顿）"
+
+msgid "Use Character as is"
+msgstr "使用当前角色"
+
+msgid "This setup can't be simulated"
+msgstr "此配置无法模拟"
+
+msgid "Rank by"
+msgstr "排序依据"
+
+msgid "List"
+msgstr "列表"
+
+msgid "Chart"
+msgstr "图表"
+
+msgctxt "comparison filter"
+msgid "Show"
+msgstr "显示"
+
+msgctxt "comparison filter"
+msgid "All"
+msgstr "全部"
+
+msgid "Better"
+msgstr "更好"
+
+msgid "Worse"
+msgstr "更差"
+
+msgid "Showing the last results, for the character as is."
+msgstr "显示上次结果，基于当前角色。"
+
+msgid "Showing the last results, for {0}."
+msgstr "显示上次结果，基于 {0}。"
+
+msgid "lowest HP"
+msgstr "最低生命值"
+
+msgid "highest hit"
+msgstr "最高单次伤害"
+
+msgid "scale: max HP {0}"
+msgstr "刻度：最大生命值 {0}"
+
+msgid "Risk"
+msgstr "风险"
+
+msgid "Close calls"
+msgstr "险胜"
+
+msgid "This run was saved before CS2 kept risk."
+msgstr "本次运行在 CS2 记录风险之前保存。"
+
+msgid "worst of {0} trial"
+msgid_plural "worst of {0} trials"
+msgstr[0] "{0} 次试验中最差"
+
+msgid "of {0}"
+msgstr "共 {0}"
+
+msgid "Highest hit reaches lowest HP"
+msgstr "最高伤害触及最低生命值"
+
+msgid "{0} · unfinished"
+msgstr "{0} · 未完成"
+
+msgid "{0} · not recorded"
+msgstr "{0} · 未记录"
+
+msgid "{0} · highest hit reaches lowest HP"
+msgstr "{0} · 最高伤害触及最低生命值"
+
+msgid "{0} · died every fight"
+msgstr "{0} · 每场都死亡"
+
+msgid "{0} · no warning"
+msgstr "{0} · 无预警"
+
+msgid "Fights won where one more hit as large as the highest taken would have killed. Share of all fights, with its 95% range. A lost fight isn't one."
+msgstr "获胜的战斗中，若再承受一次等同于最高受伤的攻击就会死亡，占比及其 95% 区间。失败的战斗不计入。"
+
+msgid "No fight survived"
+msgstr "没有战斗存活"
+
+msgid "same"
+msgstr "相同"
+
+msgid "The biggest hit taken here ({0}) is at least the lowest HP reached ({1}): that hit at that moment would kill."
+msgstr "此处承受的最大伤害（{0}）不低于达到的最低生命值（{1}）：那一刻再挨这一下就会死亡。"
+
+msgid "On {0}'s task"
+msgstr "在 {0} 的任务中"
+
+msgid "No master gives it"
+msgstr "没有大师会给它"
+
+msgid "Fold until CS2 next opens"
+msgstr "折叠直到下次打开 CS2"
+
+msgid "Not checked with this game version. Results may be wrong."
+msgstr "未用此游戏版本验证。结果可能有误。"
+
+msgid "CS2 {0} was checked with Melvor Idle 2 {1}. This is {2} (build {3})."
+msgstr "CS2 {0} 已在 Melvor Idle 2 {1} 上验证。当前为 {2}（版本 {3}）。"
+
+msgid "Made on a game version CS2 wasn't checked with. Results may be wrong."
+msgstr "生成于 CS2 未验证的游戏版本，结果可能有误。"
+
+msgid "Scale"
+msgstr "刻度"
+
+msgid "Stopped at stage {0} · best so far"
+msgstr "在第 {0} 阶段停止 · 目前最佳"
+
+msgid "{0}'s tasks"
+msgstr "{0} 的任务"
+
+msgid "On each monster"
+msgstr "对每个怪物"
+
+msgid "On each target"
+msgstr "对每个目标"
+
+msgid "Helps {0} of {1}"
+msgstr "对 {1} 个中的 {0} 个有帮助"
+
+msgid "Helps {0} of {1} · worse on {2}"
+msgstr "对 {1} 个中的 {0} 个有帮助 · 在 {2} 上更差"
+
+msgid "{0}: another set does clearly better there alone. Search it on its own."
+msgstr "{0}：另一套在该处单独表现明显更好。请单独搜索。"
+
+msgid "Sim again"
+msgstr "再次模拟"
+
+msgid "Out of date"
+msgstr "已过期"
+
+msgid "Keep what you have"
+msgstr "保留当前"
+
+msgid "No set is better by more than {0}."
+msgstr "没有套装的优势超过 {0}。"
+
+msgid "No set stays within the death limit"
+msgstr "没有套装在死亡上限内"
+
+msgid "Closest: {0}"
+msgstr "最接近：{0}"
+
+msgid "No set kills this target"
+msgstr "没有套装能击杀此目标"
+
+msgid "Nothing to search"
+msgstr "没有可搜索的"
+
+msgid "Nothing else you own fits an unlocked slot."
+msgstr "你拥有的其他物品都不适用于已解锁栏位。"
+
+msgid "Open as setup"
+msgstr "作为配置打开"
+
+msgid "Search again"
+msgstr "重新搜索"
+
+msgid "Wear"
+msgstr "穿戴"
+
+msgid "Nothing"
+msgstr "无"
+
+msgid "{0} · replaces {1}"
+msgstr "{0} · 替换 {1}"
+
+msgid "Stance: {0}"
+msgstr "姿态：{0}"
+
+msgid "Assumes {0} lasts"
+msgstr "假设 {0} 持续生效"
+
+msgid "Why"
+msgstr "原因"
+
+msgid "By style"
+msgstr "按风格"
+
+msgid "No set"
+msgstr "无套装"
+
+msgid "{0}: skipped, {1}"
+msgstr "{0}：跳过，{1}"
+
+msgid "As good"
+msgstr "同样好"
+
+msgid "Open"
+msgstr "打开"
+
+msgid "Combinations"
+msgstr "组合数"
+
+msgid "Ruled out"
+msgstr "已排除"
+
+msgid "Simulated"
+msgstr "已模拟"
+
+msgid "Equal within"
+msgstr "视为相同（容差）"
+
+msgid "Built slot by slot, as there were too many combinations to try. A better mix may exist."
+msgstr "组合过多，改为逐栏位构建。可能存在更优组合。"
+
+msgid "The best was behind at stage {0}, so the leaders were fought again with another seed."
+msgstr "最佳在第 {0} 阶段落后，因此领先者用另一次种子再战。"
+
+msgid "Every item"
+msgstr "所有物品"
+
+msgid "wearable at my levels"
+msgstr "我等级可穿戴的"
+
+msgid "content I've reached"
+msgstr "我已达成的内容"
+
+msgid "leaving out {0}"
+msgstr "已排除 {0}"
+
+msgid "Slots not settled: the search was stopped before tied slots were raced again."
+msgstr "栏位未定：搜索在并列栏位再次竞速前停止。"
+
+msgid "No gap figures: the search was stopped before the new items were fought alone."
+msgstr "无差距数据：搜索在新物品单独测试前停止。"
+
+msgid "Cut short to keep within your {0} min limit: the best set found so far."
+msgstr "为遵守 {0} 分钟上限而提前结束：目前找到的最佳套装。"
+
+msgid "Not owned · {0}"
+msgstr "未拥有 · {0}"
+
+msgid "Best for {0}"
+msgstr "{0} 的最佳"
+
+msgid "Fewest deaths"
+msgstr "死亡最少"
+
+msgid "Least damage taken"
+msgstr "受伤最少"
+
+msgid "Least food eaten"
+msgstr "食物消耗最少"
+
+msgid "Locked in the form"
+msgstr "已在表单中锁定"
+
+msgid "Nothing told the items apart"
+msgstr "无法区分这些物品"
+
+msgid "{0} ({1} vs {2})"
+msgstr "{0}（{1} 对 {2}）"
+
+msgid "{0}; {1} the same"
+msgstr "{0}；{1} 相同"
+
+msgid "{0} item"
+msgid_plural "{0} items"
+msgstr[0] "{0} 件物品"
+
+msgid "Items to get"
+msgstr "待获取物品"
+
+msgid "Leave out"
+msgstr "排除"
+
+msgid "Leave out {0} and search again"
+msgstr "排除 {0} 并重新搜索"
+
+msgid "Gap from now"
+msgstr "当前差距"
+
+msgid "{0} from now"
+msgstr "距当前 {0}"
+
+msgid "get first"
+msgstr "优先获取"
+
+msgid "{0} · only with the rest"
+msgstr "{0} · 需与其他件同时"
+
+msgid "Nothing to try: no unowned item can be worn now."
+msgstr "没有可试的：当前没有可穿戴的未拥有物品。"
+
+msgid "No upgrades found"
+msgstr "未找到升级"
+
+msgid "{0} upgrade found"
+msgid_plural "{0} upgrades found"
+msgstr[0] "找到 {0} 项升级"
+
+msgid "Each item you don't own, tried alone in place of what you wear now. Your other gear isn't changed."
+msgstr "每件你未拥有的物品，单独替换你当前穿的装备进行测试。其他装备不变。"
+
+msgid "Safer, same result"
+msgstr "更稳，结果相同"
+
+msgid "No gain: {0} · over the death limit: {1}"
+msgstr "无提升：{0} · 超出死亡上限：{1}"
+
+msgid "Not yet wearable"
+msgstr "暂不可穿戴"
+
+msgid "{0} not owned · {1} wearable now · {2} simulated"
+msgstr "未拥有 {0} · 现在可穿戴 {1} · 已模拟 {2}"
+
+msgid "On setup B. Click to take it out."
+msgstr "已加到 B 配置。点击可移除。"
+
+msgid "Click to add to setup B."
+msgstr "点击加入 B 配置。"
+
+msgid "{0}% damage"
+msgstr "{0}% 伤害"
+
+msgid "{0} → {1} damage/s"
+msgstr "{0} → {1} 伤害/秒"
+
+msgid "replaces {0}"
+msgstr "替换 {0}"
+
+msgid "best setup"
+msgstr "最佳配置"
+
+msgid "upgrades"
+msgstr "升级"
+
+msgid "Find {0} for {1}"
+msgstr "为 {1} 查找{0}"
+
+msgid "How gear search works"
+msgstr "装备搜索如何工作"
+
+msgid "Select an enemy to search its whole area."
+msgstr "选择一个敌人即可搜索其整个区域。"
+
+msgid "Pin 2 or 3 targets to search them together."
+msgstr "固定 2 或 3 个目标即可一起搜索。"
+
+msgid "its area"
+msgstr "其区域"
+
+msgid "the {0} pins"
+msgstr "{0} 个固定目标"
+
+msgid "the pins"
+msgstr "固定目标"
+
+msgid "Prayers"
+msgstr "祝祭"
+
+msgid "Spell"
+msgstr "法术"
+
+msgid "Imbuement"
+msgstr "灌注"
+
+msgid "Toolbelt"
+msgstr "工具带"
+
+msgid "Also try"
+msgstr "同时尝试"
+
+msgid "Include choices I don't have"
+msgstr "包含我还没有的选项"
+
+msgid "Also tries prayers, spells, food and toolbelt items you don't have, and gear you own but can't wear yet."
+msgstr "同时尝试你还没有的祝祭、法术、食物和工具带物品，以及你拥有但暂不能穿戴的装备。"
+
+msgid "Gear you don't own: choose \"every item\" above to search all of it, or Find upgrades for one item at a time."
+msgstr "未拥有的装备：选择上方的“所有物品”可全部搜索，或用“查找升级”逐件尝试。"
+
+msgid "With requirements ignored, gear you own but can't wear yet is tried either way."
+msgstr "忽略要求时，无论是否开启此选项，都会尝试你拥有但暂不能穿戴的装备。"
+
+msgid "No combat potions in this build"
+msgstr "此版本没有战斗药水"
+
+msgid "You have no combat potions"
+msgstr "你没有战斗药水"
+
+msgid "Options"
+msgstr "选项"
+
+msgid "Wearable at my levels"
+msgstr "我等级可穿戴"
+
+msgid "Only items whose requirements your levels already meet."
+msgstr "仅限等级已满足其要求的物品。"
+
+msgid "Content I've reached"
+msgstr "我已达成的内容"
+
+msgid "Only items you own, or can get from monsters, dungeons, shops and skills you have reached."
+msgstr "仅限你拥有的物品，或来自你已接触的怪物、地牢、商店和技能的物品。"
+
+msgid "Bring it back"
+msgstr "恢复它"
+
+msgid "from {0}"
+msgstr "来自 {0}"
+
+msgid "owned items"
+msgstr "已拥有物品"
+
+msgid "every item"
+msgstr "所有物品"
+
+msgid "Simulating"
+msgstr "模拟中"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Step {0}"
+msgstr "步骤 {0}"
+
+msgid "Stage {0}"
+msgstr "阶段 {0}"
+
+msgid "{0} trials"
+msgstr "{0} 次试验"
+
+msgid "{0} of {1} sets"
+msgstr "{1} 套中的 {0} 套"
+
+msgid "Reading your gear…"
+msgstr "正在读取你的装备…"
+
+msgid "Best so far: none yet"
+msgstr "目前最佳：暂无"
+
+msgid "Best so far: keep what you have"
+msgstr "目前最佳：保留当前"
+
+msgid "Best so far: {0}"
+msgstr "目前最佳：{0}"
+
+msgid "{0}m {1}s"
+msgstr "{0} 分 {1} 秒"
+
+msgid "Step {0} · {1} fought · {2} dropped"
+msgstr "步骤 {0} · 已战 {1} 套 · 已淘汰 {2} 套"
+
+msgid "Stage {0} · {1} trials · {2} fought · {3} dropped · {4} left"
+msgstr "阶段 {0} · {1} 次试验 · 已战 {2} 套 · 已淘汰 {3} 套 · 剩 {4} 套"
+
+msgid "finishing"
+msgstr "收尾中"
+
+msgid "at most {0}h {1}m {2}s left"
+msgstr "最多剩 {0} 小时 {1} 分 {2} 秒"
+
+msgid "at most {0}m {1}s left"
+msgstr "最多剩 {0} 分 {1} 秒"
+
+msgid "at most {0}s left"
+msgstr "最多剩 {0} 秒"
+
+msgid "{0}h {1}m {2}s left"
+msgstr "剩 {0} 小时 {1} 分 {2} 秒"
+
+msgid "{0}m {1}s left"
+msgstr "剩 {0} 分 {1} 秒"
+
+msgid "{0}s left"
+msgstr "剩 {0} 秒"
+
+msgid "No deaths"
+msgstr "不允许死亡"
+
+msgid "Under 5% deaths"
+msgstr "死亡率低于 5%"
+
+msgid "Any, if survived once"
+msgstr "不限，只要能存活一次"
+
+msgid "Your gear now doesn't finish a fight: {0}"
+msgstr "你当前装备无法完成战斗：{0}"
+
+msgid "no result"
+msgstr "无结果"
+
+msgid "95% range {0}% to {1}%"
+msgstr "95% 区间 {0}% 至 {1}%"
+
+msgid "95% range {0} to {1}"
+msgstr "95% 区间 {0} 至 {1}"
+
+msgid "≈{0} to first drop with your gear"
+msgstr "用你的装备约 {0} 首次掉落"
+
+msgid "≈{0} to first drop"
+msgstr "约 {0} 首次掉落"
+
+msgid "{0} sooner"
+msgstr "提前 {0}"
+
+msgid "{0} later"
+msgstr "延后 {0}"
+
+msgid "{0} deaths"
+msgstr "{0} 次死亡"
+
+msgid "{0} quadrillion"
+msgstr "{0} 千万亿"
+
+msgid "{0} trillion"
+msgstr "{0} 万亿"
+
+msgid "{0} billion"
+msgstr "{0} 十亿"
+
+msgid "{0} million"
+msgstr "{0} 百万"
+
+msgid "About {0} s"
+msgstr "约 {0} 秒"
+
+msgid "About {0} min"
+msgstr "约 {0} 分钟"
+
+msgid "Cancelled after stage {0}."
+msgstr "已在第 {0} 阶段后取消。"
+
+msgid "The search failed: {0}"
+msgstr "搜索失败：{0}"
+
+msgid "A search for {0} is running: wait for it or cancel it first."
+msgstr "正在搜索 {0}：请等待或先取消。"
+
+msgid "A run is going: wait for it or cancel it first."
+msgstr "有运行正在进行：请等待或先取消。"
+
+msgid "nothing"
+msgstr "无"
+
+msgid "current gear"
+msgstr "当前装备"
+
+msgid "The best setup found."
+msgstr "找到的最佳配置。"
+
+msgid "Cheaper"
+msgstr "更省"
+
+msgid "Another setup about as good as the best (within its 95% range) that uses less."
+msgstr "与最佳相当（在其 95% 区间内）但消耗更少的另一配置。"
+
+msgid "Safer"
+msgstr "更稳"
+
+msgid "Another setup about as good as the best (within its 95% range) that takes the least damage."
+msgstr "与最佳相当（在其 95% 区间内）但受伤最少的另一配置。"
+
+msgid "{0} against Best"
+msgstr "{0} 对比最佳"
+
+msgid "{0} less {1}{2}"
+msgstr "少 {0} {1}{2}"
+
+msgid "{0} less damage taken"
+msgstr "少承受 {0} 伤害"
+
+msgid "Alternative"
+msgstr "备选"
+
+msgid "Blue: not as in Best"
+msgstr "蓝色：与最佳不同之处"
+
+msgid "For {0}"
+msgstr "针对 {0}"
+
+msgid "Close calls unsettled"
+msgstr "险胜未定"
+
+msgid "Stopped before its close calls were raced again."
+msgstr "在险胜项再次竞速前停止。"
+
+msgid "Setups the search can't tell apart from Best. Each shows only what it does differently."
+msgstr "搜索无法与最佳区分的配置。各自只显示不同之处。"
+
+msgid "Against Best; {0} over your setup"
+msgstr "对比最佳；相对你的配置 {0}"
+
+msgid "Show fewer"
+msgstr "收起"
+
+msgid "Show {0} more"
+msgstr "再显示 {0} 项"
+
+msgid "instead of {0}"
+msgstr "替代 {0}"
+
+msgid "without {0}"
+msgstr "不含 {0}"
+
+msgid "Not in this answer:"
+msgstr "未包含在此结果中："
+
+msgid "Uses"
+msgstr "消耗"
+
+msgid "Damage taken"
+msgstr "承受伤害"
+
+msgid "Per second"
+msgstr "每秒"
+
+msgid "Food eaten"
+msgstr "食物消耗"
+
+msgid "{0} won over {1}{2}"
+msgstr "{0} 优于 {1}{2}"
+
+msgid "Also fine: {0} instead of {1}{2}"
+msgstr "也可：{0} 替代 {1}{2}"
+
+msgid "Potion"
+msgstr "药水"
+
+msgid "None"
+msgstr "无"
+
+msgid "Locked"
+msgstr "已锁定"
+
+msgid "Not owned"
+msgstr "未拥有"
+
+msgid "Wearable now"
+msgstr "现在可穿戴"
+
+msgid "Simulation"
+msgstr "模拟"
+
+msgid "Items"
+msgstr "物品"
+
+msgid "Per slot"
+msgstr "按栏位"
+
+msgid "Nothing to search: nothing else you own fits an unlocked slot."
+msgstr "没有可搜索的：你拥有的其他物品都不适用于已解锁栏位。"
+
+msgid "Too many combinations to try: the search builds a set slot by slot. A better mix may exist."
+msgstr "组合过多无法逐一尝试：搜索改为逐栏位构建套装。可能存在更优组合。"
+
+msgid "Simulating them all would take over {0} min, so the search builds a set slot by slot. A better mix may exist."
+msgstr "全部模拟会超过 {0} 分钟，因此搜索改为逐栏位构建。可能存在更优组合。"
+
+msgid "{0} sets is too many to simulate before a search here has been timed, so the search builds a set slot by slot. A better mix may exist."
+msgstr "此处搜索尚未计时，{0} 套过多无法全部模拟，因此改为逐栏位构建。可能存在更优组合。"
+
+msgid "Trying everything switched on may take over {0} min. Switch some off to make it shorter."
+msgstr "尝试所有已开启项可能超过 {0} 分钟。可关闭部分以缩短。"
+
+msgid "{0} sets"
+msgstr "{0} 套"
+
+msgid "slot by slot"
+msgstr "逐栏位"
+
+msgid "{0} to simulate"
+msgstr "待模拟 {0} 套"
+
+msgid "Up to {0} min"
+msgstr "最多 {0} 分钟"
+
+msgid "{0} · stops at {1} min"
+msgstr "{0} · 在 {1} 分钟时停止"
+
+msgid "{0} · {1} not owned"
+msgstr "{0} · {1} 件未拥有"
+
+msgid "Under 5%"
+msgstr "低于 5%"
+
+msgid "Any"
+msgstr "任意"
+
+msgid "Include other styles"
+msgstr "包含其他风格"
+
+msgid "Also search with a weapon of each other combat style, and show each style's best."
+msgstr "同时用其他各战斗风格的武器搜索，并显示每种风格的最佳。"
+
+msgid "Ignore requirements"
+msgstr "忽略要求"
+
+msgid "Side A's setting, as on the Setup tab: search any gear and choice, requirements met or not."
+msgstr "A 方的设置，同配置页：搜索任意装备和选项，无论是否满足要求。"
+
+msgid "Unsupported on this game build"
+msgstr "当前游戏版本不支持"
+
+msgid "requirements ignored"
+msgstr "已忽略要求"
+
+msgid "{0} left out"
+msgstr "排除 {0} 项"
+
+msgid "other styles"
+msgstr "其他风格"
+
+msgid "choices I don't have"
+msgstr "我还没有的选项"
+
+msgid "Gear only"
+msgstr "仅装备"
+
+msgid "Counting combinations…"
+msgstr "正在计算组合数…"
+
+msgid "The sets couldn't be counted."
+msgstr "无法计算套装数。"
+
+msgid "Shorter search"
+msgstr "缩短搜索"
+
+msgid "Never use"
+msgstr "从不使用"
+
+msgid "+ Item"
+msgstr "+ 物品"
+
+msgid "Click to use it again."
+msgstr "点击可再次使用。"
+
+msgid "Show less"
+msgstr "收起"
+
+msgid "Show all ({0})"
+msgstr "显示全部（{0}）"
+
+msgid "Locked: the search keeps this slot. Click to unlock."
+msgstr "已锁定：搜索保留此栏位。点击解锁。"
+
+msgid "Click to lock: the search keeps this slot as it is."
+msgstr "点击锁定：搜索保持此栏位不变。"
+
+msgid "Clear saved runs"
+msgstr "清除已保存运行"
+
+msgid "Click again to clear"
+msgstr "再次点击以清除"
+
+msgid "Nothing to clear"
+msgstr "没有可清除的"
+
+msgid "{0} run"
+msgid_plural "{0} runs"
+msgstr[0] "{0} 次运行"
+
+msgid "{0} comparison"
+msgid_plural "{0} comparisons"
+msgstr[0] "{0} 个对比"
+
+msgid "{0} and {1}"
+msgstr "{0} 和 {1}"
+
+msgid "Deletes {0}."
+msgstr "将删除 {0}。"
+
+msgid "{0} pinned run stays."
+msgid_plural "{0} pinned runs stay."
+msgstr[0] "{0} 个已固定运行会保留。"
+
+msgid "Pin: keep past the limit"
+msgstr "固定：超出上限后仍保留"
+
+msgid "seed {0}"
+msgstr "种子 {0}"
+
+msgid "No changes"
+msgstr "无改动"
+
+msgid "{0} target"
+msgid_plural "{0} targets"
+msgstr[0] "{0} 个目标"
+
+msgid "Show"
+msgstr "显示"
+
+msgid "A run is in progress"
+msgstr "有运行正在进行"
+
+msgid "Show this run's results"
+msgstr "显示本次运行的结果"
+
+msgid "Compare now with this"
+msgstr "以此对比当前"
+
+msgid "Simulate: your setup now as {0}, this run as {1}"
+msgstr "模拟：当前配置作为 {0}，本次运行作为 {1}"
+
+msgid "Rename"
+msgstr "重命名"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete this run?"
+msgstr "删除本次运行？"
+
+msgid "Enter saves · Esc cancels · empty clears the name"
+msgstr "回车保存 · Esc 取消 · 留空清除名称"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Unreadable: {0}"
+msgstr "无法读取：{0}"
+
+msgid "Character as is"
+msgstr "当前角色"
+
+msgid "{0} · requirements ignored"
+msgstr "{0} · 已忽略要求"
+
+msgid "Finished"
+msgstr "已完成"
+
+msgid "Cancelled"
+msgstr "已取消"
+
+msgid "Failed"
+msgstr "失败"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "The last {0} comparisons are kept, with their runs."
+msgstr "保留最近 {0} 个对比及其运行。"
+
+msgid "No runs yet. Simulate once and it appears here."
+msgstr "暂无运行。模拟一次后即会出现在此处。"
+
+msgid "Kept {0} of {1} · {2} pinned"
+msgstr "保留 {0}/{1} · 已固定 {2}"
+
+msgid "More runs are pinned or in kept comparisons than the limit: they stay until unpinned or removed."
+msgstr "已固定或包含在保留对比中的运行超出上限：它们会保留到取消固定或移除。"
+
+msgid "Pinned runs and kept comparisons' runs stay past the limit. Select a run for actions."
+msgstr "已固定的运行和保留对比中的运行会超出上限保留。选择一次运行可执行操作。"
+
+msgid "Hide runs ▴"
+msgstr "收起运行 ▴"
+
+msgid "Show {0} run ▾"
+msgid_plural "Show {0} runs ▾"
+msgstr[0] "显示 {0} 次运行 ▾"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "CS2's own text. Game names stay in the game's language."
+msgstr "CS2 自身的文字。游戏名称仍使用游戏语言。"
+
+msgid "Same as the game"
+msgstr "与游戏一致"
+
+msgid "No limit"
+msgstr "不限制"
+
+msgid "{0} min"
+msgstr "{0} 分钟"
+
+msgid "A search too big to try every set builds one slot by slot; at this limit it keeps the best set found so far."
+msgstr "组合过多无法逐一尝试时改为逐栏位构建；达到此上限时保留目前找到的最佳套装。"
+
+msgid "Longest gear search"
+msgstr "最长装备搜索"
+
+msgid "Full"
+msgstr "完整"
+
+msgid "Reduced"
+msgstr "精简"
+
+msgid "Off"
+msgstr "关闭"
+
+msgid "Motion"
+msgstr "动效"
+
+msgid "Reduced: short fades only. Off: nothing moves."
+msgstr "精简：仅短淡入淡出。关闭：无动效。"
+
+msgid "Bug reports"
+msgstr "错误报告"
+
+msgid "Combat Simulator 2 {0}"
+msgstr "战斗模拟器 2 {0}"
+
+msgid "{0} MB each"
+msgstr "每个 {0} MB"
+
+msgid "Allocated space"
+msgstr "分配空间"
+
+msgid "Most each crash dump or report takes in CombatSimulator2's folder. Oldest go first."
+msgstr "每个崩溃转储或报告在 CombatSimulator2 文件夹中占用的上限。最旧的先删除。"
+
+msgid "Include my character's save"
+msgstr "包含我的角色存档"
+
+msgid "Lets the developer rerun your runs. Names your character, not your Windows or Steam account. Public if posted on GitHub or Discord."
+msgstr "让开发者能复现你的运行。其中只有角色名，不含 Windows 或 Steam 账号。若发到 GitHub 或 Discord 则会公开。"
+
+msgid "another game build"
+msgstr "其他游戏版本"
+
+msgid "The run comes from game build {0}; this is {1}."
+msgstr "该运行来自游戏版本 {0}；当前为 {1}。"
+
+msgid "not checked"
+msgstr "未验证"
+
+msgid "Trials per target"
+msgstr "每个目标的试验次数"
+
+msgid "More: tighter ranges, longer runs."
+msgstr "越多：区间越窄，运行越久。"
+
+msgid "CS2 host"
+msgstr "CS2 宿主"
+
+msgid "Game process (may stutter)"
+msgstr "游戏进程（可能卡顿）"
+
+msgid "Simulate in"
+msgstr "模拟位置"
+
+msgid "CS2 host: a hidden second copy of the game, so yours doesn't slow."
+msgstr "CS2 宿主：游戏的隐藏第二副本，不会拖慢你的游戏。"
+
+msgid "Simulate fresh"
+msgstr "全新模拟"
+
+msgid "Rerun every target. Off: reuse results with the same setup and settings."
+msgstr "重新运行每个目标。关闭：在配置与设置相同时复用结果。"
+
+msgid "Stop targets early"
+msgstr "提前停止目标"
+
+msgid "Stop a target once its kill rate is this precise. Faster; marked in results."
+msgstr "当目标击杀率精确到该程度时停止。更快，并在结果中标注。"
+
+msgid "Auto ({0})"
+msgstr "自动（{0}）"
+
+msgid "Copies in parallel"
+msgstr "并行副本数"
+
+msgid "Auto: cores − 2, at most 4 ({0} here)."
+msgstr "自动：核心数 − 2，最多 4（此处 {0}）。"
+
+msgid "random"
+msgstr "随机"
+
+msgid "New seed each run"
+msgstr "每次运行使用新种子"
+
+msgid "Seed"
+msgstr "种子"
+
+msgid "Same seed and setup, same results."
+msgstr "相同种子与配置会得到相同结果。"
+
+msgid "Smaller"
+msgstr "更小"
+
+msgid "Larger"
+msgstr "更大"
+
+msgid "Everything in this window. On top of the game's UI size."
+msgstr "此窗口内的所有内容。叠加在游戏的 UI 尺寸之上。"
+
+msgid "Up to {0:0}% on this screen."
+msgstr "此屏幕最多 {0:0}%。"
+
+msgid "Window"
+msgstr "窗口"
+
+msgid "Show the Sim button in the header"
+msgstr "在标题栏显示“模拟”按钮"
+
+msgid "Next to the game's Guide button. The pause menu keeps its entry."
+msgstr "位于游戏“指南”按钮旁。暂停菜单仍保留入口。"
+
+msgid "Notices"
+msgstr "提示"
+
+msgid "Where refused changes show."
+msgstr "被拒绝的改动显示位置。"
+
+msgid "Top"
+msgstr "顶部"
+
+msgid "Bottom"
+msgstr "底部"
+
+msgid "Hide game notifications"
+msgstr "隐藏游戏通知"
+
+msgid "While this window is open: items found, level-ups and quests. They show again when it closes."
+msgstr "此窗口打开期间：物品获得、升级和任务通知会被隐藏，关闭后恢复显示。"
+
+msgid "Show the gear search guide button"
+msgstr "显示装备搜索指南按钮"
+
+msgid "The (i) on the Gear tab that explains how gear search works."
+msgstr "“装备”标签上解释装备搜索方式的 (i)。"
+
+msgid "Skin"
+msgstr "皮肤"
+
+msgid "The game's look or mElvUI's flat one. Either works with mElvUI on or off."
+msgstr "游戏风格或 mElvUI 的扁平风格。无论 mElvUI 开关都可用。"
+
+msgid "Results"
+msgstr "结果"
+
+msgid "Rank by, when CS2 opens"
+msgstr "打开 CS2 时的排序依据"
+
+msgid "Time unit"
+msgstr "时间单位"
+
+msgid "Saved runs"
+msgstr "已保存运行"
+
+msgid "Keep the last"
+msgstr "保留最近"
+
+msgid "Base Game"
+msgstr "游戏原版"
+
+msgid "Saved with setup, build and seed. {0} MB used. Results on screen not saved."
+msgstr "随配置、版本和种子一起保存。已用 {0} MB。屏幕上的结果不会保存。"
+
+msgid "Saved with setup, build and seed. {0} MB used."
+msgstr "随配置、版本和种子一起保存。已用 {0} MB。"
+
+msgid "Treat as equal within"
+msgstr "视为相同的容差"
+
+msgid "Gear search: a set must beat another by more than this to rank above it."
+msgstr "装备搜索：套装需超过此幅度才算优于另一套。"
+
+msgid "Clear kept answers"
+msgstr "清除保留结果"
+
+msgid "Gear search answers"
+msgstr "装备搜索结果"
+
+msgid "Kept to show again on returning to their target."
+msgstr "保留以便回到其目标时再次显示。"
+
+msgid "Search changes"
+msgstr "搜索改动"
+
+msgid "Clear changes"
+msgstr "清除改动"
+
+msgid "Clear this page"
+msgstr "清除本页"
+
+msgid "Save as preset…"
+msgstr "保存为预设…"
+
+msgid "Keep these changes by name, for any character to use"
+msgstr "将这些改动命名保存，供任意角色使用"
+
+msgid "Export setup"
+msgstr "导出配置"
+
+msgid "Show changes"
+msgstr "显示改动"
+
+msgid "Hide changes"
+msgstr "隐藏改动"
+
+msgid "Changes ({0})"
+msgstr "改动（{0}）"
+
+msgid "Changes on {0} ({1})"
+msgstr "{0} 上的改动（{1}）"
+
+msgid "No changes were made on this page"
+msgstr "本页未做改动"
+
+msgid "Undo the {0} change made on this page"
+msgid_plural "Undo the {0} changes made on this page"
+msgstr[0] "撤销本页的 {0} 项改动"
+
+msgid "Checking this side…"
+msgstr "正在检查此方…"
+
+msgid "Copies this side as one line, for another player to import"
+msgstr "将此方复制为一行文本，供其他玩家导入"
+
+msgid "None yet"
+msgstr "暂无"
+
+msgid "checking…"
+msgstr "检查中…"
+
+msgid "No change: the side already has this."
+msgstr "无改动：此方已有。"
+
+msgid "Requirement ignored: {0}"
+msgstr "已忽略要求：{0}"
+
+msgid "{0} vs {1}"
+msgstr "{0} 对 {1}"
+
+msgid "Against your character unchanged"
+msgstr "与你未改动的角色对比"
+
+msgid "Effects on {0}"
+msgstr "对 {0} 的效果"
+
+msgid "Effects"
+msgstr "效果"
+
+msgid "Differences ({0})"
+msgstr "差异（{0}）"
+
+msgid "All {0}"
+msgstr "全部 {0} 项"
+
+msgid "No changes yet"
+msgstr "暂无改动"
+
+msgid "Checking…"
+msgstr "检查中…"
+
+msgid "No difference."
+msgstr "无差异。"
+
+msgid "Modifiers"
+msgstr "修正项"
+
+msgid "{0} added · {1} gone"
+msgstr "新增 {0} · 失去 {1}"
+
+msgid "{0} added on {2} · {1} gone on {2}"
+msgstr "在 {2} 上新增 {0} · 在 {2} 上失去 {1}"
+
+msgid "{0} added"
+msgstr "新增 {0}"
+
+msgid "{0} added on {1}"
+msgstr "在 {1} 上新增 {0}"
+
+msgid "{0} gone"
+msgstr "失去 {0}"
+
+msgid "{0} gone on {1}"
+msgstr "在 {1} 上失去 {0}"
+
+msgid "on {0} obstacle"
+msgid_plural "on {0} obstacles"
+msgstr[0] "在 {0} 个障碍上"
+
+msgid "{0} only"
+msgstr "仅 {0}"
+
+msgid "gone"
+msgstr "失去"
+
+msgid "Turn off Spoiler guard to try it"
+msgstr "关闭剧透防护以试用"
+
+msgid "{0} modifier"
+msgid_plural "{0} modifiers"
+msgstr[0] "{0} 项修正"
+
+msgid "The character has this: CS2 can add purchases and stars, not take them away."
+msgstr "角色已有此内容：CS2 只能添加购买与星星，不能移除。"
+
+msgid "With modifiers or unlocks"
+msgstr "含修正或解锁"
+
+msgid "None with modifiers or unlocks"
+msgstr "没有含修正或解锁的"
+
+msgid "Nothing here"
+msgstr "此处为空"
+
+msgid "Levels"
+msgstr "等级"
+
+msgid "max"
+msgstr "最大"
+
+msgid "Max {0} in this build. Hitpoints at least 10."
+msgstr "此版本上限 {0}。生命值至少 10。"
+
+msgid "Equipment"
+msgstr "装备"
+
+msgid "empty"
+msgstr "空"
+
+msgid "Right-click: put back"
+msgstr "右键：还原"
+
+msgid "Right-click: empty"
+msgstr "右键：清空"
+
+msgid "Pick an item for {0}. Now: {1}."
+msgstr "为 {0} 选择物品。当前：{1}。"
+
+msgid "Search items"
+msgstr "搜索物品"
+
+msgid "Empty slot"
+msgstr "空栏位"
+
+msgid "Stance"
+msgstr "姿态"
+
+msgid "Empty prayer slot"
+msgstr "空祝祭栏位"
+
+msgid "Prayer slot {0}"
+msgstr "祝祭栏位 {0}"
+
+msgid "Pick a prayer for {0}. Now: {1}."
+msgstr "为 {0} 选择祝祭。当前：{1}。"
+
+msgid "none"
+msgstr "无"
+
+msgid "Search prayers"
+msgstr "搜索祝祭"
+
+msgid "Pick other food"
+msgstr "选择其他食物"
+
+msgid "No food"
+msgstr "没有食物"
+
+msgid "Pick food for {0}. Now: {1}."
+msgstr "为 {0} 选择食物。当前：{1}。"
+
+msgid "Search food"
+msgstr "搜索食物"
+
+msgid "No spell"
+msgstr "没有法术"
+
+msgid "No imbuement"
+msgstr "没有灌注"
+
+msgid "Pick a spell for {0}. Now: {1}."
+msgstr "为 {0} 选择法术。当前：{1}。"
+
+msgid "Pick an imbuement for {0}. Now: {1}."
+msgstr "为 {0} 选择灌注。当前：{1}。"
+
+msgid "Search spells"
+msgstr "搜索法术"
+
+msgid "Search imbuements"
+msgstr "搜索灌注"
+
+msgid "Rune Costs"
+msgstr "符文消耗"
+
+msgid "No spell selected"
+msgstr "未选择法术"
+
+msgid "Can't be worn: {0}"
+msgstr "无法穿戴：{0}"
+
+msgid "Unowned"
+msgstr "未拥有"
+
+msgid "Drag to move · double-click or middle-click: reset"
+msgstr "拖动可移动 · 双击或中键：复位"
+
+msgid "selected"
+msgstr "已选择"
+
+msgid "in A"
+msgstr "在 A 中"
+
+msgid "worn"
+msgstr "已穿戴"
+
+msgid "owned"
+msgstr "已拥有"
+
+msgid "unowned"
+msgstr "未拥有"
+
+msgid "Blocks on {0}"
+msgstr "在 {0} 上屏蔽"
+
+msgid "{0} slot open ·"
+msgid_plural "{0} slots open ·"
+msgstr[0] "{0} 个栏位空闲 ·"
+
+msgid "{0} each"
+msgstr "各 {0}"
+
+msgid "Slot {0}"
+msgstr "栏位 {0}"
+
+msgid "{0} more task"
+msgid_plural "{0} more tasks"
+msgstr[0] "还需 {0} 个任务"
+
+msgctxt "block"
+msgid "None"
+msgstr "无"
+
+msgid "Loadouts on {0}"
+msgstr "{0} 上的配装"
+
+msgid "a saved loadout per monster; the rest fight with the setup"
+msgstr "每个怪物使用一份已保存配装；其余用本配置作战"
+
+msgid "No saved loadouts yet. Save loadouts in the game to try one per monster."
+msgstr "暂无已保存配装。可在游戏中保存配装，以便为每个怪物单独试用。"
+
+msgid "Same as setup"
+msgstr "与配置相同"
+
+msgid "{0} · gone"
+msgstr "{0} · 已失去"
+
+msgid "Find best"
+msgstr "查找最佳"
+
+msgid "Use best on {0}"
+msgstr "在 {0} 上使用最佳"
+
+msgid "Clear on {0}"
+msgstr "清除 {0} 上的设置"
+
+msgid "Gets stuck on {0} with every loadout"
+msgstr "在 {0} 上每种配装都卡住"
+
+msgid "No figures"
+msgstr "无数据"
+
+msgid "{0} on its own loadout"
+msgid_plural "{0} on their own loadouts"
+msgstr[0] "{0} 使用自己的配装"
+
+msgid "Best: {0} · {1}"
+msgstr "最佳：{0} · {1}"
+
+msgid "no blocks"
+msgstr "无屏蔽"
+
+msgid "Best: blocks {0} ·"
+msgstr "最佳：屏蔽 {0} ·"
+
+msgid "needs slot {0}"
+msgstr "需要栏位 {0}"
+
+msgid "Stuck"
+msgstr "卡住"
+
+msgid "{0} deaths / h"
+msgstr "每小时 {0} 次死亡"
+
+msgid "vs {0}"
+msgstr "对比 {0}"
+
+msgid "On {0} ✓"
+msgstr "在 {0} 上 ✓"
+
+msgid "Use on {0}"
+msgstr "用于 {0}"
+
+msgid "Side B gives this master its best blocks and loadouts"
+msgstr "B 方使用此大师的最佳屏蔽与配装"
+
+msgid "Puts this master's best blocks and loadouts on side B; nothing else on B changes"
+msgstr "将此大师的最佳屏蔽与配装放到 B 方；B 的其他内容不变"
+
+msgid "No bonfires in this build"
+msgstr "此版本没有篝火"
+
+msgid "{0} isn't in this build"
+msgstr "{0} 不在此版本中"
+
+msgid "Once the game adds it, your courses and obstacles show here, and you can try others."
+msgstr "游戏加入该内容后，你的路线和障碍会显示在此，并可试用其他。"
+
+msgid "Once the game adds combat potions, you can pick one for a side here."
+msgstr "游戏加入战斗药水后，可在此为某一方选择。"
+
+msgid "Once the game adds bonfires, you can light one for a side here."
+msgstr "游戏加入篝火后，可在此为某一方点燃。"
+
+msgid "Once the game adds pets, yours show here, and you can try others."
+msgstr "游戏加入宠物后，你的宠物会显示在此，并可试用其他。"
+
+msgid "Nothing from {0} affects results in this build."
+msgstr "此版本中 {0} 的任何内容都不影响结果。"
+
+msgid "on"
+msgstr "开启"
+
+msgid "changed"
+msgstr "已更改"
+
+msgid "Gear and levels"
+msgstr "装备与等级"
+
+msgid "Astrology"
+msgstr "星象学"
+
+msgid "Mastery Guild"
+msgstr "精通公会"
+
+msgid "Agility"
+msgstr "灵巧"
+
+msgid "Herblore"
+msgstr "草药学"
+
+msgid "Firemaking"
+msgstr "生火"
+
+msgid "Shop upgrades"
+msgstr "商店升级"
+
+msgid "Quests"
+msgstr "任务"
+
+msgid "Pets"
+msgstr "宠物"
+
+msgid "Character"
+msgstr "角色"
+
+msgid "Skills"
+msgstr "技能"
+
+msgid "Account"
+msgstr "账号"
+
+msgid "{0} change"
+msgid_plural "{0} changes"
+msgstr[0] "{0} 项改动"
+
+msgid "Gear search running"
+msgstr "装备搜索进行中"
+
+msgid "Simulating · {0} of {1} targets"
+msgstr "模拟中 · 第 {0}/{1} 个目标"
+
+msgid "Use any gear and entry, requirements met or not"
+msgstr "使用任意装备与条目，无论是否满足要求"
+
+msgid "{0} can use any gear and entry, requirements met or not"
+msgstr "{0} 可使用任意装备与条目，无论是否满足要求"
+
+msgid "Copy of {0} · simulation only"
+msgstr "{0} 的副本 · 仅供模拟"
+
+msgid "Simulation only"
+msgstr "仅供模拟"
+
+msgid "Masters"
+msgstr "大师"
+
+msgid "Goal"
+msgstr "目标"
+
+msgid "The deaths Find best allows when it picks loadouts and blocks"
+msgstr "“查找最佳”在选择配装与屏蔽时允许的死亡数"
+
+msgid "Blocks and loadouts per master on {0}, and each one's best. Click a master to change them."
+msgstr "{0} 上每位大师的屏蔽与配装，以及各自的最佳。点击大师可修改。"
+
+msgid "Find best for every master"
+msgstr "为所有大师查找最佳"
+
+msgid "Find best for {0} master"
+msgid_plural "Find best for {0} masters"
+msgstr[0] "为 {0} 位大师查找最佳"
+
+msgid "Finds each ticked master's best saved loadout per monster and best blocks, from side A. Use on B tries one."
+msgstr "从 A 方为每位勾选的大师找出每个怪物的最佳已保存配装与最佳屏蔽。在 B 上使用可试用。"
+
+msgid "Take this master in the next Find best"
+msgstr "下次“查找最佳”时包含此大师"
+
+msgid "Close this master"
+msgstr "关闭此大师"
+
+msgid "Change this master's blocks and loadouts"
+msgstr "修改此大师的屏蔽与配装"
+
+msgid "blocks {0}"
+msgstr "屏蔽 {0}"
+
+msgid "no loadouts"
+msgstr "无配装"
+
+msgid "loadouts {0}"
+msgstr "配装 {0}"
+
+msgid "On {0}: {1} · {2}"
+msgstr "在 {0} 上：{1} · {2}"
+
+msgid "Slayer task"
+msgstr "屠杀者任务"
+
+msgid "As save"
+msgstr "按存档"
+
+msgid "On task"
+msgstr "任务中"
+
+msgid "Off task"
+msgstr "非任务"
+
+msgid "Single monsters are fought on a task only when your save has one for them."
+msgstr "仅当你的存档为该怪物设有任务时，单个怪物才在任务状态下战斗。"
+
+msgid "Each single monster is fought on a task from a master that gives it, with Slayer XP, coins and on-task bonuses. Masters are always on task."
+msgstr "每个单个怪物都在会给出它的某位大师的任务中战斗，享屠杀者经验、硬币和任务加成。大师始终视为任务状态。"
+
+msgid "Single monsters are fought with no slayer task. Masters are always on task."
+msgstr "单个怪物在无屠杀者任务的状态下战斗。大师始终视为任务状态。"
+
+msgid "Your tasks now"
+msgstr "你当前的任务"
+
+msgid "Simulate tasks"
+msgstr "模拟任务"
+
+msgid "Simulates each master you have a task with, on side A, to compare your task with the master's overall rate"
+msgstr "在 A 方模拟你有任务的每位大师，以将你的任务与该大师的整体速率对比"
+
+msgid "Simulate to compare each task with its master's overall rate."
+msgstr "模拟后即可将每个任务与其大师的整体速率对比。"
+
+msgid "Each task on its master's best setup or on side A, whichever was simulated last, against the master's overall rate: above it is worth extending, below it worth rerolling."
+msgstr "每个任务采用其大师的最佳配置或 A 方（以最近一次模拟为准），与大师整体速率对比：高于它值得延长，低于它值得重抽。"
+
+msgid "not simulated yet"
+msgstr "尚未模拟"
+
+msgid "{0} /h · {1}"
+msgstr "{0}/小时 · {1}"
+
+msgid "on side A"
+msgstr "在 A 方"
+
+msgid "best found before your setup changed"
+msgstr "在你的配置更改前找到的最佳"
+
+msgid "its best setup blocks it"
+msgstr "其最佳配置会屏蔽它"
+
+msgid "On {0}'s best loadouts and blocks. Overall rate: all of {0}'s tasks, blocked monsters left out."
+msgstr "按 {0} 的最佳配装与屏蔽。整体速率：{0} 的全部任务，不含被屏蔽的怪物。"
+
+msgid "On side A. Find best on {0} judges it on its best loadouts."
+msgstr "按 A 方。在 {0} 上“查找最佳”会按其最佳配装评判。"
+
+msgid "Your setup has changed since Find best. Find best again for the best setup now, or Simulate tasks to judge it on side A."
+msgstr "自“查找最佳”后你的配置已变。请重新查找最佳以得出当前最佳，或“模拟任务”按 A 方评判。"
+
+msgid "Extend"
+msgstr "延长"
+
+msgid "Reroll"
+msgstr "重抽"
+
+msgid "Extended already: the game extends a task once"
+msgstr "已延长：游戏每个任务只能延长一次"
+
+msgid "Neither extending nor rerolling earns back what it costs"
+msgstr "延长或重抽都无法收回成本"
+
+msgid "About its master's overall rate: neither is worth paying for"
+msgstr "约等于其大师的整体速率：两者都不值得支付"
+
+msgid "for"
+msgstr "换取"
+
+msgid "{0}: +{1} {2} over the {3} the {4} kills left would take"
+msgstr "{0}：+{1} {2}，相对剩余 {4} 次击杀所需的 {3}"
+
+msgid "{0}: +{1} {2} over the {3} of {4} more kills"
+msgstr "{0}：+{1} {2}，相对再 {4} 次击杀的 {3}"
+
+msgid "net +{0}"
+msgstr "净 +{0}"
+
+msgid "Against the same time on {0}'s tasks"
+msgstr "对比在 {0} 任务上相同时间的表现"
+
+msgid "about {0}'s overall rate"
+msgstr "约等于 {0} 的整体速率"
+
+msgid "{0}% above {1}'s overall rate"
+msgstr "高于 {1} 整体速率 {0}%"
+
+msgid "{0}% below {1}'s overall rate"
+msgstr "低于 {1} 整体速率 {0}%"
+
+msgid "Can't be used at these levels: {0}. Take them off, or switch on Ignore requirements."
+msgstr "这些等级下无法使用：{0}。请卸下，或开启“忽略要求”。"
+
+msgid "Side {0}: {1}"
+msgstr "{0} 方：{1}"
+
+msgid "Can't be exported: {0}"
+msgstr "无法导出：{0}"
+
+msgid "Side B is a saved run: it can't be shared. Compare with a setup instead."
+msgstr "B 方是已保存运行：无法分享。请改用配置进行对比。"
+
+msgid "Still checking the sides: try again in a moment."
+msgstr "仍在检查双方：请稍后再试。"
+
+msgid "Too long to share: {0} of {1} characters. Remove some changes."
+msgstr "过长无法分享：{0}/{1} 个字符。请减少一些改动。"
+
+msgid "Copied!"
+msgstr "已复制！"
+
+msgid "The clipboard is empty."
+msgstr "剪贴板为空。"
+
+msgid "The clipboard holds no CS2 setup."
+msgstr "剪贴板中没有 CS2 配置。"
+
+msgid "Too long for a CS2 setup."
+msgstr "超出 CS2 配置的长度上限。"
+
+msgid "Damaged: cut short or changed after it was copied."
+msgstr "已损坏：复制后被截断或修改。"
+
+msgid "Made by a newer CS2: update to use it."
+msgstr "由更新版本的 CS2 生成：请更新后再用。"
+
+msgid "Not a setup CS2 can read."
+msgstr "不是 CS2 能读取的配置。"
+
+msgid "All areas"
+msgstr "所有区域"
+
+msgid "Dungeons"
+msgstr "地牢"
+
+msgid "{0} starts from"
+msgstr "{0} 起始于"
+
+msgid "{0} as you are now"
+msgstr "{0}（按你当前状态）"
+
+msgid "Your loadouts"
+msgstr "你的配装"
+
+msgid "Presets · shared by every character"
+msgstr "预设 · 所有角色共用"
+
+msgid "Saved runs · results only"
+msgstr "已保存运行 · 仅结果"
+
+msgid "A saved run can only be side {0}."
+msgstr "已保存运行只能作为 {0} 方。"
+
+msgid "Import setup…"
+msgstr "导入配置…"
+
+msgid "Reads a setup another player exported from the clipboard, and shows it before anything changes"
+msgstr "从剪贴板读取其他玩家导出的配置，并在改动前先展示"
+
+msgid "as it was"
+msgstr "原有状态"
+
+msgid "Can't be used: {0}"
+msgstr "无法使用：{0}"
+
+msgid "in use"
+msgstr "使用中"
+
+msgid "Pick"
+msgstr "选择"
+
+msgid "Side {0} keeps its start and takes this preset's changes"
+msgstr "{0} 方保留其起点并应用此预设的改动"
+
+msgid "Side {0} keeps its start and takes this preset's changes. Replaces its {1} change."
+msgid_plural "Side {0} keeps its start and takes this preset's changes. Replaces its {1} changes."
+msgstr[0] "{0} 方保留其起点并应用此预设的改动。将替换其 {1} 项改动。"
+
+msgid "Compares side {0} against this saved run"
+msgstr "将 {0} 方与此已保存运行对比"
+
+msgid "Side {0} starts from this"
+msgstr "{0} 方由此开始"
+
+msgid "Side {0} starts from this. Clears its {1} change."
+msgid_plural "Side {0} starts from this. Clears its {1} changes."
+msgstr[0] "{0} 方由此开始。将清除其 {1} 项改动。"
+
+msgid "No prayers"
+msgstr "没有祝祭"
+
+msgid "+ Prayer"
+msgstr "+ 祝祭"
+
+msgid "Add prayer"
+msgstr "添加祝祭"
+
+msgid "Pick {0}. It runs on the same targets with the same seed as {1}."
+msgstr "选择 {0}。它将与 {1} 在相同目标和相同种子下运行。"
+
+msgid "{0} with changes"
+msgstr "{0}（含改动）"
+
+msgid "Start from {0} and change gear, levels, food, prayers or a spell."
+msgstr "以 {0} 为起点，修改装备、等级、食物、祝祭或法术。"
+
+msgid "Compare variant"
+msgstr "对比变体"
+
+msgid "Side {0} starts as a copy of side {1}, for you to change"
+msgstr "{0} 方以 {1} 方的副本为起点，供你修改"
+
+msgid "Import…"
+msgstr "导入…"
+
+msgid "Import a setup or preset another player exported"
+msgstr "导入其他玩家导出的配置或预设"
+
+msgid "Recent comparisons"
+msgstr "近期对比"
+
+msgid "All in History ▸"
+msgstr "全部见“历史” ▸"
+
+msgid "Presets · none yet: save one from the Setup tab"
+msgstr "预设 · 暂无：可在配置页保存一个"
+
+msgid "Nothing worn"
+msgstr "未穿戴任何物品"
+
+msgid "This is side {0}"
+msgstr "这是 {0} 方"
+
+msgid "Makes this loadout side {0}"
+msgstr "将此配装作为 {0} 方"
+
+msgid "Saved runs · none yet"
+msgstr "已保存运行 · 暂无"
+
+msgid "Saved runs · {0}"
+msgid_plural "Saved runs · {0}"
+msgstr[0] "已保存运行 · {0}"
+
+msgid "Another preset has that name."
+msgstr "已有其他预设使用该名称。"
+
+msgid "Give the preset a name."
+msgstr "请为预设命名。"
+
+msgid "{0} change · on top of {1}"
+msgid_plural "{0} changes · on top of {1}"
+msgstr[0] "{0} 项改动 · 基于 {1}"
+
+msgid "Use"
+msgstr "使用"
+
+msgid "Side {0}: what side {1} starts from, with this preset's changes"
+msgstr "{0} 方：以 {1} 方为起点并应用此预设的改动"
+
+msgid "Delete?"
+msgstr "删除？"
+
+msgid "Export"
+msgstr "导出"
+
+msgid "Copies this preset as one line, for another player to import"
+msgstr "将此预设复制为一行文本，供其他玩家导入"
+
+msgid "Compares side {0} against this saved run's results"
+msgstr "将 {0} 方与此已保存运行的结果对比"
+
+msgid "Key stats"
+msgstr "关键数据"
+
+msgid "All stats ▸"
+msgstr "全部数据 ▸"
+
+msgid "start → with changes"
+msgstr "起点 → 改动后"
+
+msgid "Accuracy ({0})"
+msgstr "精准（{0}）"
+
+msgid "Menu"
+msgstr "菜单"
+
+msgid "Share"
+msgstr "分享"
+
+msgid "Copy simulation"
+msgstr "复制模拟"
+
+msgid "Paste…"
+msgstr "粘贴…"
+
+msgid "Both sides, the targets left out and the settings below, as one line."
+msgstr "双方、排除的目标及下方设置，合为一行文本。"
+
+msgid "How runs fight"
+msgstr "运行的战斗规则"
+
+msgid "Help and reports"
+msgstr "帮助与报告"
+
+msgid "Save bug report…"
+msgstr "保存错误报告…"
+
+msgid "History"
+msgstr "历史"
+
+msgid "Menu: share this simulation, how runs fight, the longest gear search, bug reports and history"
+msgstr "菜单：分享此模拟、运行战斗规则、最长装备搜索、错误报告与历史"
+
+msgid "Import simulation"
+msgstr "导入模拟"
+
+msgid "One side"
+msgstr "单方"
+
+msgid "Two sides"
+msgstr "双方"
+
+msgid "{0} target left out"
+msgid_plural "{0} targets left out"
+msgstr[0] "排除 {0} 个目标"
+
+msgid "A simulation · {0} · {1}"
+msgstr "一次模拟 · {0} · {1}"
+
+msgid "Made on game build {0}: results may differ."
+msgstr "生成于游戏版本 {0}：结果可能不同。"
+
+msgid "The check failed."
+msgstr "检查失败。"
+
+msgid "Side {0}"
+msgstr "{0} 方"
+
+msgid "Targets left out"
+msgstr "排除的目标"
+
+msgid "{0} not in this build"
+msgid_plural "{0} not in this build"
+msgstr[0] "{0} 不在此版本中"
+
+msgid "Settings that change"
+msgstr "会改变的设置"
+
+msgid "None: as now"
+msgstr "无：保持当前"
+
+msgid "Use this simulation"
+msgstr "使用此模拟"
+
+msgid "Import setup"
+msgstr "导入配置"
+
+msgid "Preset name"
+msgstr "预设名称"
+
+msgid "Preset: {0} · {1}"
+msgstr "预设：{0} · {1}"
+
+msgid "A setup · {0}"
+msgstr "一个配置 · {0}"
+
+msgid "Made on another game build."
+msgstr "生成于其他游戏版本。"
+
+msgid "Save as preset"
+msgstr "保存为预设"
+
+msgid "Use as A"
+msgstr "用作 A"
+
+msgid "Replaces side {0}'s changes with these"
+msgstr "用这些替换 {0} 方的改动"
+
+msgid "Use as B"
+msgstr "用作 B"
+
+msgid "Side {0}: what side {1} starts from, with these changes. Replaces a side {0} already there."
+msgstr "{0} 方：以 {1} 方为起点并应用这些改动。将替换现有的 {0} 方。"
+
+msgid "Checking on your character…"
+msgstr "正在你的角色上检查…"
+
+msgid "{0} already as yours"
+msgid_plural "{0} already as yours"
+msgstr[0] "{0} 已与你的一致"
+
+msgid "requirement ignored"
+msgstr "已忽略要求"
+
+msgid "applies"
+msgstr "生效"
+
+msgid "A preset has this name. Save again to replace it."
+msgstr "已有同名预设。再次保存将替换它。"
+
+msgid "{0} presets already: delete one first."
+msgstr "已有 {0} 个预设：请先删除一个。"
+
+msgid "No changes to save."
+msgstr "没有可保存的改动。"
+
+msgid "{0} target · {1} · {2}"
+msgid_plural "{0} targets · {1} · {2}"
+msgstr[0] "{0} 个目标 · {1} · {2}"
+
+msgid "run gone"
+msgstr "运行已不存在"
+
+msgid "One of its saved runs is no longer there, so it can't be shown."
+msgstr "其某个已保存运行已不存在，因此无法显示。"
+
+msgid "Simulated on another game build than this one."
+msgstr "在与当前不同的游戏版本上模拟。"
+
+msgctxt "comparison"
+msgid "Show"
+msgstr "显示"
+
+msgctxt "comparison"
+msgid "Remove"
+msgstr "移除"
+
+msgid "Removes the comparison. Its two runs stay."
+msgstr "移除该对比。其两次运行仍会保留。"
+
+msgid "Find best · {0} · {1} of {2} masters"
+msgstr "查找最佳 · {0} · {1}/{2} 位大师"
+
+msgid "Find best · {0} · {1} of {2} loadouts"
+msgstr "查找最佳 · {0} · {1}/{2} 份配装"
+
+msgid "Best loadouts · {0} · {1} of {2}"
+msgstr "最佳配装 · {0} · {1}/{2}"
+
+msgid "Simulation used: both sides, the targets left out and the settings."
+msgstr "所用模拟：双方、排除的目标及设置。"
+
+msgid "Undo"
+msgstr "撤销"
+
+msgid "▶ Simulate"
+msgstr "▶ 模拟"
+
+msgid "This setup can't be simulated; see the message above the results."
+msgstr "此配置无法模拟；见结果上方的提示。"
+
+msgid "Checking targets for this setup…"
+msgstr "正在检查此配置可用的目标…"
+
+msgid "Nothing to simulate: every target shown is ignored. Return some."
+msgstr "没有可模拟的：显示的所有目标均被忽略。请恢复一些。"
+
+msgid "Nothing to simulate: no target matches the filters."
+msgstr "没有可模拟的：没有目标符合筛选条件。"
+
+msgid "■ Cancel run"
+msgstr "■ 取消运行"
+
+msgid "▶ Compare {0} target"
+msgid_plural "▶ Compare {0} targets"
+msgstr[0] "▶ 对比 {0} 个目标"
+
+msgid "▶ Simulate {0} target"
+msgid_plural "▶ Simulate {0} targets"
+msgstr[0] "▶ 模拟 {0} 个目标"
+
+msgid "The button can't be pressed now"
+msgstr "此按钮当前不可用"
+
+msgid "Same as before: nothing fought"
+msgstr "与上次相同：未进行战斗"
+
+msgctxt "a run's time"
+msgid "reused"
+msgstr "复用"
+
+msgid "{5} {0} of {1} · {6} {2} of {3} · {4}"
+msgstr "{5} {0}/{1} · {6} {2}/{3} · {4}"
+
+msgid "Reused from earlier runs: Settings › Simulate fresh fights again."
+msgstr "复用了较早运行的结果：设置 ›“全新模拟”可重新战斗。"
+
+msgid "Not run yet"
+msgstr "尚未运行"
+
+msgid "Searching · reading your gear"
+msgstr "搜索中 · 正在读取你的装备"
+
+msgid "Searching · step {0}"
+msgstr "搜索中 · 步骤 {0}"
+
+msgid "no runs yet"
+msgstr "暂无运行"
+
+msgid "{0} of {1} done · {2}"
+msgstr "已完成 {0}/{1} · {2}"
+
+msgid "{0} of {1} · {2}"
+msgstr "{0}/{1} · {2}"
+
+msgid "Not fighting anything right now."
+msgstr "当前未进行任何战斗。"
+
+msgid "No changes yet: change a level, an item, food, a prayer or a spell."
+msgstr "暂无改动：请修改等级、物品、食物、祝祭或法术。"
+
+msgid "Both sides are the same setup, so it ran once."
+msgstr "双方配置相同，因此只运行了一次。"
+
+msgid "Change"
+msgstr "更改"
+
+msgid "Pick what this side starts from"
+msgstr "选择此方的起点"
+
+msgid "Clear"
+msgstr "清除"
+
+msgid "Undo every change"
+msgstr "撤销全部改动"
+
+msgid "Ignore level, quest and unlock requirements of targets, gear and Setup entries."
+msgstr "忽略目标、装备和配置条目的等级、任务与解锁要求。"
+
+msgid "Ignore level, quest and unlock requirements of targets. Gear and Setup entries: unsupported on this game build."
+msgstr "忽略目标的等级、任务与解锁要求。装备与配置条目：当前游戏版本不支持。"
+
+msgid "Edit"
+msgstr "编辑"
+
+msgid "Levels, gear, prayers, guilds and more, on the Setup tab"
+msgstr "在配置页调整等级、装备、祝祭、公会等"
+
+msgid "Compare variant: copy this setup to {0}"
+msgstr "对比变体：将此配置复制到 {0}"
+
+msgid "Export setup: copies this side as one line, for another player to import"
+msgstr "导出配置：将此方复制为一行文本，供其他玩家导入"
+
+msgid "A loadout that is gone"
+msgstr "已不存在的配装"
+
+msgid "A saved run that is gone"
+msgstr "已不存在的已保存运行"
+
+msgid "Saved run · {0}"
+msgstr "已保存运行 · {0}"
+
+msgid "Its results are shown as they were saved. A saved run keeps no setup, so it has no gear to show, nothing to change and no stats."
+msgstr "其结果按保存时的样子显示。已保存运行不保存配置，因此没有可显示的装备、无法修改、也没有数据。"
+
+msgid "{0}: empty"
+msgstr "{0}：空"
+
+msgid "unknown error"
+msgstr "未知错误"
+
+msgid "The character as is can't be simulated: {0}"
+msgstr "当前角色无法模拟：{0}"
+
+msgid "Loadout {0} can't be simulated: {1}"
+msgstr "配装 {0} 无法模拟：{1}"
+
+msgid "vs"
+msgstr "对"
+
+msgid "✕ Clear"
+msgstr "✕ 清除"
+
+msgid "Clear comparison: back to side {0} alone"
+msgstr "清除对比：回到仅 {0} 方"
+
+msgid "+ Compare…"
+msgstr "+ 对比…"
+
+msgid "Compare this setup with changes, a loadout or a saved run"
+msgstr "将此配置与改动版、配装或已保存运行对比"
+
+msgid "Loadout {0} is gone or locked: pick another with Change."
+msgstr "配装 {0} 已不存在或已锁定：请用“更改”另选。"
+
+msgid "The saved run is gone: pick another with Change."
+msgstr "已保存运行不存在：请用“更改”另选。"
+
+msgid "A saved run can only be side B"
+msgstr "已保存运行只能作为 B 方"
+
+msgid "Swap sides {0} and {1}; results shown swap too"
+msgstr "交换 {0} 与 {1} 方；显示的结果也随之交换"
+
+msgid "Search stances"
+msgstr "搜索姿态"
+
+msgid "Search targets"
+msgstr "搜索目标"
+
+msgid "Can fight"
+msgstr "可战斗"
+
+msgctxt "targets"
+msgid "All"
+msgstr "全部"
+
+msgid "The targets this setup can fight"
+msgstr "此配置可战斗的目标"
+
+msgid "Every target in the game, locked ones included"
+msgstr "游戏中的所有目标（含锁定的）"
+
+msgid "Areas ({0}) ▾"
+msgstr "区域（{0}） ▾"
+
+msgid "Areas ▾"
+msgstr "区域 ▾"
+
+msgid "No target matches the filters."
+msgstr "没有目标符合筛选条件。"
+
+msgid "Click a target to ignore it in the next run, an area's name for the whole area. Right-click to run only it, then to add more."
+msgstr "点击目标可在下次运行中忽略它，点击区域名可忽略整个区域。右键仅运行它，再次右键可继续添加。"
+
+msgid "Ignore all"
+msgstr "全部忽略"
+
+msgid "Return all"
+msgstr "全部恢复"
+
+msgid "Return every target and clear the search"
+msgstr "恢复所有目标并清除搜索"
+
+msgid "Slayer masters"
+msgstr "屠杀大师"
+
+msgid "{0} of {1} targets"
+msgstr "{0}/{1} 个目标"
+
+msgid "Show this area's targets"
+msgstr "显示此区域的目标"
+
+msgid "Fold this area"
+msgstr "折叠此区域"
+
+msgid "{0}: click to return the whole area"
+msgstr "{0}：点击恢复整个区域"
+
+msgid "{0}: click to ignore the whole area"
+msgstr "{0}：点击忽略整个区域"
+
+msgid "Ignored: click to return it"
+msgstr "已忽略：点击恢复"
+
+msgid "This setup can't fight it yet: the run refuses it"
+msgstr "此配置尚不能与它战斗：运行会拒绝它"
+
+msgid "Click to ignore it in the next run"
+msgstr "点击在下次运行中忽略它"
+
+msgid "{0} monster"
+msgid_plural "{0} monsters"
+msgstr[0] "{0} 个怪物"
+
+msgid "Each comes up as often as any other, so the slow ones take most of the time."
+msgstr "每个出现频率相同，因此慢的会占去大部分时间。"
+
+msgid "Blocked in this run"
+msgstr "本次运行中已屏蔽"
+
+msgid "{0} of the time · {1} {2} · {3} deaths / h"
+msgstr "占 {0} 时间 · {1} {2} · 每小时 {3} 次死亡"
+
+msgid "as good"
+msgstr "同样好"
+
+msgid "{0} block"
+msgid_plural "{0} blocks"
+msgstr[0] "{0} 个屏蔽"
+
+msgid "still stuck"
+msgstr "仍然卡住"
+
+msgid "Blocks"
+msgstr "屏蔽"
+
+msgid "Blocks now: {0} · {1} of {2} slots open · worked out from this run, no extra fights"
+msgstr "当前屏蔽：{0} · {2} 个栏位中 {1} 个空闲 · 由本次运行算出，无额外战斗"
+
+msgid "Best in your open slots"
+msgstr "你空闲栏位中的最佳"
+
+msgid "Better · needs slot {0} · {1}"
+msgstr "更好 · 需要栏位 {0} · {1}"
+
+msgid "Block {0}"
+msgstr "屏蔽 {0}"
+
+msgid "95% range {0} – {1}"
+msgstr "95% 区间 {0} – {1}"
+
+msgid "Safe to leave running: no deaths"
+msgstr "可安全挂机：无死亡"
+
+msgid "Costs nothing: these are blocked already"
+msgstr "无成本：这些已被屏蔽"
+
+msgid "Costs"
+msgstr "成本"
+
+msgid "· about {0} of {1}'s coins"
+msgstr "· 约 {1} 硬币的 {0}"
+
+msgid "Risk · no deaths"
+msgstr "风险 · 无死亡"
+
+msgid "Risk · {0} · {1}"
+msgstr "风险 · {0} · {1}"
+
+msgid "1 death in {0} min"
+msgstr "{0} 分钟内 1 次死亡"
+
+msgid "1 death in {0} h"
+msgstr "{0} 小时内 1 次死亡"
+
+msgid "Deaths {0} {1} · highest hit taken {2} · lowest HP {3}"
+msgstr "死亡 {0} {1} · 承受最高伤害 {2} · 最低生命值 {3}"
+
+msgid "The game stops at a death: a master with deaths can't be left running."
+msgstr "游戏在死亡时会停止：会死亡的大师无法挂机运行。"
+
+msgid "Best setup: {0} · {1} vs {2}"
+msgstr "最佳配置：{0} · {1} 对 {2}"
+
+msgid "Best setup: {0}"
+msgstr "最佳配置：{0}"
+
+msgid "On Setup ›"
+msgstr "在配置 ›"
+
+msgid "Slayer master"
+msgstr "屠杀大师"
+
+msgid "Blocks: as good"
+msgstr "屏蔽：同样好"
+
+msgid "Best blocks: {0}"
+msgstr "最佳屏蔽：{0}"
+
+msgid "Blocks help"
+msgstr "屏蔽收益"
+
+msgid "tie"
+msgstr "持平"
+
+msgid "As good: {0}"
+msgstr "同样好：{0}"
+
+msgid "{0} for the master with them. Use on B on the Slayer setup page to try them."
+msgstr "使用这些时该大师为 {0}。可在屠杀者配置页对 B 使用以试用。"
+
+msgid "{0} monster does better on another loadout"
+msgid_plural "{0} monsters do better on another loadout"
+msgstr[0] "{0} 个怪物在其他配装上表现更好"
+
+msgid "Loadouts"
+msgstr "配装"
+
+msgid "Edit on Setup ›"
+msgstr "在配置 › 编辑"
+
+msgid "Change this master's blocks and loadouts per monster, and find its best"
+msgstr "修改此大师的屏蔽与每怪物配装，并查找其最佳"
+
+msgid "Monsters fight with the setup unless given a saved loadout; a tag names it."
+msgstr "除非指定已保存配装，怪物使用本配置作战；标签会标注所用配装。"
+
+msgid "Set bonuses"
+msgstr "套装加成"
+
+msgid "Potions and toolbelt"
+msgstr "药水与工具带"
+
+msgid "Stance and spell"
+msgstr "姿态与法术"
+
+msgid "Mastery"
+msgstr "精通"
+
+msgid "Area"
+msgstr "区域"
+
+msgid "{0} (on the enemy)"
+msgstr "{0}（敌方）"
+
+msgid "Search modifiers or sources"
+msgstr "搜索修正项或来源"
+
+msgid "{0} {1}: both sides · {0} only, {1} only: one side"
+msgstr "{0} {1}：双方 · 仅 {0}、仅 {1}：单方"
+
+msgid "{0} from {1} sources"
+msgstr "来自 {1} 个来源的 {0}"
+
+msgid "{0} · {1} on one side"
+msgstr "{0} · {1} 仅在一方"
+
+msgid "No match in {0}."
+msgstr "{0} 中没有匹配。"
+
+msgid "A only"
+msgstr "仅 A"
+
+msgid "B only"
+msgstr "仅 B"
+
+msgid "Offence"
+msgstr "进攻"
+
+msgid "Defence"
+msgstr "防御"
+
+msgid "Equipment stats"
+msgstr "装备数据"
+
+msgid "differing {0} of {1}"
+msgstr "{1} 项中 {0} 项不同"
+
+msgid "{0} stat"
+msgid_plural "{0} stats"
+msgstr[0] "{0} 项数据"
+
+msgid "Stats and modifiers"
+msgstr "数据与修正项"
+
+msgid "Only differences"
+msgstr "仅差异"
+
+msgid "Copy as text"
+msgstr "复制为文本"
+
+msgid "◂ Back to Setup"
+msgstr "◂ 返回配置"
+
+msgid "Load a character to see its setup."
+msgstr "加载角色以查看其配置。"
+
+msgid "Reading the setup…"
+msgstr "正在读取配置…"
+
+msgid "A saved run keeps no stats: side {0} as it is now."
+msgstr "已保存运行不保留数据：{0} 方按当前状态显示。"
+
+msgid "as the game computes them · read from a copy, your game is untouched"
+msgstr "按游戏的计算方式 · 从副本读取，你的游戏不受影响"
+
+msgid "Combat Simulator 2 · A {0} · B {1}"
+msgstr "战斗模拟器 2 · A {0} · B {1}"
+
+msgid "Combat Simulator 2 · {0}"
+msgstr "战斗模拟器 2 · {0}"
+
+msgid "Share of trials that ended in your death."
+msgstr "以你死亡告终的试验占比。"
+
+msgid "no deaths"
+msgstr "无死亡"
+
+msgid "1 in {0} min"
+msgstr "{0} 分钟内 1 次"
+
+msgid "1 in {0} h"
+msgstr "{0} 小时内 1 次"
+
+msgid "How long its tasks go between deaths. The game stops at a death."
+msgstr "其任务在两次死亡之间的持续时间。游戏在死亡时会停止。"
+
+msgid "Ignored in the next run · click to return it"
+msgstr "已从下次运行中忽略 · 点击恢复"
+
+msgid "Click to ignore it in the next run · right-click to run only it"
+msgstr "点击可将其从下次运行中忽略 · 右键仅运行它"
+
+msgid "{0} area without results"
+msgid_plural "{0} areas without results"
+msgstr[0] "{0} 个无结果的区域"
+
+msgid "{0} target, no result"
+msgid_plural "{0} targets, none with a result"
+msgstr[0] "{0} 个目标无结果"
+
+msgid "Click to show their targets"
+msgstr "点击显示其目标"
+
+msgid "Click to show its targets"
+msgstr "点击显示其目标"
+
+msgid "Click to collapse"
+msgstr "点击折叠"
+
+msgid "Click to unfold"
+msgstr "点击展开"
+
+msgid "Click to fold into its best bar"
+msgstr "点击折叠为其最佳柱"
+
+msgid "Deaths: {0}"
+msgstr "死亡：{0}"
+
+msgid "Kills / h: {0}"
+msgstr "击杀/小时：{0}"
+
+msgid "Time per kill: {0} s"
+msgstr "每次击杀时间：{0} 秒"
+
+msgid "Best of its folded area"
+msgstr "其折叠区域中的最佳"
+
+msgid "Click: details · Shift-click: pin"
+msgstr "点击：详情 · Shift+点击：固定"
+
+msgid "Nothing to chart yet."
+msgstr "暂无可绘制的数据。"
+
+msgid "Hover a bar for value, range and deaths · click for details · shift-click to pin · click a portrait to ignore it · click an area to fold it into one bar"
+msgstr "悬停柱看数值、区间与死亡 · 点击看详情 · Shift+点击固定 · 点击头像忽略 · 点击区域折叠为一根柱"
+
+msgid "Unfold every area"
+msgstr "展开所有区域"
+
+msgid "Fold every area into its best bar"
+msgstr "将所有区域折叠为其最佳柱"
+
+msgid "some deaths"
+msgstr "少量死亡"
+
+msgid "5%+ deaths"
+msgstr "5% 以上死亡"
+
+msgid "died every fight"
+msgstr "每场都死亡"
+
+msgid "some ran over"
+msgstr "部分超时"
+
+msgid "5%+ ran over"
+msgstr "5% 以上超时"
+
+msgid "Undo this change"
+msgstr "撤销此改动"
+
+msgid "mElvUI's palette is missing"
+msgstr "缺少 mElvUI 的配色方案"
+
+msgid "mElvUI's palette is unreadable: {0}"
+msgstr "mElvUI 的配色方案无法读取：{0}"
+
+msgid "mElvUI's palette is unreadable: not an object"
+msgstr "mElvUI 的配色方案无法读取：不是对象"
+
+msgid "mElvUI's palette is version {0}, CS2 reads version {1}"
+msgstr "mElvUI 的配色方案版本为 {0}，CS2 读取版本 {1}"
+
+msgid "mElvUI's palette is version unknown, CS2 reads version {0}"
+msgstr "mElvUI 的配色方案版本未知，CS2 读取版本 {0}"
+
+msgid "mElvUI's palette has no roles"
+msgstr "mElvUI 的配色方案没有角色定义"
+
+msgid "mElvUI's palette has no '{0}' role"
+msgstr "mElvUI 的配色方案没有“{0}”角色"
+
+msgid "mElvUI's palette role '{0}' names an unknown colour '{1}'"
+msgstr "mElvUI 配色方案的角色“{0}”引用了未知颜色“{1}”"
+
+msgid "Update a preset: pick it to save these changes over it"
+msgstr "更新预设：选择它以将这些改动覆盖保存"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Replace"
+msgstr "替换"
+
+msgid "Save as preset: keeps this side's changes by name, for any character to use"
+msgstr "保存为预设：将此方的改动命名保存，供任意角色使用"
+
+msgid "New preset"
+msgstr "新预设"
+
+msgid "Updated preset: {0}"
+msgstr "已更新预设：{0}"
+
+msgid "Saved as preset: {0}"
+msgstr "已保存为预设：{0}"
+
+msgid "A preset has this name. Replace it?"
+msgstr "已有同名预设。是否替换？"
+
+msgid "mElvUI isn't installed"
+msgstr "未安装 mElvUI"
+
+msgid "{0}: showing Base Game."
+msgstr "{0}：显示游戏原版风格。"
+
+msgid "{0} / kill"
+msgstr "{0}/击杀"
+
+msgid "{0} / s"
+msgstr "{0}/秒"
+
+msgid "{0} / min"
+msgstr "{0}/分钟"
+
+msgid "{0} / h"
+msgstr "{0}/小时"
+
+msgid "{0} / day"
+msgstr "{0}/天"
+
+msgid "{0} / kill · {1}"
+msgstr "{0}/击杀 · {1}"
+
+msgid "{0} / s · {1}"
+msgstr "{0}/秒 · {1}"
+
+msgid "{0} / min · {1}"
+msgstr "{0}/分钟 · {1}"
+
+msgid "{0} / h · {1}"
+msgstr "{0}/小时 · {1}"
+
+msgid "{0} / day · {1}"
+msgstr "{0}/天 · {1}"
+
+msgid "per second"
+msgstr "每秒"
+
+msgid "per minute"
+msgstr "每分钟"
+
+msgid "per hour"
+msgstr "每小时"
+
+msgid "per day"
+msgstr "每天"
+
+msgid "/kill"
+msgstr "/击杀"
+
+msgid "/s"
+msgstr "/秒"
+
+msgid "/min"
+msgstr "/分钟"
+
+msgid "/h"
+msgstr "/小时"
+
+msgid "/day"
+msgstr "/天"
+
+msgid "{0} h"
+msgstr "{0} 小时"
+
+msgid "{0} days"
+msgstr "{0} 天"
+
+msgctxt "loadout"
+msgid "current"
+msgstr "当前"
+
+msgid "{0} (requirements ignored)"
+msgstr "{0}（已忽略要求）"

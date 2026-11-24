@@ -30,6 +30,10 @@ internal static class GameChrome
 
     private static readonly List<(Control Part, int Z)> _raised = [];
 
+    // The parts kept, each let go as it leaves the tree. Closing a character frees the game's view, and touching a
+    // part kept past that kills the game: IsInstanceValid still passed for the freed footer.
+    private static readonly List<(Node Part, Action Left)> _watched = [];
+
     /// <summary>
     /// Draws the footer, the event log and the widget strip at <paramref name="z"/> while modals are open, so what they
     /// open (the event log, the footer's choices, the strip's panels) shows over a modal; null gives them their own
@@ -38,8 +42,7 @@ internal static class GameChrome
     public static void Raise(int? z)
     {
         foreach (var (part, own) in _raised)
-            if (GodotObject.IsInstanceValid(part))
-                part.ZIndex = own;
+            part.ZIndex = own;
         _raised.Clear();
         if (z is not { } level)
             return;
@@ -68,7 +71,60 @@ internal static class GameChrome
             case EventLogView eventLog:
                 _eventLog = eventLog;
                 break;
+            default:
+                return;
         }
+        Watch(node);
+    }
+
+    private static void Watch(Node part)
+    {
+        if (_watched.Exists(w => w.Part == part))
+            return;
+        Action left = () => Gone(part);
+        part.TreeExiting += left;
+        _watched.Add((part, left));
+    }
+
+    // While it leaves, the part is still whole: its own draw order goes back, then nothing keeps it.
+    private static void Gone(Node part)
+    {
+        var raised = _raised.FindIndex(r => r.Part == part);
+        if (raised >= 0)
+        {
+            _raised[raised].Part.ZIndex = _raised[raised].Z;
+            _raised.RemoveAt(raised);
+        }
+        if (_sidebar == part)
+            _sidebar = null;
+        if (_footer == part)
+            _footer = null;
+        if (_widgets == part)
+            _widgets = null;
+        if (_eventLog == part)
+            _eventLog = null;
+        var watched = _watched.FindIndex(w => w.Part == part);
+        if (watched >= 0)
+        {
+            part.TreeExiting -= _watched[watched].Left;
+            _watched.RemoveAt(watched);
+        }
+    }
+
+    /// <summary>
+    /// Gives the parts their own draw order back and lets them go, as the mod unloads: the game keeps them, and a
+    /// handler left on them would call into the unloaded mod.
+    /// </summary>
+    public static void Release()
+    {
+        Raise(null);
+        foreach (var (part, left) in _watched)
+            part.TreeExiting -= left;
+        _watched.Clear();
+        _sidebar = null;
+        _footer = null;
+        _widgets = null;
+        _eventLog = null;
     }
 
     /// <summary>Finds the parts already in the tree (a mod loaded in game).</summary>

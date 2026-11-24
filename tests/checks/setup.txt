@@ -2,6 +2,11 @@
 # (./mm play CombatSimulator2 --load Chk). On any other character they stop here, not on a wrong number.
 cs2 setups
 expect reply "current  Chk "
+# A fresh install shows About over the window the first time it opens, and the first click would only close it.
+# Closing the window closes About, and it never opens by itself again.
+cs2 open simulate
+wait 1000
+cs2 close
 # Every check starts on Simulate, in the game's look, with one side and every name shown, once the view is built.
 cs2 side b off
 cs2 spoilers off
@@ -17,3 +22,5 @@ cs2 skin base
 cs2 open simulate
 wait 2000
 expect see "+ Compare…"
+cs2 ui
+expect reply "help=none"

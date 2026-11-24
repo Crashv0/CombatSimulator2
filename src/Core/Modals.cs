@@ -17,6 +17,7 @@ sealed partial class ModContext
         OnReady(GameChrome.OnTreeReady);
         OnNodeAdded(GameChrome.OnNodeAdded);
         Hooks.AddOwned(ModalHost.ReleaseLayer);
+        Hooks.AddOwned(GameChrome.Release);
         return modals;
     }
 }
@@ -170,8 +171,8 @@ internal static class ModalHost
     public static void CloseAll() => Stack.CloseAll();
 
     /// <summary>
-    /// Releases the mod's layer as it unloads: the layer leaves the tree now and is freed, so a reloaded copy of the
-    /// mod makes its own under the same name.
+    /// Releases the mod's layer as it unloads, or before it is made again: the layer leaves the tree now and is freed,
+    /// so a reloaded copy of the mod makes its own under the same name.
     /// </summary>
     public static void ReleaseLayer()
     {

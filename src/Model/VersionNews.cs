@@ -40,6 +40,7 @@ public static class VersionNews
             Fix("CS2's window leaves room for the game's legacy sidebar"),
             Fix("Magic setups attack when your bank has none of the spell's runes"),
         ],
+        ["0.1.0-preview.5"] = [Fix("Runs on the game's 0.11.7 update")],
     };
 
     /// <summary>Every version with an entry.</summary>

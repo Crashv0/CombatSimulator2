@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0-preview.5 (2026-11-26)
+
+### Fixed
+
+- Runs on the game's 0.11.7 update.
+
 ## 0.1.0-preview.4 (2026-11-24)
 
 ### Added
